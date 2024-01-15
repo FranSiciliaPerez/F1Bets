@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "996516886382",
+    "project_id": "f1bets-74760",
+    "storage_bucket": "f1bets-74760.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:996516886382:android:62c0a5cace3c8a6986337f",
+        "android_client_info": {
+          "package_name": "com.example.f1bets"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBodgvbhhfhyeLig4WW3Qfn3w0hrXEkd3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
