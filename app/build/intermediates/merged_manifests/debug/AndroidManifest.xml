@@ -29,9 +29,25 @@
         android:theme="@style/Theme.F1Bets" >
         <activity
             android:name="com.example.f1bets.MainActivity"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/app_name"
             android:theme="@style/Theme.F1Bets.NoActionBar" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.f1bets.StartActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.f1bets.SplashStartActivity"
+            android:exported="true"
+            android:label="@string/title_activity_splash_start"
+            android:theme="@style/SplashTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
