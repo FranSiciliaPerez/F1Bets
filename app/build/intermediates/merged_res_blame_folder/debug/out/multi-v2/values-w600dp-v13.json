@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.f1bets.app-mergeDebugResources-47:/values-w600dp-v13/values-w600dp-v13.xml",
+            "outputFile": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-mergeDebugResources-47:\\values-w600dp-v13\\values-w600dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Franky\\AndroidStudioProjects\\F1Bets\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
@@ -18,6 +18,28 @@
                         "startOffsets": "55",
                         "endColumns": "41",
                         "endOffsets": "92"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.example.f1bets.app-mergeDebugResources-47:/values-w600dp-v13/values-w600dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Franky\\AndroidStudioProjects\\F1Bets\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
+                    "from": {
+                        "startLines": "2,-1",
+                        "startColumns": "4,-1",
+                        "startOffsets": "58,-1",
+                        "endColumns": "57,-1",
+                        "endOffsets": "111,-1"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,113",
+                        "endColumns": "57,41",
+                        "endOffsets": "108,150"
                     }
                 }
             ]

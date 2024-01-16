@@ -20,6 +20,7 @@ drawable ic_menu_slideshow
 drawable side_nav_bar
 id action_settings
 id app_bar_main
+id button1
 id drawer_layout
 id fab
 id imageView
@@ -35,6 +36,7 @@ id text_home
 id text_slideshow
 id toolbar
 layout activity_main
+layout activity_start
 layout app_bar_main
 layout content_main
 layout fragment_gallery
@@ -47,7 +49,12 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 navigation mobile_navigation
 string action_settings
+string action_sign_in
+string action_sign_in_short
 string app_name
+string invalid_password
+string invalid_username
+string login_failed
 string menu_gallery
 string menu_home
 string menu_slideshow
@@ -56,6 +63,10 @@ string nav_header_subtitle
 string nav_header_title
 string navigation_drawer_close
 string navigation_drawer_open
+string prompt_email
+string prompt_password
+string title_activity_login
+string welcome
 style Theme.F1Bets
 style Theme.F1Bets.AppBarOverlay
 style Theme.F1Bets.NoActionBar
