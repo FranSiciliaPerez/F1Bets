@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.f1bets.app-mergeDebugResources-47:/values-night-v8/values-night-v8.xml",
+            "outputFile": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-mergeDebugResources-47:\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Franky\\AndroidStudioProjects\\F1Bets\\app\\src\\main\\res\\values-night\\themes.xml",
@@ -54,6 +54,60 @@
                         "startOffsets": "1266,1341,1452,1541,1642,1749,1856,1955,2062,2165,2253,2377,2479,2581,2697,2799,2913,3041,3157,3279,3415,3535,3669,3789,3901,4116,4233,4357,4487,4609,4747,4881,4997",
                         "endColumns": "74,110,88,100,106,106,98,106,102,87,123,101,101,115,101,113,127,115,121,135,119,133,119,111,125,116,123,129,121,137,133,115,119",
                         "endOffsets": "1336,1447,1536,1637,1744,1851,1950,2057,2160,2248,2372,2474,2576,2692,2794,2908,3036,3152,3274,3410,3530,3664,3784,3896,4022,4228,4352,4482,4604,4742,4876,4992,5112"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.example.f1bets.app-mergeDebugResources-47:/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Franky\\AndroidStudioProjects\\F1Bets\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "from": {
+                        "startLines": "15,2",
+                        "startColumns": "4,4",
+                        "startOffsets": "815,102",
+                        "endLines": "17,14",
+                        "endColumns": "12,12",
+                        "endOffsets": "987,809"
+                    },
+                    "to": {
+                        "startLines": "2,12",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,862",
+                        "endLines": "4,24",
+                        "endColumns": "12,12",
+                        "endOffsets": "225,1436"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Franky\\.gradle\\caches\\transforms-3\\fce9ca73a05c7620075e2b5eed0101b5\\transformed\\appcompat-1.6.1\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "5,6,7,8,9,10,11,50",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "230,300,384,468,564,666,768,4202",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "295,379,463,559,661,763,857,4286"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Franky\\.gradle\\caches\\transforms-3\\9e93ead9d34672fc20887b1accd513cd\\transformed\\material-1.11.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,51,52,53,54,55,56,57,58",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1441,1516,1627,1716,1817,1924,2031,2130,2237,2340,2428,2552,2654,2756,2872,2974,3088,3216,3332,3454,3590,3710,3844,3964,4076,4291,4408,4532,4662,4784,4922,5056,5172",
+                        "endColumns": "74,110,88,100,106,106,98,106,102,87,123,101,101,115,101,113,127,115,121,135,119,133,119,111,125,116,123,129,121,137,133,115,119",
+                        "endOffsets": "1511,1622,1711,1812,1919,2026,2125,2232,2335,2423,2547,2649,2751,2867,2969,3083,3211,3327,3449,3585,3705,3839,3959,4071,4197,4403,4527,4657,4779,4917,5051,5167,5287"
                     }
                 }
             ]
