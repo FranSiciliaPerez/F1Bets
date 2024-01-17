@@ -15,7 +15,7 @@ class StartActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Asegúrate de que el botón esté inicializado correctamente
-        binding.button1.setOnClickListener {
+        binding.btnLogin.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
         }
     }

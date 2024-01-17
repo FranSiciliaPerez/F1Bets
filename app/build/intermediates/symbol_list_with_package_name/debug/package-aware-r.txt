@@ -3236,7 +3236,8 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id button1
+id btnLogin
+id btnSingUp
 id buttonPanel
 id button_first
 id button_second
@@ -3315,6 +3316,7 @@ id east
 id edge
 id edit_query
 id elastic
+id email
 id embed
 id end
 id endToStart

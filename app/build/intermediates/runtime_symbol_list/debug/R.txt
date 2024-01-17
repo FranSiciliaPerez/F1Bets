@@ -3235,7 +3235,8 @@ int id bounce 0x7f080061
 int id bounceBoth 0x7f080062
 int id bounceEnd 0x7f080063
 int id bounceStart 0x7f080064
-int id button1 0x7f08020a
+int id btnLogin 0x7f080215
+int id btnSingUp 0x7f080216
 int id buttonPanel 0x7f080065
 int id button_first 0x7f08020f
 int id button_second 0x7f080210
@@ -3314,6 +3315,7 @@ int id east 0x7f0800ad
 int id edge 0x7f0800ae
 int id edit_query 0x7f0800af
 int id elastic 0x7f0800b0
+int id email 0x7f080217
 int id embed 0x7f0800b1
 int id end 0x7f0800b2
 int id endToStart 0x7f0800b3

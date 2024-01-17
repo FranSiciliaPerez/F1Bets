@@ -4,8 +4,16 @@
         "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-51:\\layout\\nav_header_main.xml"
     },
     {
-        "merged": "com.example.f1bets.app-mergeDebugResources-48:/layout/activity_splash_start.xml",
-        "source": "com.example.f1bets.app-main-51:/layout/activity_splash_start.xml"
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-mergeDebugResources-48:\\layout\\fragment_second.xml",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-51:\\layout\\fragment_second.xml"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-mergeDebugResources-48:\\layout\\fragment_first.xml",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-51:\\layout\\fragment_first.xml"
+    },
+    {
+        "merged": "com.example.f1bets.app-mergeDebugResources-48:/layout/activity_start.xml",
+        "source": "com.example.f1bets.app-main-51:/layout/activity_start.xml"
     },
     {
         "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-mergeDebugResources-48:\\layout\\activity_main.xml",
@@ -24,20 +32,20 @@
         "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-51:\\layout\\content_main.xml"
     },
     {
-        "merged": "com.example.f1bets.app-mergeDebugResources-48:/layout/content_splash_start.xml",
-        "source": "com.example.f1bets.app-main-51:/layout/content_splash_start.xml"
-    },
-    {
         "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-mergeDebugResources-48:\\layout\\fragment_slideshow.xml",
         "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-51:\\layout\\fragment_slideshow.xml"
     },
     {
-        "merged": "com.example.f1bets.app-mergeDebugResources-48:/layout/fragment_second.xml",
-        "source": "com.example.f1bets.app-main-51:/layout/fragment_second.xml"
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-mergeDebugResources-48:\\layout\\activity_splash_start.xml",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-51:\\layout\\activity_splash_start.xml"
     },
     {
         "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-mergeDebugResources-48:\\layout\\fragment_home.xml",
         "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-51:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-mergeDebugResources-48:\\layout\\content_splash_start.xml",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-51:\\layout\\content_splash_start.xml"
     },
     {
         "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-mergeDebugResources-48:\\layout\\app_bar_main.xml",
@@ -46,9 +54,5 @@
     {
         "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-mergeDebugResources-48:\\layout\\activity_start.xml",
         "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-51:\\layout\\activity_start.xml"
-    },
-    {
-        "merged": "com.example.f1bets.app-mergeDebugResources-48:/layout/fragment_first.xml",
-        "source": "com.example.f1bets.app-main-51:/layout/fragment_first.xml"
     }
 ]
