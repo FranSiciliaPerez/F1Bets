@@ -10,7 +10,7 @@
     tools:context=".StartActivity">
 
   <TextView
-      android:text="rsgf"
+      android:text="@string/txtLogin"
       android:textSize="20sp"
       android:textStyle="bold"
       android:layout_width="match_parent"
@@ -26,7 +26,7 @@
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="gsdf"
+        android:hint="@string/txtEmail"
         android:inputType="textEmailAddress" />
   </com.google.android.material.textfield.TextInputLayout>
 
@@ -38,7 +38,7 @@
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="gsfdf"
+        android:hint="@string/txtPasw"
         android:inputType="textPassword" />
   </com.google.android.material.textfield.TextInputLayout>
   <LinearLayout
@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="sdg" />
+        android:text="@string/txtLogin" />
 
     <Space
         android:layout_width="8dp"
@@ -62,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="gsd" />
+        android:text="@string/txtSign" />
   </LinearLayout>
 
 </LinearLayout>

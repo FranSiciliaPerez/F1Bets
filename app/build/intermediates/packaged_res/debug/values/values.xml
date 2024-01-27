@@ -17,6 +17,11 @@
     <string name="action_sign_in_short">Sign in</string>
     <string name="app_name">F1Bets</string>
     <string name="first_fragment_label">First Fragment</string>
+    <string name="gcm_defaultSenderId" translatable="false">996516886382</string>
+    <string name="google_api_key" translatable="false">AIzaSyBodgvbhhfhyeLig4WW3Qfn3w0hrXEkd3I</string>
+    <string name="google_app_id" translatable="false">1:996516886382:android:62c0a5cace3c8a6986337f</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBodgvbhhfhyeLig4WW3Qfn3w0hrXEkd3I</string>
+    <string name="google_storage_bucket" translatable="false">f1bets-74760.appspot.com</string>
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="invalid_password">Password must be >5 characters</string>
@@ -32,11 +37,16 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="project_id" translatable="false">f1bets-74760</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_splash_start">SplashStartActivity</string>
+    <string name="txtEmail">Email</string>
+    <string name="txtLogin">Login</string>
+    <string name="txtPasw">Contraseña</string>
+    <string name="txtSign">Registrate</string>
     <string name="welcome">"Welcome !"</string>
     <style name="SplashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_start</item>
