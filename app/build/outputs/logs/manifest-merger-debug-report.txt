@@ -144,8 +144,6 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Franky\.gradle\cac
 		ADDED from C:\Users\Franky\AndroidStudioProjects\F1Bets\app\src\main\AndroidManifest.xml:10:9-41
 	android:fullBackupContent
 		ADDED from C:\Users\Franky\AndroidStudioProjects\F1Bets\app\src\main\AndroidManifest.xml:8:9-54
-	android:roundIcon
-		ADDED from C:\Users\Franky\AndroidStudioProjects\F1Bets\app\src\main\AndroidManifest.xml:11:9-54
 	tools:targetApi
 		ADDED from C:\Users\Franky\AndroidStudioProjects\F1Bets\app\src\main\AndroidManifest.xml:14:9-29
 	android:icon

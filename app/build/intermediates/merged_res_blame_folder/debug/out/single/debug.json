@@ -1,35 +1,27 @@
 [
     {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
         "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.f1bets.app-merged_res-54:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.example.f1bets.app-debug-55:/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\layout\\activity_main.xml"
+        "merged": "com.example.f1bets.app-merged_res-54:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.f1bets.app-debug-55:/mipmap-xxhdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\drawable_ic_menu_camera.xml.flat",
-        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\drawable\\ic_menu_camera.xml"
-    },
-    {
-        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\layout_fragment_second.xml.flat",
-        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\layout\\fragment_second.xml"
+        "merged": "com.example.f1bets.app-merged_res-54:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.example.f1bets.app-debug-55:/mipmap-hdpi/ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
-        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-xxhdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\layout_activity_start.xml.flat",
-        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\layout\\activity_start.xml"
     },
     {
         "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\layout_fragment_gallery.xml.flat",
@@ -40,18 +32,6 @@
         "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\layout_nav_header_main.xml.flat",
-        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\layout\\nav_header_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\xml\\data_extraction_rules.xml"
-    },
-    {
-        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\drawable-v24\\ic_launcher_foreground.xml"
-    },
-    {
         "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\drawable_logo.png.flat",
         "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\drawable\\logo.png"
     },
@@ -60,36 +40,44 @@
         "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\drawable\\ic_menu_gallery.xml"
     },
     {
-        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "com.example.f1bets.app-merged_res-54:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.f1bets.app-debug-55:/mipmap-mdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\drawable_ic_menu_slideshow.xml.flat",
         "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\drawable\\ic_menu_slideshow.xml"
     },
     {
-        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\layout_fragment_slideshow.xml.flat",
-        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\layout\\fragment_slideshow.xml"
-    },
-    {
-        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\xml\\backup_rules.xml"
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\layout_app_bar_main.xml.flat",
         "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\layout\\app_bar_main.xml"
     },
     {
-        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\drawable-v24_logo1.png.flat",
-        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\drawable-v24\\logo1.png"
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-hdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\layout_fragment_home.xml.flat",
-        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\layout\\fragment_home.xml"
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.f1bets.app-merged_res-54:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.f1bets.app-debug-55:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.f1bets.app-merged_res-54:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.f1bets.app-debug-55:/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -120,16 +108,156 @@
         "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\layout\\fragment_first.xml"
     },
     {
-        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-xhdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\layout_content_main.xml.flat",
         "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\layout\\content_main.xml"
     },
     {
-        "merged": "com.example.f1bets.app-merged_res-54:/layout_activity_start.xml.flat",
-        "source": "com.example.f1bets.app-main-56:/layout/activity_start.xml"
+        "merged": "com.example.f1bets.app-merged_res-54:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.f1bets.app-debug-55:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.f1bets.app-merged_res-54:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.example.f1bets.app-debug-55:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.f1bets.app-merged_res-54:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.f1bets.app-debug-55:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\layout_fragment_second.xml.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\layout\\fragment_second.xml"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\drawable_ic_menu_camera.xml.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\drawable\\ic_menu_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\layout_activity_start.xml.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\layout\\activity_start.xml"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\layout_nav_header_main.xml.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\layout\\nav_header_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.f1bets.app-merged_res-54:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.example.f1bets.app-debug-55:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.f1bets.app-merged_res-54:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.f1bets.app-debug-55:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.f1bets.app-merged_res-54:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.example.f1bets.app-debug-55:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\layout_fragment_slideshow.xml.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\layout\\fragment_slideshow.xml"
+    },
+    {
+        "merged": "com.example.f1bets.app-merged_res-54:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.example.f1bets.app-debug-55:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\drawable-v24_logo1.png.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\drawable-v24\\logo1.png"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.f1bets.app-merged_res-54:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.example.f1bets.app-debug-55:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.f1bets.app-merged_res-54:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.f1bets.app-debug-55:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.f1bets.app-merged_res-54:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.f1bets.app-debug-55:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
         "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\drawable_side_nav_bar.xml.flat",
@@ -140,15 +268,11 @@
         "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\navigation\\nav_graph.xml"
     },
     {
-        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\mipmap-xhdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\menu_main.xml.flat",
         "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\menu\\main.xml"
     },
     {
-        "merged": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-merged_res-54:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Franky\\.gradle\\daemon\\7.4\\com.example.f1bets.app-main-56:\\drawable\\ic_launcher_background.xml"
+        "merged": "com.example.f1bets.app-merged_res-54:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.f1bets.app-debug-55:/mipmap-xhdpi/ic_launcher_foreground.png"
     }
 ]

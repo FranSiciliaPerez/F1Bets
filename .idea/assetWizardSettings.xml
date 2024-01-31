@@ -8,17 +8,6 @@
             <PersistentState>
               <option name="children">
                 <map>
-                  <entry key="confirmationStep">
-                    <value>
-                      <PersistentState>
-                        <option name="values">
-                          <map>
-                            <entry key="resourceDirectory" value="main" />
-                          </map>
-                        </option>
-                      </PersistentState>
-                    </value>
-                  </entry>
                   <entry key="imageAssetPanel">
                     <value>
                       <PersistentState>
@@ -124,7 +113,7 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="ffffff" />
+                                      <entry key="backgroundColor" value="fffefe" />
                                     </map>
                                   </option>
                                 </PersistentState>
