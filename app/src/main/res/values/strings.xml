@@ -32,4 +32,11 @@
     <string name="txtSign">Registrate</string>
     <string name="txtPasw">Contraseña</string>
     <string name="txtEmail">Email</string>
+    <string name="errLog">Login failed</string>
+    <string name="errSign">Registration failed</string>
+    <string name="errEmail">Incorrect email</string>
+    <string name="errPasw">Incorrect password</string>
+    <string name="succesLog">Logged</string>
+    <string name="txtCancel">Canceled</string>
+    <string name="errEmpty">Error: Campos vacios</string>
 </resources>

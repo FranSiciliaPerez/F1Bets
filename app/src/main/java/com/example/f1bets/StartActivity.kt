@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.activity.result.contract.ActivityResultContracts
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.FirebaseApp
@@ -19,6 +20,7 @@ class StartActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         val btnLogin: Button = findViewById(R.id.btnLogin)
+        val btnSingUp: Button = findViewById(R.id.btnSingUp)
         val emailEditText: TextInputEditText = findViewById(R.id.email)
         val passwordEditText: TextInputEditText = findViewById(R.id.password)
 
@@ -27,6 +29,10 @@ class StartActivity : AppCompatActivity() {
             val password = passwordEditText.text.toString()
 
             signIn(email, password)
+        }
+        btnSingUp.setOnClickListener {
+            val i = Intent(this@StartActivity, SignUpActivity::class.java)
+            startActivity(i)
         }
     }
 
