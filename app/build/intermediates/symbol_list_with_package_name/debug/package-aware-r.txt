@@ -3298,6 +3298,7 @@ id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
 id btnLogin
+id btnRegister
 id btnSingUp
 id buttonPanel
 id button_first
@@ -3705,6 +3706,9 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id txtConfPas
+id txtEmail
+id txtPassword
 id unchecked
 id uniform
 id unlabeled
@@ -3846,6 +3850,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_sign_up
 layout activity_start
 layout app_bar_main
 layout browser_actions_context_menu_page
@@ -4015,6 +4020,11 @@ string common_signin_button_text
 string common_signin_button_text_long
 string copy_toast_msg
 string dest_title
+string errEmail
+string errEmpty
+string errLog
+string errPasw
+string errSign
 string error_a11y_label
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
@@ -4165,8 +4175,10 @@ string second_fragment_label
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
+string succesLog
 string title_activity_login
 string title_activity_splash_start
+string txtCancel
 string txtEmail
 string txtLogin
 string txtPasw

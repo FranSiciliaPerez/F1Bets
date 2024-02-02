@@ -17,6 +17,11 @@
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="app_name">F1Bets</string>
+    <string name="errEmail">Incorrect email</string>
+    <string name="errEmpty">Error: Campos vacios</string>
+    <string name="errLog">Login failed</string>
+    <string name="errPasw">Incorrect password</string>
+    <string name="errSign">Registration failed</string>
     <string name="first_fragment_label">First Fragment</string>
     <string name="gcm_defaultSenderId" translatable="false">996516886382</string>
     <string name="google_api_key" translatable="false">AIzaSyBodgvbhhfhyeLig4WW3Qfn3w0hrXEkd3I</string>
@@ -42,8 +47,10 @@
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="second_fragment_label">Second Fragment</string>
+    <string name="succesLog">Logged</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_splash_start">SplashStartActivity</string>
+    <string name="txtCancel">Canceled</string>
     <string name="txtEmail">Email</string>
     <string name="txtLogin">Login</string>
     <string name="txtPasw">Contraseña</string>

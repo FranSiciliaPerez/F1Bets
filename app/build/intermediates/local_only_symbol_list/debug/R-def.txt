@@ -28,6 +28,7 @@ id action_SecondFragment_to_FirstFragment
 id action_settings
 id app_bar_main
 id btnLogin
+id btnRegister
 id btnSingUp
 id button_first
 id button_second
@@ -50,7 +51,11 @@ id text_slideshow
 id textview_first
 id textview_second
 id toolbar
+id txtConfPas
+id txtEmail
+id txtPassword
 layout activity_main
+layout activity_sign_up
 layout activity_start
 layout app_bar_main
 layout content_main
@@ -71,6 +76,11 @@ string action_settings
 string action_sign_in
 string action_sign_in_short
 string app_name
+string errEmail
+string errEmpty
+string errLog
+string errPasw
+string errSign
 string first_fragment_label
 string gcm_defaultSenderId
 string google_api_key
@@ -96,8 +106,10 @@ string project_id
 string prompt_email
 string prompt_password
 string second_fragment_label
+string succesLog
 string title_activity_login
 string title_activity_splash_start
+string txtCancel
 string txtEmail
 string txtLogin
 string txtPasw

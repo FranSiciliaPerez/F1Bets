@@ -30,6 +30,13 @@
         android:testOnly="true"
         android:theme="@style/Theme.F1Bets" >
         <activity
+            android:name="com.example.f1bets.SignUpActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name="com.example.f1bets.MainActivity"
             android:exported="false"
             android:theme="@style/Theme.F1Bets.NoActionBar" >
