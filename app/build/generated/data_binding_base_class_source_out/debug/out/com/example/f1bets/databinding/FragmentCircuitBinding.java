@@ -20,12 +20,12 @@ public final class FragmentCircuitBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView textSlideshow;
+  public final TextView txtCircuito;
 
   private FragmentCircuitBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView textSlideshow) {
+      @NonNull TextView txtCircuito) {
     this.rootView = rootView;
-    this.textSlideshow = textSlideshow;
+    this.txtCircuito = txtCircuito;
   }
 
   @Override
@@ -55,13 +55,13 @@ public final class FragmentCircuitBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.text_slideshow;
-      TextView textSlideshow = ViewBindings.findChildViewById(rootView, id);
-      if (textSlideshow == null) {
+      id = R.id.txtCircuito;
+      TextView txtCircuito = ViewBindings.findChildViewById(rootView, id);
+      if (txtCircuito == null) {
         break missingId;
       }
 
-      return new FragmentCircuitBinding((ConstraintLayout) rootView, textSlideshow);
+      return new FragmentCircuitBinding((ConstraintLayout) rootView, txtCircuito);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

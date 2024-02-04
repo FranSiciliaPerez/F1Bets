@@ -3513,9 +3513,11 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id nav_Bets
 id nav_Circuits
 id nav_Drivers
 id nav_Home
+id nav_User
 id nav_controller_view_tag
 id nav_host_fragment_container
 id nav_host_fragment_content_main
@@ -3702,6 +3704,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id txtCircuito
 id txtConfPas
 id txtEmail
 id txtPassword
@@ -3868,9 +3871,11 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_bet
 layout fragment_circuit
 layout fragment_driver
 layout fragment_home
+layout fragment_user
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout m3_alert_dialog
@@ -4032,6 +4037,7 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string hello_blank_fragment
 string hello_first_fragment
 string hello_second_fragment
 string hide_bottom_view_on_scroll_behavior

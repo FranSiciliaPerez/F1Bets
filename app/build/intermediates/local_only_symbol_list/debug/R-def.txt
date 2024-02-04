@@ -36,9 +36,11 @@ id email
 id fab
 id imageView
 id mobile_navigation
+id nav_Bets
 id nav_Circuits
 id nav_Drivers
 id nav_Home
+id nav_User
 id nav_host_fragment_content_main
 id nav_view
 id password
@@ -47,6 +49,7 @@ id text_gallery
 id text_home
 id text_slideshow
 id toolbar
+id txtCircuito
 id txtConfPas
 id txtEmail
 id txtPassword
@@ -55,9 +58,11 @@ layout activity_sign_up
 layout activity_start
 layout app_bar_main
 layout content_main
+layout fragment_bet
 layout fragment_circuit
 layout fragment_driver
 layout fragment_home
+layout fragment_user
 layout nav_header_main
 menu activity_main_drawer
 menu main
@@ -80,6 +85,7 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string hello_blank_fragment
 string hello_first_fragment
 string hello_second_fragment
 string invalid_password

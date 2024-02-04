@@ -18,6 +18,19 @@
             android:id="@+id/nav_Drivers"
             android:icon="@drawable/ic_baseline_drive_eta_24"
             android:title="Drivers"/>
+        <item
+            android:id="@+id/nav_Bets"
+            android:icon="@drawable/ic_baseline_calendar_month_24"
+            android:title="Bets"/>
+
+        <item android:title="Profile">
+        <menu>
+        <item
+            android:id="@+id/nav_User"
+            android:icon="@drawable/ic_baseline_account_box_24"
+            android:title="User"/>
+        </menu>
+        </item>
 
     </group>
 </menu>

@@ -10,7 +10,7 @@ class SplashStartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
          FirebaseApp.initializeApp(this);
          startActivity(Intent(this, StartActivity::class.java))
-        finish()//para evitar que pulsando el boton de atrás buelva a verse el splash
+        finish()// Evita que pulsando el botón de atrás aparezca otra vez el splash
     }
 
 

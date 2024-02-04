@@ -12,11 +12,21 @@
     <fragment
         android:id="@+id/nav_Circuits"
         android:name="com.example.f1bets.ui.circuit.CircuitFragment"
-        android:label="Circuit"
+        android:label="Circuits"
         tools:layout="@layout/fragment_circuit" />
     <fragment
         android:id="@+id/nav_Drivers"
         android:name="com.example.f1bets.ui.driver.DriverFragment"
         android:label="Drivers"
         tools:layout="@layout/fragment_driver" />
+    <fragment
+        android:id="@+id/nav_Bets"
+        android:name="com.example.f1bets.ui.bet.BetFragment"
+        android:label="Bets"
+        tools:layout="@layout/fragment_bet" />
+    <fragment
+        android:id="@+id/nav_User"
+        android:name="com.example.f1bets.ui.profile.UserFragment"
+        android:label="User"
+        tools:layout="@layout/fragment_user" />
 </navigation>

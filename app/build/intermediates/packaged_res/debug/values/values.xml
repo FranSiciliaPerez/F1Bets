@@ -28,6 +28,7 @@
     <string name="google_app_id" translatable="false">1:996516886382:android:62c0a5cace3c8a6986337f</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBodgvbhhfhyeLig4WW3Qfn3w0hrXEkd3I</string>
     <string name="google_storage_bucket" translatable="false">f1bets-74760.appspot.com</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="invalid_password">Password must be >5 characters</string>
