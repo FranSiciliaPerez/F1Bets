@@ -28,9 +28,11 @@ drawable side_nav_bar
 drawable splash_start
 id action_settings
 id app_bar_main
+id btnLogOut
 id btnLogin
 id btnRegister
 id btnSingUp
+id currentUser
 id drawer_layout
 id email
 id fab
@@ -85,7 +87,6 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
-string hello_blank_fragment
 string hello_first_fragment
 string hello_second_fragment
 string invalid_password
@@ -110,9 +111,12 @@ string title_activity_login
 string title_activity_splash_start
 string txtCancel
 string txtEmail
+string txtLogOut
 string txtLogin
+string txtNo
 string txtPasw
 string txtSign
+string txtYes
 string welcome
 style SplashTheme
 style Theme.F1Bets

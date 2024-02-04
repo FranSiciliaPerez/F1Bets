@@ -11,13 +11,13 @@ import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 
 class StartActivity : AppCompatActivity() {
-    private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
-        firebaseAuth = FirebaseAuth.getInstance()
+        auth = FirebaseAuth.getInstance()
 
         val btnLogin: Button = findViewById(R.id.btnLogin)
         val btnSingUp: Button = findViewById(R.id.btnSingUp)
@@ -35,9 +35,18 @@ class StartActivity : AppCompatActivity() {
             startActivity(i)
         }
     }
+    override fun onStart(){
+        auth = FirebaseAuth.getInstance()
+        val loggedUser = auth.currentUser
+        if(loggedUser != null){
+            val i = Intent(this@StartActivity, MainActivity::class.java)
+            startActivity(i)
+        }
+        super.onStart()
+    }
 
     private fun signIn(email: String, password: String) {
-        firebaseAuth.signInWithEmailAndPassword(email, password)
+        auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Autenticación exitosa, redirige a MainActivity

@@ -39,4 +39,7 @@
     <string name="succesLog">Logged</string>
     <string name="txtCancel">Canceled</string>
     <string name="errEmpty">Error: Campos vacios</string>
+    <string name="txtLogOut">Estas seguro de querer cerrar sesión</string>
+    <string name="txtNo">No</string>
+    <string name="txtYes">Si</string>
 </resources>

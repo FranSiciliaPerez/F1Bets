@@ -33,9 +33,7 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
-        /*navController.addOnDestinationChangedListener { _, destination, _ ->
-            println("Current Destination: ${destination.label}, ID: ${destination.id}")
-        }*/
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(

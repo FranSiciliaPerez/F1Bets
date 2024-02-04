@@ -3297,6 +3297,7 @@ int id browser_actions_menu_item_icon 0x7f080068
 int id browser_actions_menu_item_text 0x7f080069
 int id browser_actions_menu_items 0x7f08006a
 int id browser_actions_menu_view 0x7f08006b
+int id btnLogOut 0x7f08021e
 int id btnLogin 0x7f08006c
 int id btnRegister 0x7f08006d
 int id btnSingUp 0x7f08006e
@@ -3336,6 +3337,7 @@ int id cos 0x7f08008f
 int id counterclockwise 0x7f080090
 int id cradle 0x7f080091
 int id currentState 0x7f080092
+int id currentUser 0x7f08021f
 int id custom 0x7f080093
 int id customPanel 0x7f080094
 int id cut 0x7f080095
@@ -4036,7 +4038,6 @@ int string google_api_key 0x7f120055
 int string google_app_id 0x7f120056
 int string google_crash_reporting_api_key 0x7f120057
 int string google_storage_bucket 0x7f120058
-int string hello_blank_fragment 0x7f1200ea
 int string hello_first_fragment 0x7f120059
 int string hello_second_fragment 0x7f12005a
 int string hide_bottom_view_on_scroll_behavior 0x7f12005b
@@ -4178,9 +4179,12 @@ int string title_activity_login 0x7f1200e2
 int string title_activity_splash_start 0x7f1200e3
 int string txtCancel 0x7f1200e4
 int string txtEmail 0x7f1200e5
+int string txtLogOut 0x7f1200eb
 int string txtLogin 0x7f1200e6
+int string txtNo 0x7f1200ec
 int string txtPasw 0x7f1200e7
 int string txtSign 0x7f1200e8
+int string txtYes 0x7f1200ed
 int string welcome 0x7f1200e9
 int style AlertDialog_AppCompat 0x7f130000
 int style AlertDialog_AppCompat_Light 0x7f130001

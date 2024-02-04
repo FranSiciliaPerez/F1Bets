@@ -3298,6 +3298,7 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btnLogOut
 id btnLogin
 id btnRegister
 id btnSingUp
@@ -3337,6 +3338,7 @@ id cos
 id counterclockwise
 id cradle
 id currentState
+id currentUser
 id custom
 id customPanel
 id cut
@@ -4037,7 +4039,6 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
-string hello_blank_fragment
 string hello_first_fragment
 string hello_second_fragment
 string hide_bottom_view_on_scroll_behavior
@@ -4179,9 +4180,12 @@ string title_activity_login
 string title_activity_splash_start
 string txtCancel
 string txtEmail
+string txtLogOut
 string txtLogin
+string txtNo
 string txtPasw
 string txtSign
+string txtYes
 string welcome
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
