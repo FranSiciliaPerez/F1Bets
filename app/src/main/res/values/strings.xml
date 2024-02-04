@@ -32,6 +32,7 @@
     <string name="txtSign">Registrate</string>
     <string name="txtPasw">Contraseña</string>
     <string name="txtEmail">Email</string>
+    <string name="txtUser">Usuario</string>
     <string name="errLog">Login failed</string>
     <string name="errSign">Registration failed</string>
     <string name="errEmail">Incorrect email</string>
@@ -42,4 +43,7 @@
     <string name="txtLogOut">Estas seguro de querer cerrar sesión</string>
     <string name="txtNo">No</string>
     <string name="txtYes">Si</string>
+    <string name="btnCheck">Acepto los términos y condiciones</string>
+    <string name="txtSignUp">Regístrate</string>
+    <string name="msgCheckError">Debes aceptar las cookies</string>
 </resources>

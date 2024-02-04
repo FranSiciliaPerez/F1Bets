@@ -5,46 +5,76 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.f1bets.R;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivitySignUpBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button btnRegister;
+  public final Button btnSignUp;
 
   @NonNull
-  public final TextInputEditText txtConfPas;
+  public final CheckBox checkBox;
 
   @NonNull
-  public final TextInputEditText txtEmail;
+  public final EditText textEmail;
 
   @NonNull
-  public final TextInputEditText txtPassword;
+  public final TextView textTitle;
 
-  private ActivitySignUpBinding(@NonNull LinearLayout rootView, @NonNull Button btnRegister,
-      @NonNull TextInputEditText txtConfPas, @NonNull TextInputEditText txtEmail,
-      @NonNull TextInputEditText txtPassword) {
+  @NonNull
+  public final TextView textTitleEmail;
+
+  @NonNull
+  public final EditText textUser;
+
+  @NonNull
+  public final TextInputLayout txtPassword;
+
+  @NonNull
+  public final TextInputEditText txtPassword2;
+
+  @NonNull
+  public final TextView txtTitlePassword;
+
+  @NonNull
+  public final TextView txtTitleUser;
+
+  private ActivitySignUpBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnSignUp,
+      @NonNull CheckBox checkBox, @NonNull EditText textEmail, @NonNull TextView textTitle,
+      @NonNull TextView textTitleEmail, @NonNull EditText textUser,
+      @NonNull TextInputLayout txtPassword, @NonNull TextInputEditText txtPassword2,
+      @NonNull TextView txtTitlePassword, @NonNull TextView txtTitleUser) {
     this.rootView = rootView;
-    this.btnRegister = btnRegister;
-    this.txtConfPas = txtConfPas;
-    this.txtEmail = txtEmail;
+    this.btnSignUp = btnSignUp;
+    this.checkBox = checkBox;
+    this.textEmail = textEmail;
+    this.textTitle = textTitle;
+    this.textTitleEmail = textTitleEmail;
+    this.textUser = textUser;
     this.txtPassword = txtPassword;
+    this.txtPassword2 = txtPassword2;
+    this.txtTitlePassword = txtTitlePassword;
+    this.txtTitleUser = txtTitleUser;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -69,32 +99,69 @@ public final class ActivitySignUpBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btnRegister;
-      Button btnRegister = ViewBindings.findChildViewById(rootView, id);
-      if (btnRegister == null) {
+      id = R.id.btnSignUp;
+      Button btnSignUp = ViewBindings.findChildViewById(rootView, id);
+      if (btnSignUp == null) {
         break missingId;
       }
 
-      id = R.id.txtConfPas;
-      TextInputEditText txtConfPas = ViewBindings.findChildViewById(rootView, id);
-      if (txtConfPas == null) {
+      id = R.id.checkBox;
+      CheckBox checkBox = ViewBindings.findChildViewById(rootView, id);
+      if (checkBox == null) {
         break missingId;
       }
 
-      id = R.id.txtEmail;
-      TextInputEditText txtEmail = ViewBindings.findChildViewById(rootView, id);
-      if (txtEmail == null) {
+      id = R.id.textEmail;
+      EditText textEmail = ViewBindings.findChildViewById(rootView, id);
+      if (textEmail == null) {
+        break missingId;
+      }
+
+      id = R.id.textTitle;
+      TextView textTitle = ViewBindings.findChildViewById(rootView, id);
+      if (textTitle == null) {
+        break missingId;
+      }
+
+      id = R.id.textTitleEmail;
+      TextView textTitleEmail = ViewBindings.findChildViewById(rootView, id);
+      if (textTitleEmail == null) {
+        break missingId;
+      }
+
+      id = R.id.textUser;
+      EditText textUser = ViewBindings.findChildViewById(rootView, id);
+      if (textUser == null) {
         break missingId;
       }
 
       id = R.id.txtPassword;
-      TextInputEditText txtPassword = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout txtPassword = ViewBindings.findChildViewById(rootView, id);
       if (txtPassword == null) {
         break missingId;
       }
 
-      return new ActivitySignUpBinding((LinearLayout) rootView, btnRegister, txtConfPas, txtEmail,
-          txtPassword);
+      id = R.id.txtPassword2;
+      TextInputEditText txtPassword2 = ViewBindings.findChildViewById(rootView, id);
+      if (txtPassword2 == null) {
+        break missingId;
+      }
+
+      id = R.id.txtTitlePassword;
+      TextView txtTitlePassword = ViewBindings.findChildViewById(rootView, id);
+      if (txtTitlePassword == null) {
+        break missingId;
+      }
+
+      id = R.id.txtTitleUser;
+      TextView txtTitleUser = ViewBindings.findChildViewById(rootView, id);
+      if (txtTitleUser == null) {
+        break missingId;
+      }
+
+      return new ActivitySignUpBinding((ConstraintLayout) rootView, btnSignUp, checkBox, textEmail,
+          textTitle, textTitleEmail, textUser, txtPassword, txtPassword2, txtTitlePassword,
+          txtTitleUser);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

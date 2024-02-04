@@ -20,31 +20,33 @@ class SignUpActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         with(binding) {
-            btnRegister.setOnClickListener {
-                val email = binding.txtEmail.text.toString()
-                val pass = binding.txtPassword.text.toString()
-                val confirmPass = binding.txtConfPas.text.toString()
+            btnSignUp.setOnClickListener {
+                val user = binding.textUser.text.toString()
+                val email = binding.textEmail.text.toString()
+                val password = binding.txtPassword2.text.toString()
 
-                if (email.isNotEmpty() && pass.isNotEmpty() && confirmPass.isNotEmpty()) {
-                    if (pass == confirmPass) {
-
-                        firebaseAuth.createUserWithEmailAndPassword(email, pass)
-                            .addOnCompleteListener {
-                                if (it.isSuccessful) {
+                // Comprobamos si todos los campos tienen información llamando a la clase funciones
+                if (Funciones.allFilled(user, email, password)) {
+                    if (checkBox.isChecked){
+                        firebaseAuth
+                            .createUserWithEmailAndPassword(email, password)
+                            .addOnSuccessListener {
                                     // If login is successful, redirect to the main activity
                                     val i = Intent(this@SignUpActivity, MainActivity::class.java)
                                     i.putExtra((R.string.succesLog.toString()), (R.string.succesLog.toString()))
                                     startActivity(i)
                                     finish()
-                                } else {
-                                    Snackbar.make(root, R.string.errEmail, Snackbar.LENGTH_LONG).show()
-
                                 }
+                            .addOnFailureListener{
+                                Snackbar.make(root, R.string.errEmail, Snackbar.LENGTH_LONG).show()
                             }
                     } else {
-                        Snackbar.make(root, R.string.errPasw, Snackbar.LENGTH_LONG).show()
+                        // Comprobamos si está marcado o no el checkBox para continuar ya que es obligatorio
+                        Snackbar.make(root, R.string.msgCheckError, Snackbar.LENGTH_LONG)
+                            .show()
                     }
                 } else {
+                    // Algún campo está vacío: mostramos error
                     Snackbar.make(root, R.string.errEmpty, Snackbar.LENGTH_LONG).show()
                 }
             }
