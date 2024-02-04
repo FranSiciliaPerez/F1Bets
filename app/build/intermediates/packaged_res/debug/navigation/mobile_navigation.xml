@@ -3,23 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
-
+    app:startDestination="@id/nav_Home">
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/nav_Home"
         android:name="com.example.f1bets.ui.home.HomeFragment"
-        android:label="@string/menu_home"
+        android:label="Home"
         tools:layout="@layout/fragment_home" />
-
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.f1bets.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
+        android:id="@+id/nav_Circuits"
+        android:name="com.example.f1bets.ui.circuit.CircuitFragment"
+        android:label="Circuit"
+        tools:layout="@layout/fragment_circuit" />
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.f1bets.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_Drivers"
+        android:name="com.example.f1bets.ui.driver.DriverFragment"
+        android:label="Drivers"
+        tools:layout="@layout/fragment_driver" />
 </navigation>

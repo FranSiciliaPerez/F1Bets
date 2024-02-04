@@ -3085,6 +3085,11 @@ drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_arrow_back_black_24
+drawable ic_baseline_account_box_24
+drawable ic_baseline_calendar_month_24
+drawable ic_baseline_drive_eta_24
+drawable ic_baseline_home_24
+drawable ic_baseline_stadium_24
 drawable ic_call_answer
 drawable ic_call_answer_low
 drawable ic_call_answer_video
@@ -3190,7 +3195,6 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
-id FirstFragment
 id META
 id NO_DEBUG
 id SHIFT
@@ -3198,7 +3202,6 @@ id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
-id SecondFragment
 id TOP_END
 id TOP_START
 id accelerate
@@ -3238,8 +3241,6 @@ id accessibility_custom_action_9
 id actionDown
 id actionDownUp
 id actionUp
-id action_FirstFragment_to_SecondFragment
-id action_SecondFragment_to_FirstFragment
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -3301,8 +3302,6 @@ id btnLogin
 id btnRegister
 id btnSingUp
 id buttonPanel
-id button_first
-id button_second
 id cache_measures
 id callMeasure
 id cancel_button
@@ -3514,13 +3513,12 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id nav_Circuits
+id nav_Drivers
+id nav_Home
 id nav_controller_view_tag
-id nav_gallery
-id nav_graph
-id nav_home
 id nav_host_fragment_container
 id nav_host_fragment_content_main
-id nav_slideshow
 id nav_view
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
@@ -3687,8 +3685,6 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
-id textview_first
-id textview_second
 id time
 id title
 id titleDividerNoCustom
@@ -3872,11 +3868,9 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout fragment_first
-layout fragment_gallery
+layout fragment_circuit
+layout fragment_driver
 layout fragment_home
-layout fragment_second
-layout fragment_slideshow
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout m3_alert_dialog
@@ -3947,7 +3941,6 @@ mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 navigation mobile_navigation
-navigation nav_graph
 plurals mtrl_badge_content_description
 raw firebase_common_keep
 string abc_action_bar_home_description

@@ -1,12 +1,12 @@
-#Fri Feb 02 15:00:58 CET 2024
-path.4=3/classes.dex
+#Sun Feb 04 15:02:10 CET 2024
+path.4=4/classes.dex
 path.3=14/classes.dex
 path.2=11/classes.dex
 path.1=0/classes.dex
 path.6=classes2.dex
 path.5=9/classes.dex
 path.0=classes.dex
-base.4=C\:\\Users\\Franky\\AndroidStudioProjects\\F1Bets\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
+base.4=C\:\\Users\\Franky\\AndroidStudioProjects\\F1Bets\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
 base.3=C\:\\Users\\Franky\\AndroidStudioProjects\\F1Bets\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
 base.2=C\:\\Users\\Franky\\AndroidStudioProjects\\F1Bets\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
 base.1=C\:\\Users\\Franky\\AndroidStudioProjects\\F1Bets\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex

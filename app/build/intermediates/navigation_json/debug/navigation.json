@@ -3,10 +3,5 @@
     "name": "mobile_navigation",
     "navigationXmlIds": [],
     "deepLinks": []
-  },
-  {
-    "name": "nav_graph",
-    "navigationXmlIds": [],
-    "deepLinks": []
   }
 ]
