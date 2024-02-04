@@ -3184,6 +3184,7 @@ int drawable notification_template_icon_bg 0x7f0700fd
 int drawable notification_template_icon_low_bg 0x7f0700fe
 int drawable notification_tile_bg 0x7f0700ff
 int drawable notify_panel_notification_icon_bg 0x7f070100
+int drawable person_pic 0x7f070106
 int drawable side_nav_bar 0x7f070101
 int drawable splash_start 0x7f070102
 int drawable test_level_drawable 0x7f070103
@@ -3431,6 +3432,7 @@ int id ignore 0x7f0800ee
 int id ignoreRequest 0x7f0800ef
 int id image 0x7f0800f0
 int id imageView 0x7f0800f1
+int id imageViewContact 0x7f080226
 int id immediateStop 0x7f0800f2
 int id included 0x7f0800f3
 int id indeterminate 0x7f0800f4

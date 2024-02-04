@@ -59,8 +59,8 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.7.1'
     implementation 'androidx.room:room-common:2.6.1'
 
-    // Imagen circular
-    //implementation 'de.hodenhof:circleimageview:3.1.0'
+    // Imagen circular ->  da incompatibilidad por ahora
+     //implementation 'de.hodenhof:circleimageview:3.1.0'
 
     // Firebase
     implementation platform('com.google.firebase:firebase-bom:31.3.0')

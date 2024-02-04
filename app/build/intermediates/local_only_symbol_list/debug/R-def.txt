@@ -24,6 +24,7 @@ drawable ic_menu_camera
 drawable ic_menu_gallery
 drawable ic_menu_slideshow
 drawable logo
+drawable person_pic
 drawable side_nav_bar
 drawable splash_start
 id action_settings
@@ -38,6 +39,7 @@ id drawer_layout
 id email
 id fab
 id imageView
+id imageViewContact
 id mobile_navigation
 id nav_Bets
 id nav_Circuits

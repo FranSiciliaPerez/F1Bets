@@ -3185,6 +3185,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable person_pic
 drawable side_nav_bar
 drawable splash_start
 drawable test_level_drawable
@@ -3432,6 +3433,7 @@ id ignore
 id ignoreRequest
 id image
 id imageView
+id imageViewContact
 id immediateStop
 id included
 id indeterminate

@@ -14,6 +14,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.f1bets.R;
+import com.google.android.material.imageview.ShapeableImageView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
@@ -29,6 +30,9 @@ public final class ActivitySignUpBinding implements ViewBinding {
 
   @NonNull
   public final CheckBox checkBox;
+
+  @NonNull
+  public final ShapeableImageView imageViewContact;
 
   @NonNull
   public final EditText textEmail;
@@ -55,13 +59,15 @@ public final class ActivitySignUpBinding implements ViewBinding {
   public final TextView txtTitleUser;
 
   private ActivitySignUpBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnSignUp,
-      @NonNull CheckBox checkBox, @NonNull EditText textEmail, @NonNull TextView textTitle,
-      @NonNull TextView textTitleEmail, @NonNull EditText textUser,
-      @NonNull TextInputLayout txtPassword, @NonNull TextInputEditText txtPassword2,
-      @NonNull TextView txtTitlePassword, @NonNull TextView txtTitleUser) {
+      @NonNull CheckBox checkBox, @NonNull ShapeableImageView imageViewContact,
+      @NonNull EditText textEmail, @NonNull TextView textTitle, @NonNull TextView textTitleEmail,
+      @NonNull EditText textUser, @NonNull TextInputLayout txtPassword,
+      @NonNull TextInputEditText txtPassword2, @NonNull TextView txtTitlePassword,
+      @NonNull TextView txtTitleUser) {
     this.rootView = rootView;
     this.btnSignUp = btnSignUp;
     this.checkBox = checkBox;
+    this.imageViewContact = imageViewContact;
     this.textEmail = textEmail;
     this.textTitle = textTitle;
     this.textTitleEmail = textTitleEmail;
@@ -108,6 +114,12 @@ public final class ActivitySignUpBinding implements ViewBinding {
       id = R.id.checkBox;
       CheckBox checkBox = ViewBindings.findChildViewById(rootView, id);
       if (checkBox == null) {
+        break missingId;
+      }
+
+      id = R.id.imageViewContact;
+      ShapeableImageView imageViewContact = ViewBindings.findChildViewById(rootView, id);
+      if (imageViewContact == null) {
         break missingId;
       }
 
@@ -159,9 +171,9 @@ public final class ActivitySignUpBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivitySignUpBinding((ConstraintLayout) rootView, btnSignUp, checkBox, textEmail,
-          textTitle, textTitleEmail, textUser, txtPassword, txtPassword2, txtTitlePassword,
-          txtTitleUser);
+      return new ActivitySignUpBinding((ConstraintLayout) rootView, btnSignUp, checkBox,
+          imageViewContact, textEmail, textTitle, textTitleEmail, textUser, txtPassword,
+          txtPassword2, txtTitlePassword, txtTitleUser);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

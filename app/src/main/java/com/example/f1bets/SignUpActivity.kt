@@ -1,15 +1,21 @@
 package com.example.f1bets
 
 import android.content.Intent
+import android.media.Image
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.f1bets.databinding.ActivitySignUpBinding
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 
 class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
     private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var storageReference: StorageReference
+    private var imageUri: Uri? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +37,7 @@ class SignUpActivity : AppCompatActivity() {
                         firebaseAuth
                             .createUserWithEmailAndPassword(email, password)
                             .addOnSuccessListener {
+                                    uploadPic()
                                     // If login is successful, redirect to the main activity
                                     val i = Intent(this@SignUpActivity, MainActivity::class.java)
                                     i.putExtra((R.string.succesLog.toString()), (R.string.succesLog.toString()))
@@ -51,5 +58,11 @@ class SignUpActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    private fun uploadPic() {
+            imageUri = Uri.parse("android.resource://$packageName/${R.drawable.person_pic}")
+        storageReference = FirebaseStorage.getInstance().getReference("Users/"+firebaseAuth.currentUser?.uid)
+
     }
 }
