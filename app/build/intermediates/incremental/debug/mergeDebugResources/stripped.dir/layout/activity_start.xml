@@ -8,6 +8,11 @@
     android:layout_height="match_parent"
     android:padding="15dp"
     tools:context=".StartActivity">
+  <ImageView
+      android:id="@+id/imageView2"
+      android:layout_width="305dp"
+      android:layout_height="129dp"
+      app:srcCompat="@drawable/logo" />
 
   <TextView
       android:text="@string/txtLogin"
@@ -64,5 +69,7 @@
         android:layout_weight="1"
         android:text="@string/txtSign" />
   </LinearLayout>
+
+
 
 </LinearLayout>

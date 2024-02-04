@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,15 +31,19 @@ public final class ActivityStartBinding implements ViewBinding {
   public final TextInputEditText email;
 
   @NonNull
+  public final ImageView imageView2;
+
+  @NonNull
   public final TextInputEditText password;
 
   private ActivityStartBinding(@NonNull LinearLayout rootView, @NonNull Button btnLogin,
-      @NonNull Button btnSingUp, @NonNull TextInputEditText email,
+      @NonNull Button btnSingUp, @NonNull TextInputEditText email, @NonNull ImageView imageView2,
       @NonNull TextInputEditText password) {
     this.rootView = rootView;
     this.btnLogin = btnLogin;
     this.btnSingUp = btnSingUp;
     this.email = email;
+    this.imageView2 = imageView2;
     this.password = password;
   }
 
@@ -87,6 +92,12 @@ public final class ActivityStartBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.imageView2;
+      ImageView imageView2 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView2 == null) {
+        break missingId;
+      }
+
       id = R.id.password;
       TextInputEditText password = ViewBindings.findChildViewById(rootView, id);
       if (password == null) {
@@ -94,7 +105,7 @@ public final class ActivityStartBinding implements ViewBinding {
       }
 
       return new ActivityStartBinding((LinearLayout) rootView, btnLogin, btnSingUp, email,
-          password);
+          imageView2, password);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

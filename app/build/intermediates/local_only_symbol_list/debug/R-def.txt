@@ -39,6 +39,7 @@ id drawer_layout
 id email
 id fab
 id imageView
+id imageView2
 id imageViewContact
 id mobile_navigation
 id nav_Bets
