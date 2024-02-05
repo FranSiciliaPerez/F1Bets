@@ -1,6 +1,7 @@
 package com.example.f1bets.entities
 
 data class User(
+    var uid: String,
     var userName: String,
     var email: String,
     var password: String,
