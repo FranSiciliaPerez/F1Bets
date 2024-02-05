@@ -15,8 +15,26 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.321" />
+
+    <Button
+        android:id="@+id/btnDeleteAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/currentUser"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="260dp"
+        android:text="@string/btnDeleteAccount"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentUser"
+        app:layout_constraintVertical_bias="0.983" />
 
     <Button
         android:id="@+id/btnLogOut"
@@ -24,10 +42,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/currentUser"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="260dp"
-        android:text="Cerrar Sesión"
+        android:layout_marginBottom="256dp"
+        android:text="@string/btnLogout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/currentUser" />
+        app:layout_constraintTop_toBottomOf="@+id/currentUser"
+        app:layout_constraintVertical_bias="0.585" />
 </androidx.constraintlayout.widget.ConstraintLayout>

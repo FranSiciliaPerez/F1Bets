@@ -35,9 +35,34 @@ class UserFragment : Fragment() {
     override fun onResume() {
 
         with(binding){
+            btnDeleteAccount.setOnClickListener { userDelete() }
             btnLogOut.setOnClickListener { showConfirmationDialog() }
         }
         super.onResume()
+    }
+
+
+
+    private fun userDelete(){
+        val user = Firebase.auth.currentUser!!
+        user.delete().addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                val dialogBuilder = MaterialAlertDialogBuilder(binding.root.context)
+                    .setTitle("F1Bets")
+                    .setMessage(getString(R.string.txtDeleteAccount))
+                    .setPositiveButton(getString(R.string.txtContinue)) { dialog, _ ->
+                        val i = Intent(requireActivity(), StartActivity::class.java)
+                        startActivity(i)
+                        auth.signOut()
+                        requireActivity().finish()
+                        dialog.dismiss()
+                    }
+                    .setNegativeButton(getString(R.string.txtCancel)) { dialog, _ ->
+                        dialog.dismiss()
+                    }
+                dialogBuilder.show()
+            }
+        }
     }
 
     private fun showConfirmationDialog() {
