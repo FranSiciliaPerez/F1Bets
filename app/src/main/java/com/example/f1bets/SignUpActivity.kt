@@ -9,7 +9,7 @@ import com.google.firebase.auth.FirebaseAuth
 
 class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
-    private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var auth: FirebaseAuth
     //private lateinit var db: FirebaseFirestore -> Próximamente
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +18,7 @@ class SignUpActivity : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        firebaseAuth = FirebaseAuth.getInstance()
+        auth = FirebaseAuth.getInstance()
 
         with(binding) {
             btnSignUp.setOnClickListener {
@@ -29,7 +29,7 @@ class SignUpActivity : AppCompatActivity() {
                 // Comprobamos si todos los campos tienen información llamando a la clase funciones
                 if (Funciones.allFilled(user, email, password)) {
                     if (checkBox.isChecked){
-                        firebaseAuth
+                        auth
                             .createUserWithEmailAndPassword(email, password)
                             .addOnSuccessListener { /*task ->*/
                                     // If login is successful, redirect to the main activity
