@@ -29,8 +29,26 @@ class UserFragment : Fragment() {
     ): View? {
         binding = FragmentUserBinding.inflate(inflater, container, false)
 
-        auth = Firebase.auth
+        auth = FirebaseAuth.getInstance()
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Verifica si hay un usuario autenticado
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            // Si hay un usuario autenticado accedes a la información
+            val userEmail = currentUser.email
+            //val userName = currentUser.userName
+
+            // Información del usuario
+            binding.textViewUserEmail.text = userEmail
+            //binding.textViewUserName.text = userName
+        } else {
+            binding.textViewUserEmail.text = "Usuario no autenticado"
+        }
     }
 
     override fun onResume() {

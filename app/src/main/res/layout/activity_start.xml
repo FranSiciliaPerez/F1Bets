@@ -25,7 +25,8 @@
 
   <com.google.android.material.textfield.TextInputLayout
       android:layout_width="match_parent"
-      android:layout_height="wrap_content">
+      android:layout_height="wrap_content"
+      app:boxBackgroundColor="@android:color/transparent">
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/email"
@@ -37,7 +38,9 @@
 
   <com.google.android.material.textfield.TextInputLayout
       android:layout_width="match_parent"
-      android:layout_height="wrap_content">
+      android:layout_height="wrap_content"
+      app:endIconMode="password_toggle"
+      app:boxBackgroundColor="@android:color/transparent">
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/password"

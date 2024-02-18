@@ -8,7 +8,20 @@
         android:id="@+id/nav_Home"
         android:name="com.example.f1bets.ui.home.HomeFragment"
         android:label="Home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_Home_to_nav_Drivers"
+            app:destination="@id/nav_Drivers" />
+        <action
+            android:id="@+id/action_nav_Home_to_nav_Circuits"
+            app:destination="@id/nav_Circuits" />
+        <action
+            android:id="@+id/action_nav_Home_to_nav_Bets"
+            app:destination="@id/nav_Bets" />
+        <action
+            android:id="@+id/action_nav_Home_to_nav_User"
+            app:destination="@id/nav_User" />
+    </fragment>
     <fragment
         android:id="@+id/nav_Circuits"
         android:name="com.example.f1bets.ui.circuit.CircuitFragment"
