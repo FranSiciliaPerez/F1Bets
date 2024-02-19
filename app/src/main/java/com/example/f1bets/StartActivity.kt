@@ -1,12 +1,11 @@
 package com.example.f1bets
 
+import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import com.example.f1bets.databinding.ActivityStartBinding
 import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 
 class StartActivity : AppCompatActivity() {
@@ -61,5 +60,24 @@ class StartActivity : AppCompatActivity() {
             startActivity(i)
         }
         super.onStart()
+    }
+    override fun onBackPressed() {
+        showExitConfirmationDialog()
+        super.onBackPressed()
+    }
+    private fun showExitConfirmationDialog() {
+        val alertDialog = AlertDialog.Builder(this)
+            .setTitle(R.string.app_name)
+            .setMessage(R.string.txtCloseApp)
+            .setPositiveButton(R.string.txtYes) { dialog, _ ->
+                dialog.dismiss()
+                finishAffinity() // Este método, cierra la actividad actual y todas las actividades asociadas a ella
+            }
+            .setNegativeButton(R.string.txtNo) { dialog, _ ->
+                dialog.dismiss()
+            }
+            .create()
+
+        alertDialog.show()
     }
 }
