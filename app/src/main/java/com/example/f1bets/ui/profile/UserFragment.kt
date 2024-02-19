@@ -63,32 +63,31 @@ class UserFragment : Fragment() {
 
 
 
-    private fun userDelete(){
-        val user = Firebase.auth.currentUser!!
-        if (user != null) {
-            user.delete().addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    val dialogBuilder = MaterialAlertDialogBuilder(binding.root.context)
-                        .setTitle(R.string.app_name)
-                        .setMessage(getString(R.string.txtDeleteAccount))
-                        .setPositiveButton(getString(R.string.txtContinue)) { dialog, _ ->
-                            val i = Intent(requireActivity(), StartActivity::class.java)
-                            startActivity(i)
-                            auth.signOut()
-                            requireActivity().finish()
-                            dialog.dismiss()
-                        }
-                        .setNegativeButton(getString(R.string.txtCancel)) { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                    dialogBuilder.show()
-                } else {
-                    Snackbar.make(binding.root, R.string.errDeleteAccount, Snackbar.LENGTH_LONG).show()
-                }
+    private fun userDelete() {
+        val user = Firebase.auth.currentUser
+        user?.delete()?.addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                val dialogBuilder = MaterialAlertDialogBuilder(binding.root.context)
+                    .setTitle(R.string.app_name)
+                    .setMessage(getString(R.string.txtDeleteAccount))
+                    .setPositiveButton(getString(R.string.txtContinue)) { dialog, _ ->
+                        val i = Intent(requireActivity(), StartActivity::class.java)
+                        startActivity(i)
+                        auth.signOut()
+                        requireActivity().finish()
+                        dialog.dismiss()
+                    }
+                    .setNegativeButton(getString(R.string.txtCancel)) { dialog, _ ->
+                        dialog.dismiss()
+                    }
+                dialogBuilder.show()
+            } else {
+                Snackbar.make(binding.root, R.string.errDeleteAccount, Snackbar.LENGTH_LONG).show()
             }
-        } else {
+        } ?: run {
+            // Si el usuario es nulo
+            Snackbar.make(binding.root, R.string.errEmpty, Snackbar.LENGTH_LONG).show()
         }
-
     }
 
     private fun showConfirmationDialog() {

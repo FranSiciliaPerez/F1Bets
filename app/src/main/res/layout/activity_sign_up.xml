@@ -55,7 +55,7 @@
 
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imageViewContact"
+        android:id="@+id/imageView"
         android:layout_width="68dp"
         android:layout_height="75dp"
         android:layout_marginBottom="8dp"
@@ -65,7 +65,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.189"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/ic_person"/>
 
     <TextView
         android:id="@+id/textTitleEmail"
