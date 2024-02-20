@@ -20,6 +20,7 @@ class StartActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
     }
     override fun onStart(){
+        // Verifica si hay un usuario ya registrado y lo redirije a la actividad principal si es así
         auth = FirebaseAuth.getInstance()
         val loggedUser = auth.currentUser
         if(loggedUser != null){

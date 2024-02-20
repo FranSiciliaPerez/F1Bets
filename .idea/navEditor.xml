@@ -29,6 +29,15 @@
                             <option name="y" value="-36" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_nav_Bets_to_createBetsFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
@@ -97,8 +106,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="310" />
-                            <option name="y" value="-26" />
+                            <option name="x" value="344" />
+                            <option name="y" value="-34" />
                           </Point>
                         </option>
                       </LayoutPositions>
