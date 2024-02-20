@@ -25,17 +25,17 @@
     <fragment
         android:id="@+id/nav_Circuits"
         android:name="com.example.f1bets.ui.circuit.CircuitFragment"
-        android:label="Circuits"
+        android:label="@string/txtMenuCircuits"
         tools:layout="@layout/fragment_circuit" />
     <fragment
         android:id="@+id/nav_Drivers"
         android:name="com.example.f1bets.ui.driver.DriverFragment"
-        android:label="Drivers"
+        android:label="@string/txtMenuDrivers"
         tools:layout="@layout/fragment_driver" />
     <fragment
         android:id="@+id/nav_Bets"
         android:name="com.example.f1bets.ui.bet.BetFragment"
-        android:label="Bets"
+        android:label="@string/txtMenuBets"
         tools:layout="@layout/fragment_bet" >
         <action
             android:id="@+id/action_nav_Bets_to_createBetsFragment"
@@ -44,7 +44,7 @@
     <fragment
         android:id="@+id/nav_User"
         android:name="com.example.f1bets.ui.profile.UserFragment"
-        android:label="User"
+        android:label="@string/txtMenuUser"
         tools:layout="@layout/fragment_user" />
     <fragment
         android:id="@+id/createBetsFragment"
