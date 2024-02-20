@@ -1,11 +1,17 @@
 package com.example.f1bets
 
+import android.Manifest
 import android.app.Activity.RESULT_OK
+import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import androidx.appcompat.app.AlertDialog
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -19,6 +25,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
+import java.io.ByteArrayOutputStream
 import java.io.IOException
 
 class SignUpFragment : Fragment() {
@@ -27,6 +34,7 @@ class SignUpFragment : Fragment() {
     private lateinit var db: FirebaseFirestore
     private lateinit var storage: FirebaseStorage
     private var selectedImageUri: Uri? = null
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -77,6 +85,31 @@ class SignUpFragment : Fragment() {
             }
         }
     }
+    private fun requestPermissions() {
+        if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED ||
+            ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(
+                requireActivity(),
+                arrayOf(
+                    Manifest.permission.CAMERA,
+                    Manifest.permission.READ_EXTERNAL_STORAGE,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE
+                ),
+                REQUEST_PERMISSION_CODE
+            )
+        }
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == REQUEST_PERMISSION_CODE) {
+            if (grantResults.isNotEmpty() && grantResults.all { it == PackageManager.PERMISSION_GRANTED }) {
+                // Permisos concedidos, puedes proceder con la lógica de la cámara o la galería
+            } else {
+                Snackbar.make(binding.root, "Los permisos no fueron concedidos", Snackbar.LENGTH_LONG).show()
+            }
+        }
+    }
 
     private fun selectImage() {
         val options = arrayOf("Tomar Foto", "Elegir de la Galería", "Cancelar")
@@ -96,8 +129,12 @@ class SignUpFragment : Fragment() {
     }
 
     private fun dispatchTakePictureIntent() {
-        val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
+        if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+            val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
+        } else {
+            requestPermissions(arrayOf(Manifest.permission.CAMERA), REQUEST_PERMISSION_CODE)
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -112,8 +149,8 @@ class SignUpFragment : Fragment() {
                 e.printStackTrace()
             }
         } else if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            val imageUri = data?.extras?.get("data") as Uri
-            selectedImageUri = imageUri
+            val imageBitmap = data?.extras?.get("data") as Bitmap
+            selectedImageUri = getImageUri(requireContext(), imageBitmap)
             try {
                 Glide.with(requireContext())
                     .load(selectedImageUri)
@@ -124,6 +161,13 @@ class SignUpFragment : Fragment() {
         }
     }
 
+    private fun getImageUri(inContext: Context, inImage: Bitmap): Uri {
+        val bytes = ByteArrayOutputStream()
+        inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes)
+        val path = MediaStore.Images.Media.insertImage(inContext.contentResolver, inImage, "Title", null)
+        return Uri.parse(path)
+    }
+
     private fun uploadImageAndSaveUser(imageUri: Uri, userName: String, email: String) {
         val storageRef = storage.reference
         val imagesRef = storageRef.child("f1Bets-images/${auth.currentUser?.uid}")
@@ -131,7 +175,7 @@ class SignUpFragment : Fragment() {
         val uploadTask = imagesRef.putFile(imageUri)
         uploadTask.addOnSuccessListener { taskSnapshot ->
             taskSnapshot.storage.downloadUrl.addOnSuccessListener { uri ->
-                val newUser = User(auth.currentUser?.uid ?: "", userName, email, uri.toString())
+                val newUser = User(auth.currentUser?.uid ?: "", userName, email, "", uri.toString())
                 saveUserToFirestore(newUser)
             }
         }.addOnFailureListener {
@@ -157,5 +201,6 @@ class SignUpFragment : Fragment() {
     companion object {
         private const val PICK_IMAGE_REQUEST = 1
         private const val REQUEST_IMAGE_CAPTURE = 2
+        private const val REQUEST_PERMISSION_CODE = 100
     }
 }
