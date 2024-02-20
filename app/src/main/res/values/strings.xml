@@ -54,4 +54,6 @@
     <string name="txtDeleteAccount">Estas a punto de eliminar tu cuenta</string>
     <string name="txtContinue">Continuar</string>
     <string name="errImageUpload">No se ha podido subir la imagen</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -36,10 +36,19 @@
         android:id="@+id/nav_Bets"
         android:name="com.example.f1bets.ui.bet.BetFragment"
         android:label="Bets"
-        tools:layout="@layout/fragment_bet" />
+        tools:layout="@layout/fragment_bet" >
+        <action
+            android:id="@+id/action_nav_Bets_to_createBetsFragment"
+            app:destination="@id/createBetsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_User"
         android:name="com.example.f1bets.ui.profile.UserFragment"
         android:label="User"
         tools:layout="@layout/fragment_user" />
+    <fragment
+        android:id="@+id/createBetsFragment"
+        android:name="com.example.f1bets.ui.bet.CreateBetsFragment"
+        android:label="fragment_create_bets"
+        tools:layout="@layout/fragment_create_bets" />
 </navigation>

@@ -6,8 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
 import com.example.f1bets.R
-import com.example.f1bets.StartActivity
+import com.example.f1bets.activities.StartActivity
 import com.example.f1bets.databinding.FragmentUserBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
@@ -39,13 +40,19 @@ class UserFragment : Fragment() {
         // Verifica si hay un usuario autenticado
         val currentUser = auth.currentUser
         if (currentUser != null) {
-            // Si hay un usuario autenticado accedes a la información
+            // Si hay un usuario autenticado accedo a la información
             val userEmail = currentUser.email
-            //val userName = currentUser.userName
+            val userName = currentUser.displayName
+            val userPhotoUrl = currentUser.photoUrl
 
             // Información del usuario
             binding.textViewUserEmail.text = userEmail
-            //binding.textViewUserName.text = userName
+            binding.textViewUserName.text = userName
+            userPhotoUrl?.let { url ->
+                Glide.with(requireContext())
+                    .load(url)
+                    .into(binding.imageViewUser)
+            }
         } else {
             binding.textViewUserEmail.text = "Usuario no autenticado"
         }
