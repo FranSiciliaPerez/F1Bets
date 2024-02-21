@@ -9,4 +9,5 @@
     <color name="f1Black">#171519</color>
     <color name="f1Red">#A3032B</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
 </resources>

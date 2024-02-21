@@ -65,4 +65,6 @@
     <string name="txtPlaceholderEmailUser">Correo electrónico del usuario</string>
     <string name="txtTittleEmailUser">Usuario:</string>
     <string name="btnAddBet">Nueva Apuesta</string>
+    <string name="nameDriverItem">Nombre del piloto</string>
+    <string name="nameTeamDriverItem">Nombre del equipo</string>
 </resources>

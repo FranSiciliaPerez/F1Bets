@@ -66,4 +66,6 @@
     <string name="txtPlaceholderEmailUser">User Email</string>
     <string name="txtTittleEmailUser">User:</string>
     <string name="btnAddBet">New Bet</string>
+    <string name="nameDriverItem">Driver name</string>
+    <string name="nameTeamDriverItem">Team name</string>
 </resources>
