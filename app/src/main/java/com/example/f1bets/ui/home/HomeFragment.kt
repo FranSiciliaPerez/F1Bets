@@ -1,9 +1,12 @@
 package com.example.f1bets.ui.home
 
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.MediaController
+import android.widget.VideoView
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import com.example.f1bets.R
@@ -12,14 +15,16 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.firebase.auth.FirebaseAuth
 
 class HomeFragment : Fragment() {
-    lateinit var auth: FirebaseAuth
+    private lateinit var auth: FirebaseAuth
     private lateinit var binding: FragmentHomeBinding
+    private var videoView: VideoView? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
+        val view = binding.root
 
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
@@ -39,6 +44,25 @@ class HomeFragment : Fragment() {
             }
         })
 
-        return binding.root
+
+        // Initialize the VideoView after the inflate of the dessign
+        videoView = view.findViewById(R.id.videoView)
+
+        // Media controler to play, pause, go fast forguard etc..
+        val mediaController = MediaController(requireContext())
+        mediaController.setAnchorView(videoView)
+
+        // Get the path of the video uri from the resources
+        val videoUri = Uri.parse("android.resource://" + requireActivity().packageName + "/" + R.raw.betf1)
+
+        videoView?.apply {
+            setMediaController(mediaController)
+            // Config the path to play it at the VideoView
+            setVideoURI(videoUri)
+            // Initialize the video
+            start()
+        }
+
+        return view
     }
 }

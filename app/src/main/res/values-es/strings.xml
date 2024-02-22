@@ -11,7 +11,7 @@
     <string name="prompt_password">Contraseña</string>
     <string name="action_sign_in">Iniciar sesión o registrarse</string>
     <string name="action_sign_in_short">Iniciar sesión</string>
-    <string name="welcome">¡Bienvenido!</string>
+    <string name="welcome">¡Bienvenido a F1Bets!</string>
     <string name="invalid_username">Nombre de usuario no válido</string>
     <string name="invalid_password">La contraseña debe tener más de 5 caracteres</string>
     <string name="login_failed">Inicio de sesión fallido</string>
@@ -69,7 +69,8 @@
     <string name="nameTeamDriverItem">Nombre del equipo</string>
     <string name="nameCircuitItem">Nombre del circuito</string>
     <string name="txtLapsCircuit">Vueltas del circuito</string>
-    <string name="txtCircuitCountry">Pais del circuito</string>
+    <string name="txtCircuitCountry">País del circuito</string>
     <string name="txtLaps">Vueltas</string>
     <string name="textConfirDeleteCont">Vas a eliminarlo, estas seguro?</string>
+    <string name="txtmoneybet">Dinero apostado</string>
 </resources>

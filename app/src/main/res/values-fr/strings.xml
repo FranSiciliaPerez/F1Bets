@@ -11,7 +11,7 @@
     <string name="prompt_password">Mot de passe</string>
     <string name="action_sign_in">Connectez-vous ou inscrivez-vous</string>
     <string name="action_sign_in_short">Se connecter</string>
-    <string name="welcome">Bienvenue !</string>
+    <string name="welcome">Bienvenue dans F1Bets!</string>
     <string name="invalid_username">Nom d utilisateur non valide</string>
     <string name="invalid_password">Le mot de passe doit comporter plus de 5 caractères</string>
     <string name="login_failed">Échec de la connexion</string>
@@ -72,4 +72,5 @@
     <string name="txtCircuitCountry">Pays du circuit</string>
     <string name="txtLaps">Tours</string>
     <string name="textConfirDeleteCont">Vous vais le supprimez, vous étes sure?</string>
+    <string name="txtmoneybet">Argeant apostée</string>
 </resources>
