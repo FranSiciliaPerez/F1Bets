@@ -51,10 +51,11 @@
             android:id="@+id/btnDelete"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginStart="312dp"
             android:layout_marginTop="52dp"
             android:background="@color/transparent"
             android:drawableTop="@drawable/ic_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.982"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -62,10 +63,12 @@
             android:id="@+id/btnEdit"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginStart="256dp"
+            android:layout_marginStart="250dp"
             android:layout_marginTop="52dp"
             android:background="@color/transparent"
             android:drawableTop="@drawable/ic_edit"
+            app:layout_constraintEnd_toStartOf="@+id/btnDelete"
+            app:layout_constraintHorizontal_bias="0.744"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

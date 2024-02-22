@@ -67,4 +67,9 @@
     <string name="btnAddBet">Nueva Apuesta</string>
     <string name="nameDriverItem">Nombre del piloto</string>
     <string name="nameTeamDriverItem">Nombre del equipo</string>
+    <string name="nameCircuitItem">Nombre del circuito</string>
+    <string name="txtLapsCircuit">Vueltas del circuito</string>
+    <string name="txtCircuitCountry">Pais del circuito</string>
+    <string name="txtLaps">Vueltas</string>
+    <string name="textConfirDeleteCont">Vas a eliminarlo, estas seguro?</string>
 </resources>

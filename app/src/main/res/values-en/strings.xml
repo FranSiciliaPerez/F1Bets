@@ -67,4 +67,9 @@
     <string name="btnAddBet">New Bet</string>
     <string name="nameDriverItem">Driver name</string>
     <string name="nameTeamDriverItem">Team name</string>
+    <string name="nameCircuitItem">Circuit name</string>
+    <string name="txtLapsCircuit">Circuit laps</string>
+    <string name="txtCircuitCountry">Circuit country</string>
+    <string name="txtLaps">Laps</string>
+    <string name="textConfirDeleteCont">You are going to delete it, are you sure?</string>
 </resources>

@@ -5,14 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.f1bets.DriverAdapter
 import com.example.f1bets.databinding.FragmentDriverBinding
+import com.example.f1bets.entities.Driver
+import com.google.firebase.firestore.FirebaseFirestore
 
 class DriverFragment : Fragment() {
     private lateinit var binding: FragmentDriverBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    private lateinit var driverAdapter: DriverAdapter
+    private lateinit var driverRecyclerView: RecyclerView
+    private val db = FirebaseFirestore.getInstance()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -20,5 +24,37 @@ class DriverFragment : Fragment() {
     ): View? {
         binding = FragmentDriverBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        driverAdapter = DriverAdapter(mutableListOf()) { _-> true } // Inicialize the adapter
+        setupRecyclerView()
+        getDriverData()
+    }
+
+    private fun setupRecyclerView() {
+        driverRecyclerView = binding.driverRecyclerView
+        driverRecyclerView.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = driverAdapter
+        }
+    }
+
+    private fun getDriverData() {
+        db.collection("driver")
+            .get()
+            .addOnSuccessListener { documents ->
+                val driversList = mutableListOf<Driver>()
+                for (document in documents) {
+                    val driver = document.toObject(Driver::class.java)
+                    driversList.add(driver)
+                }
+                driverAdapter.driversList = driversList
+                driverAdapter.notifyDataSetChanged()
+            }
+            .addOnFailureListener { exception ->
+                // Handle errors
+            }
     }
 }

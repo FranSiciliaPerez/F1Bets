@@ -6,5 +6,5 @@ data class Driver(
     val name: String = "",
     var picture: String? = null,
     val team: String = "",
-    val yearBirth: String = ""
+    val yearBirth: Long = 0
 ) : Serializable
