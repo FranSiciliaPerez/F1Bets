@@ -64,7 +64,10 @@ class CircuitAdapter(
             with(binding) {
                 // Load circuit's photo using Glide library if exist
                 if (!circuit.picture.isNullOrEmpty()) {
-                    Glide.with(root.context).load(circuit.picture).into(imgCircuit)
+                    Glide.with(root.context)
+                        .load(circuit.picture)
+                        //.override(600, 400) // Set standard size for the image
+                        .into(imgCircuit)
                 } else {
                     // Set a placeholder image if no picture is available
                     imgCircuit.setImageResource(R.drawable.ic_person)
