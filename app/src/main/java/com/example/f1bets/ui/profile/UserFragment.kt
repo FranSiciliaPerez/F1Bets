@@ -12,16 +12,20 @@ import com.bumptech.glide.Glide
 import com.example.f1bets.R
 import com.example.f1bets.activities.StartActivity
 import com.example.f1bets.databinding.FragmentUserBinding
+import com.example.f1bets.entities.User
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.firestore.toObject
 import com.google.firebase.ktx.Firebase
 
 class UserFragment : Fragment() {
     private lateinit var binding: FragmentUserBinding
     private lateinit var auth: FirebaseAuth
+    private lateinit var firestore: FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,27 +38,42 @@ class UserFragment : Fragment() {
         binding = FragmentUserBinding.inflate(inflater, container, false)
 
         auth = FirebaseAuth.getInstance()
+        firestore = Firebase.firestore
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Verifica si hay un usuario autenticado
+        // Verify if there is an autenticated user
         val currentUser = auth.currentUser
         if (currentUser != null) {
-            // Si hay un usuario autenticado accedo a la información
-            val userEmail = currentUser.email
-            val userName = currentUser.displayName
-            val userPhotoUrl = currentUser.photoUrl
+            // If there is an autenticated user get the Id
+            val userId = currentUser.uid
 
-            // Información del usuario
-            binding.textViewUserEmail.text = userEmail
-            binding.textViewUserName.text = userName
-            userPhotoUrl?.let { url ->
-                Glide.with(requireContext())
-                    .load(url)
-                    .into(binding.imageViewUser)
+            // Get the document reference of the current user
+            val userDocRef = firestore.collection("user").document(userId)
+
+            // Query the information of the current user
+            userDocRef.get().addOnSuccessListener { document ->
+                if (document != null && document.exists()) {
+                    // If the document exist, get the user data
+                    val user = document.toObject<User>()
+                    // Show the user data in the user interface
+                    user?.let { user ->
+                        binding.textViewUserEmail.text = user.email
+                        binding.textViewUserName.text = user.userName
+                        user.picture?.let { pictureUrl ->
+                            Glide.with(requireContext())
+                                .load(pictureUrl)
+                                .into(binding.imageViewUser)
+                        }
+                    }
+                } else {
+                    Log.d(TAG, "El documento no existe")
+                }
+            }.addOnFailureListener { exception ->
+                Log.d(TAG, "Error obteniendo el documento:", exception)
             }
         } else {
             binding.textViewUserEmail.text = "Usuario no autenticado"
@@ -78,20 +97,20 @@ class UserFragment : Fragment() {
             .setTitle(R.string.app_name)
             .setMessage(getString(R.string.txtDeleteAccount))
             .setPositiveButton(getString(R.string.txtContinue)) { dialog, _ ->
-                // Eliminar al usuario de Firebase Authentication
+                // Delete the user from Firebase Authentication
                 user?.delete()?.addOnCompleteListener { authTask ->
                     if (authTask.isSuccessful) {
-                        // Eliminación exitosa del usuario de Authentication
-                        // Ahora, eliminar la información del usuario de la base de datos de Firebase
+                        // Successful deletion of the user from Authentication
+                        // Now, delete the user's information from Firebase database
                         user?.uid?.let { deleteUserDataFromDatabase(it) }
                     } else {
-                        // Error en la eliminación del usuario de Authentication
+                        // Error in deleting the user from Authentication
                         Log.e(TAG, "Error deleting user from Authentication: ${authTask.exception}")
-                        // Mostrar un mensaje de error
+                        // Show an error message
                         Snackbar.make(requireView(), R.string.errDeleteAccount, Snackbar.LENGTH_LONG).show()
                     }
                 } ?: run {
-                    // Si el usuario es nulo
+                    // If the user is null
                     Snackbar.make(requireView(), R.string.errEmpty, Snackbar.LENGTH_LONG).show()
                 }
                 dialog.dismiss()
@@ -108,9 +127,9 @@ class UserFragment : Fragment() {
 
         userDocRef.delete()
             .addOnSuccessListener {
-                // Eliminación exitosa de la información del usuario de la base de datos
+                // Successful deletion of the user's information from the database
                 Log.d(TAG, "User data deleted successfully from Firestore")
-                // Cerrar sesión y redirigir a la pantalla de inicio
+                // Sign out and redirect to the start screen
                 Firebase.auth.signOut()
                 val intent = Intent(requireActivity(), StartActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -118,7 +137,7 @@ class UserFragment : Fragment() {
                 requireActivity().finish()
             }
             .addOnFailureListener { exception ->
-                // Error en la eliminación de la información del usuario de la base de datos
+                // Error in deleting the user's information from the database
                 Log.e(TAG, "Error deleting user data from Firestore: $exception")
                 // Mostrar un mensaje de error
                 Snackbar.make(requireView(), R.string.errDeleteAccount, Snackbar.LENGTH_LONG).show()

@@ -1,5 +1,7 @@
 package com.example.f1bets.ui.home
 
+import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +11,9 @@ import android.widget.MediaController
 import android.widget.VideoView
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
+import com.example.f1bets.LoginFragment
 import com.example.f1bets.R
+import com.example.f1bets.activities.StartActivity
 import com.example.f1bets.databinding.FragmentHomeBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.firebase.auth.FirebaseAuth
@@ -25,6 +29,13 @@ class HomeFragment : Fragment() {
     ): View? {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        val sharedPreferences = requireContext().getSharedPreferences("prefs", Context.MODE_PRIVATE)
+        val showWarnning = sharedPreferences.getBoolean("showWarnning", true)
+
+        if (showWarnning) {
+            showMessageDialog()
+        }
 
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
@@ -60,9 +71,32 @@ class HomeFragment : Fragment() {
             // Config the path to play it at the VideoView
             setVideoURI(videoUri)
             // Initialize the video
-            start()
+            //start()
         }
 
         return view
+    }
+    private fun showMessageDialog() {
+        // Everytime the user logs into the app the first time in the device
+        // it will show the warning message
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle("Advertencia de F1Bets")
+            .setMessage("Esta es una aplicación de apuestas, si no eres mayor de 18 años haz click en salir")
+            .setPositiveButton("Soy mayor de 18, acceder") { _, _ ->
+                // Save into SharedPreferences that the user doesnt whant to see the message again
+                val sharedPreferences = requireContext().getSharedPreferences("prefs", Context.MODE_PRIVATE)
+                val editor = sharedPreferences.edit()
+                editor.putBoolean("showWarnning", false)
+                editor.apply()
+            }
+                // It logs out the user, and redirect him to the main activity
+            .setNegativeButton("Salir, soy menor de edad") { _, _ ->
+                FirebaseAuth.getInstance().signOut()
+                val intent = Intent(requireContext(), StartActivity::class.java)
+                startActivity(intent)
+                requireActivity().finish()
+            }
+            .setCancelable(false)
+            .show()
     }
 }
