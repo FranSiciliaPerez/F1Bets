@@ -50,5 +50,9 @@
         android:id="@+id/createBetsFragment"
         android:name="com.example.f1bets.ui.bet.CreateBetsFragment"
         android:label="fragment_create_bets"
-        tools:layout="@layout/fragment_create_bets" />
+        tools:layout="@layout/fragment_create_bets" >
+        <action
+            android:id="@+id/action_createBetsFragment_to_nav_Bets"
+            app:destination="@id/nav_Bets" />
+    </fragment>
 </navigation>

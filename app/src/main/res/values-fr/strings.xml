@@ -73,4 +73,8 @@
     <string name="txtLaps">Tours</string>
     <string name="textConfirDeleteCont">Vous vais le supprimez, vous étes sure?</string>
     <string name="txtmoneybet">Argeant apostée</string>
+    <string name="ageAlert">F1Bets Attention</string>
+    <string name="txtAgeAlert">F1Bets cést une app de apuestas si tu est moins du 18 ans, clickez sortir</string>
+    <string name="txtDeclineAgeAlert">Sortir, je suis meneur du 18</string>
+    <string name="txtAcceptAgeAlert">Je suis plus de 18, continuer</string>
 </resources>

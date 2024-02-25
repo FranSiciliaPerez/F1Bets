@@ -2,7 +2,6 @@ package com.example.f1bets
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.f1bets.databinding.DriverItemBinding
@@ -11,9 +10,7 @@ import com.example.f1bets.entities.Driver
 class DriverAdapter(
     var driversList: MutableList<Driver>,
     private val onDeleteClickListener: (Driver) -> Unit
-) : RecyclerView.Adapter<DriverAdapter.DriverViewHolder>(
-
-) {
+) : RecyclerView.Adapter<DriverAdapter.DriverViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DriverViewHolder {
         val inflater = LayoutInflater.from(parent.context)

@@ -73,4 +73,8 @@
     <string name="txtLaps">Vueltas</string>
     <string name="textConfirDeleteCont">Vas a eliminarlo, estas seguro?</string>
     <string name="txtmoneybet">Dinero apostado</string>
+    <string name="ageAlert">Alerta de F1Bets</string>
+    <string name="txtAgeAlert">Esta es una aplicación de apuestas, si no tienes mas de 18 años, haz click en salir.</string>
+    <string name="txtAcceptAgeAlert">Soy mayor de 18, continuar</string>
+    <string name="txtDeclineAgeAlert">Salir, soy menor de 18</string>
 </resources>

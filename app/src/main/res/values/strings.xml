@@ -74,4 +74,8 @@
     <string name="txtLaps">Laps</string>
     <string name="textConfirDeleteCont">You are going to delete it, are you sure?</string>
     <string name="txtmoneybet">Bet monney</string>
+    <string name="ageAlert">F1Bets Warning</string>
+    <string name="txtAgeAlert">This is a betting application, if you are not over 18 years old click exit</string>
+    <string name="txtAcceptAgeAlert">I\'m over 18, proceed</string>
+    <string name="txtDeclineAgeAlert">Exit, I\'m under 18</string>
 </resources>
