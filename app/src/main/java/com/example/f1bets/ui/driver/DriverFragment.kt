@@ -28,7 +28,7 @@ class DriverFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        driverAdapter = DriverAdapter(mutableListOf()) { _-> true } // Inicialize the adapter
+        driverAdapter = DriverAdapter(mutableListOf()) { _ -> true } // Inicialize the adapter
         setupRecyclerView()
         getDriverData()
     }
@@ -54,7 +54,6 @@ class DriverFragment : Fragment() {
                 driverAdapter.notifyDataSetChanged()
             }
             .addOnFailureListener { exception ->
-                // Handle errors
             }
     }
 }

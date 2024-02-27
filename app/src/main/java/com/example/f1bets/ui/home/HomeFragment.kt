@@ -9,9 +9,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.MediaController
+import android.widget.PopupMenu
 import android.widget.VideoView
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import com.example.f1bets.R
 import com.example.f1bets.activities.StartActivity
 import com.example.f1bets.databinding.FragmentHomeBinding
@@ -74,7 +76,11 @@ class HomeFragment : Fragment() {
             // Config the path to play it at the VideoView
             setVideoURI(videoUri)
         }
-
+        // Set the long click in the screen
+        binding.root.setOnLongClickListener{
+            contextMenu()
+            true
+        }
         return view
     }
 
@@ -110,7 +116,36 @@ class HomeFragment : Fragment() {
                 .show()
         }
     }
+
     private fun showWarning(userId: String): Boolean {
         return sharedPreferences.getBoolean("showWarning_$userId", true)
+    }
+
+    private fun contextMenu() {
+        val navController = Navigation.findNavController(requireView())
+        val popupMenu = PopupMenu(requireContext(), binding.textView)
+        popupMenu.menuInflater.inflate(R.menu.context_menu_home, popupMenu.menu)
+        popupMenu.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.contextMenuDriver -> {
+                    navController.navigate(R.id.nav_Drivers)
+                    true
+                }
+                R.id.contextMenuCircuit -> {
+                    navController.navigate(R.id.createBetsFragment)
+                    true
+                }
+                R.id.contextMenuBets -> {
+                    navController.navigate(R.id.nav_Bets)
+                    true
+                }
+                R.id.contextMenuUser -> {
+                    navController.navigate(R.id.nav_User)
+                    true
+                }
+                else -> false
+            }
+        }
+        popupMenu.show()
     }
 }

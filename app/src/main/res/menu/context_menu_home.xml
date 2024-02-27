@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/menu_group_title">
+        <item
+            android:id="@+id/contextMenuTitle"
+            android:title="@string/txtTitleContextMenu"
+            android:enabled="false"/>
+    </group>
+    <item
+        android:id="@+id/contextMenuDriver"
+        android:title="@string/txtMenuDrivers"/>
+    <item
+        android:id="@+id/contextMenuCircuit"
+        android:title="@string/txtMenuCircuits"/>
+    <item
+        android:id="@+id/contextMenuBets"
+        android:title="@string/txtMenuBets"/>
+    <item
+        android:id="@+id/contextMenuUser"
+        android:title="@string/txtMenuUser"/>
+</menu>

@@ -78,4 +78,7 @@
     <string name="txtAgeAlert">This is a betting application, if you are not over 18 years old click exit</string>
     <string name="txtAcceptAgeAlert">I\'m over 18, proceed</string>
     <string name="txtDeclineAgeAlert">Exit, I\'m under 18</string>
+    <string name="txtDeleteBet">Bet deleted</string>
+    <string name="txtErrDeleteBet">Failed to delete bet</string>
+    <string name="txtTitleContextMenu">Click to go to:</string>
 </resources>

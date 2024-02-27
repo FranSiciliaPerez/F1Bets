@@ -77,4 +77,7 @@
     <string name="txtAgeAlert">F1Bets cést une app de apuestas si tu est moins du 18 ans, clickez sortir</string>
     <string name="txtDeclineAgeAlert">Sortir, je suis meneur du 18</string>
     <string name="txtAcceptAgeAlert">Je suis plus de 18, continuer</string>
+    <string name="txtErrDeleteBet">Ne se peut pas effaser la pari</string>
+    <string name="txtDeleteBet">Pari effasée</string>
+    <string name="txtTitleContextMenu">Clickez pour aller à:</string>
 </resources>

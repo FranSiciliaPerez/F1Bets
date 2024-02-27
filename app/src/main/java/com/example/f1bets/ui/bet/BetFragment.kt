@@ -5,16 +5,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.f1bets.BetAdapter
 import com.example.f1bets.R
 import com.example.f1bets.databinding.FragmentBetBinding
+import com.example.f1bets.entities.Bets
+import com.example.f1bets.entities.Circuit
+import com.example.f1bets.entities.Driver
+import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.firestore.FirebaseFirestore
 
 class BetFragment : Fragment() {
     private lateinit var binding: FragmentBetBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    private lateinit var betAdapter: BetAdapter
+    private lateinit var betRecyclerView: RecyclerView
+    private val db = FirebaseFirestore.getInstance()
+    private val betsLiveData: MutableLiveData<List<Bets>> = MutableLiveData()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,9 +32,103 @@ class BetFragment : Fragment() {
     ): View? {
         binding = FragmentBetBinding.inflate(inflater, container, false)
 
-        binding.btnAddContact.setOnClickListener() {
+        binding.btnAddBet.setOnClickListener() {
             Navigation.findNavController(it).navigate(R.id.action_nav_Bets_to_createBetsFragment)
         }
+
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        betsLiveData.observe(viewLifecycleOwner, Observer { bets ->
+            bets?.let {
+                val driversMap = mutableMapOf<String, Driver>()
+                val circuitsMap = mutableMapOf<String, Circuit>()
+
+                getDriversData { drivers ->
+                    driversMap.putAll(drivers)
+                    getCircuitsData { circuits ->
+                        circuitsMap.putAll(circuits)
+                        betAdapter = BetAdapter(
+                            it as MutableList<Bets>,
+                            onDeleteClickListener = { bet ->
+                                // Delete bet here
+                                deleteBet(bet)
+                            },
+                            driversMap,
+                            circuitsMap
+                        )
+                        setupRecyclerView()
+                    }
+                }
+            }
+        })
+
+        getBetData()
+    }
+
+    private fun setupRecyclerView() {
+        betRecyclerView = binding.betRecyclerView
+        betRecyclerView.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = betAdapter
+        }
+    }
+
+    private fun getBetData() {
+        db.collection("bets")
+            .get()
+            .addOnSuccessListener { documents ->
+                val betsList = mutableListOf<Bets>()
+                for (document in documents) {
+                    val bet = document.toObject(Bets::class.java)
+                    betsList.add(bet)
+                }
+                betsLiveData.value = betsList
+            }
+            .addOnFailureListener { exception ->
+            }
+    }
+
+    private fun deleteBet(bet: Bets) {
+        db.collection("bets").document(bet.id.toString()).delete()
+            .addOnSuccessListener {
+                Snackbar.make(binding.root, getString(R.string.txtDeleteBet), Snackbar.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener { exception ->
+                Snackbar.make(binding.root, getString(R.string.txtErrDeleteBet), Snackbar.LENGTH_SHORT).show()
+            }
+    }
+
+    private fun getDriversData(callback: (Map<String, Driver>) -> Unit) {
+        db.collection("driver")
+            .get()
+            .addOnSuccessListener { documents ->
+                val driverMap = mutableMapOf<String, Driver>()
+                for (document in documents) {
+                    val driver = document.toObject(Driver::class.java)
+                    driverMap[document.id] = driver
+                }
+                callback(driverMap)
+            }
+            .addOnFailureListener { exception ->
+            }
+    }
+
+    private fun getCircuitsData(callback: (Map<String, Circuit>) -> Unit) {
+        db.collection("circuit")
+            .get()
+            .addOnSuccessListener { documents ->
+                val circuitMap = mutableMapOf<String, Circuit>()
+                for (document in documents) {
+                    val circuit = document.toObject(Circuit::class.java)
+                    circuitMap[document.id] = circuit
+                }
+                callback(circuitMap)
+            }
+            .addOnFailureListener { exception ->
+            }
     }
 }

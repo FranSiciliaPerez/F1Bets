@@ -40,7 +40,7 @@ class CircuitAdapter(
     override fun onBindViewHolder(holder: CircuitViewHolder, position: Int) {
         holder.bindCircuit(circuitsList[position])
     }
-
+    // Size of the circuitList collection
     override fun getItemCount(): Int = circuitsList.size
 
     inner class CircuitViewHolder(private val binding: CircuitItemBinding) :
@@ -78,7 +78,7 @@ class CircuitAdapter(
                 circuitCountry.text = circuit.country
                 circuitLaps.text = circuit.laps.toString()
 
-                // Handle click on circuit item
+                // Handle delete click on circuit item
                 btnDelete.setOnClickListener {
                     val position = adapterPosition
                     if (position != RecyclerView.NO_POSITION) {

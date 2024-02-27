@@ -54,7 +54,6 @@ class CircuitFragment : Fragment() {
                 circuitAdapter.notifyDataSetChanged()
             }
             .addOnFailureListener { exception ->
-                // Handle errors
             }
     }
 }

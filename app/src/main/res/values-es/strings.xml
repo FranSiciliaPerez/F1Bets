@@ -77,4 +77,7 @@
     <string name="txtAgeAlert">Esta es una aplicación de apuestas, si no tienes mas de 18 años, haz click en salir.</string>
     <string name="txtAcceptAgeAlert">Soy mayor de 18, continuar</string>
     <string name="txtDeclineAgeAlert">Salir, soy menor de 18</string>
+    <string name="txtDeleteBet">Apuesta eliminada</string>
+    <string name="txtErrDeleteBet">No se ha podido eliminar la apuesta</string>
+    <string name="txtTitleContextMenu">Pulse para ir a:</string>
 </resources>
