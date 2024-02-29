@@ -80,4 +80,7 @@
     <string name="txtDeleteBet">Apuesta eliminada</string>
     <string name="txtErrDeleteBet">No se ha podido eliminar la apuesta</string>
     <string name="txtTitleContextMenu">Pulse para ir a:</string>
+    <string name="txtrrEmptyBetMoney">Por favor, introduce el dinero a apostar</string>
+    <string name="txtErrDeleteCircuitAssigned">No se ha podido eliminar el circuito porque pertenece a una apuesta</string>
+    <string name="txtErrDeleteDriverAssigned">No se ha podido eliminar el piloto porque pertenece a una apuesta</string>
 </resources>

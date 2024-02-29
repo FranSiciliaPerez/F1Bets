@@ -80,4 +80,7 @@
     <string name="txtErrDeleteBet">Ne se peut pas effaser la pari</string>
     <string name="txtDeleteBet">Pari effasée</string>
     <string name="txtTitleContextMenu">Clickez pour aller à:</string>
+    <string name="txtrrEmptyBetMoney">S il t ai plait, ecribez l argeant a pari</string>
+    <string name="txtErrDeleteDriverAssigned">Ne se peut pas effaser le pilote parcequ il est dans une pari</string>
+    <string name="txtErrDeleteCircuitAssigned">Ne se peut pas effaser le circuit parcequ il est dans une pari</string>
 </resources>

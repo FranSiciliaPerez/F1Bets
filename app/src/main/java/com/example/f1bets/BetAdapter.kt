@@ -1,5 +1,7 @@
 package com.example.f1bets
 
+import android.content.ContentValues.TAG
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -12,10 +14,8 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class BetAdapter(
     var betsList: MutableList<Bets>,
-    private val onDeleteClickListener: (Bets) -> Unit,
     private val driversMap: Map<String, Driver>,
     private val circuitsMap: Map<String, Circuit>
-
 ) : RecyclerView.Adapter<BetAdapter.BetViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BetViewHolder {
@@ -50,17 +50,6 @@ class BetAdapter(
                 }
             dialogBuilder.show()
         }
-        private fun deleteBet(bet: Bets) {
-            val db = FirebaseFirestore.getInstance()
-            db.collection("bets").document(bet.id.toString()).delete()
-                .addOnSuccessListener {
-                    betsList.remove(bet)
-                    notifyDataSetChanged()
-                }
-                .addOnFailureListener { exception ->
-                    //R.string.txtNo
-                }
-        }
 
         fun bindBet(bet: Bets) {
             with(binding) {
@@ -76,7 +65,7 @@ class BetAdapter(
                 }
                 moneyBet.text = bet.betMoney.toString()
 
-                // Handle delete click on bet item
+                // Handle delete click on bet delete item
                 btnDelete.setOnClickListener {
                     val position = adapterPosition
                     if (position != RecyclerView.NO_POSITION) {
@@ -85,6 +74,18 @@ class BetAdapter(
                     }
                 }
             }
+        }
+        private fun deleteBet(bet: Bets) {
+            val db = FirebaseFirestore.getInstance()
+            val betDocRef = db.collection("bets").document(bet.id)
+            betDocRef.delete()
+                .addOnSuccessListener {
+                    betsList.remove(bet)
+                    notifyDataSetChanged()
+                }
+                .addOnFailureListener { exception ->
+                    Log.e(TAG, "Error deleting the bet", exception)
+                }
         }
     }
 }

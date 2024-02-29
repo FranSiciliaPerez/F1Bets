@@ -1,5 +1,7 @@
 package com.example.f1bets
 
+import android.content.ContentValues
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -7,6 +9,7 @@ import com.bumptech.glide.Glide
 import com.example.f1bets.databinding.CircuitItemBinding
 import com.example.f1bets.entities.Circuit
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.firestore.FirebaseFirestore
 
 class CircuitAdapter(
@@ -15,18 +18,6 @@ class CircuitAdapter(
 
 ) : RecyclerView.Adapter<CircuitAdapter.CircuitViewHolder>()
 {
-    private fun deleteCircuit(circuit: Circuit) {
-        val db = FirebaseFirestore.getInstance()
-        db.collection("circuit").document(circuit.id.toString()).delete()
-            .addOnSuccessListener {
-                circuitsList.remove(circuit)
-                notifyDataSetChanged()
-            }
-            .addOnFailureListener { exception ->
-                //R.string.txtNo
-            }
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CircuitViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val binding = CircuitItemBinding.inflate(inflater, parent, false)
@@ -87,6 +78,35 @@ class CircuitAdapter(
                     }
                 }
             }
+        }
+        private fun deleteCircuit(circuit: Circuit) {
+            val db = FirebaseFirestore.getInstance()
+            val idCircuit = circuit.id
+
+            // Verify if the circuit is assigned into at least one bet
+            db.collection("bets")
+                .whereEqualTo("idCircuit", idCircuit)
+                .get()
+                .addOnSuccessListener { querySnapshot ->
+                    if (querySnapshot.isEmpty) {
+                        // Circuit is not assigned to any bets so it can be deleted
+                        val driverDocRef = db.collection("circuit").document(idCircuit)
+                        driverDocRef.delete()
+                            .addOnSuccessListener {
+                                circuitsList.remove(circuit)
+                                notifyDataSetChanged()
+                            }
+                            .addOnFailureListener { exception ->
+                                Log.e(ContentValues.TAG, "Error deleting the circuit", exception)
+                            }
+                    } else {
+                        // Show a message that the circuit is assigned to a bet and that cannot be deleted
+                        Snackbar.make(binding.root, (R.string.txtErrDeleteCircuitAssigned), Snackbar.LENGTH_LONG).show()
+                    }
+                }
+                .addOnFailureListener { exception ->
+                    Log.e(ContentValues.TAG, "Error checking if the circuit is assigned to a bet", exception)
+                }
         }
     }
 }

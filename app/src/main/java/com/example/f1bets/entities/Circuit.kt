@@ -3,7 +3,7 @@ package com.example.f1bets.entities
 import java.io.Serializable
 
 data class Circuit(
-    val id: Long = 0,
+    val id: String = "",
     val country: String = "",
     val laps: Long = 0,
     val length: Long = 0,

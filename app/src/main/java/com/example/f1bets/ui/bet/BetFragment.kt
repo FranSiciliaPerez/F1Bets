@@ -53,10 +53,6 @@ class BetFragment : Fragment() {
                         circuitsMap.putAll(circuits)
                         betAdapter = BetAdapter(
                             it as MutableList<Bets>,
-                            onDeleteClickListener = { bet ->
-                                // Delete bet here
-                                deleteBet(bet)
-                            },
                             driversMap,
                             circuitsMap
                         )
@@ -89,16 +85,6 @@ class BetFragment : Fragment() {
                 betsLiveData.value = betsList
             }
             .addOnFailureListener { exception ->
-            }
-    }
-
-    private fun deleteBet(bet: Bets) {
-        db.collection("bets").document(bet.id.toString()).delete()
-            .addOnSuccessListener {
-                Snackbar.make(binding.root, getString(R.string.txtDeleteBet), Snackbar.LENGTH_SHORT).show()
-            }
-            .addOnFailureListener { exception ->
-                Snackbar.make(binding.root, getString(R.string.txtErrDeleteBet), Snackbar.LENGTH_SHORT).show()
             }
     }
 
