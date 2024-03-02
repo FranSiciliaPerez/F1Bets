@@ -45,7 +45,7 @@
     <string name="msgCheckError">Vous devez accepter les cookies</string>
     <string name="btnLogout">Déconnexion</string>
     <string name="btnDeleteAccount">Supprimer le compte</string>
-    <string name="txtContinue">Continuer</string>
+    <string name="txtContinue">Continuer et connecte vous autre fois pour confirmer</string>
     <string name="errImageUpload">Impossible de télécharger l image</string>
     <string name="hello_blank_fragment">Bonjour fragment vide</string>
     <string name="nav_header_title">Bienvenue sur F1Bets</string>
@@ -83,4 +83,6 @@
     <string name="txtrrEmptyBetMoney">S il t ai plait, ecribez l argeant a pari</string>
     <string name="txtErrDeleteDriverAssigned">Ne se peut pas effaser le pilote parcequ il est dans une pari</string>
     <string name="txtErrDeleteCircuitAssigned">Ne se peut pas effaser le circuit parcequ il est dans une pari</string>
+    <string name="txtDeleteLogAccount">Effaser l account</string>
+    <string name="succesDeleteAccount">Eliminee perfect</string>
 </resources>

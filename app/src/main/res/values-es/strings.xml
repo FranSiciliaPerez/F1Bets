@@ -45,7 +45,7 @@
     <string name="msgCheckError">Debes aceptar las cookies</string>
     <string name="btnLogout">Cerrar sesión</string>
     <string name="btnDeleteAccount">Eliminar cuenta</string>
-    <string name="txtContinue">Continuar</string>
+    <string name="txtContinue">Continua y logueate para confirmarlo</string>
     <string name="errImageUpload">No se pudo subir la imagen</string>
     <string name="hello_blank_fragment">¡Hola fragmento en blanco!</string>
     <string name="nav_header_title">Bienvenido a F1Bets</string>
@@ -83,4 +83,6 @@
     <string name="txtrrEmptyBetMoney">Por favor, introduce el dinero a apostar</string>
     <string name="txtErrDeleteCircuitAssigned">No se ha podido eliminar el circuito porque pertenece a una apuesta</string>
     <string name="txtErrDeleteDriverAssigned">No se ha podido eliminar el piloto porque pertenece a una apuesta</string>
+    <string name="txtDeleteLogAccount">Eliminar cuenta</string>
+    <string name="succesDeleteAccount">Eliminada con exito</string>
 </resources>

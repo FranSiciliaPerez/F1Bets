@@ -45,7 +45,7 @@
     <string name="msgCheckError">You must accept the cookies</string>
     <string name="btnLogout">Log out</string>
     <string name="btnDeleteAccount">Delete account</string>
-    <string name="txtContinue">Continue</string>
+    <string name="txtContinue">Continue and log again to confirm</string>
     <string name="errImageUpload">Could not upload image</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nav_header_title">Welcome to F1Bets</string>
@@ -83,4 +83,6 @@
     <string name="txtrrEmptyBetMoney">Please, add the monet to bet</string>
     <string name="txtErrDeleteDriverAssigned">Cannot delete the driver because it is assigned to a bet.</string>
     <string name="txtErrDeleteCircuitAssigned">Cannot delete the circuit because it is assigned to a bet</string>
+    <string name="succesDeleteAccount">Deleted successfully</string>
+    <string name="txtDeleteLogAccount">Delete account</string>
 </resources>

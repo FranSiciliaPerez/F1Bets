@@ -8,6 +8,18 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+                  <entry key="checkLoginFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="518" />
+                            <option name="y" value="248" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="createBetsFragment">
                     <value>
                       <LayoutPositions>
@@ -101,6 +113,15 @@
                             <option name="y" value="262" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_editDriversFragment_to_nav_Drivers">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
@@ -163,6 +184,11 @@
                         <option name="myPositions">
                           <map>
                             <entry key="action_nav_Drivers_to_createDriversFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_nav_Drivers_to_editDriversFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
