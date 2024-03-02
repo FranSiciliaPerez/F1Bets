@@ -42,7 +42,7 @@ class BetFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        betsLiveData.observe(viewLifecycleOwner, Observer { bets ->
+        betsLiveData.observe(viewLifecycleOwner) { bets ->
             bets?.let {
                 val driversMap = mutableMapOf<String, Driver>()
                 val circuitsMap = mutableMapOf<String, Circuit>()
@@ -60,7 +60,7 @@ class BetFragment : Fragment() {
                     }
                 }
             }
-        })
+        }
 
         getBetData()
     }

@@ -5,9 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.MutableLiveData
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.f1bets.CircuitAdapter
+import com.example.f1bets.R
 import com.example.f1bets.databinding.FragmentCircuitBinding
 import com.example.f1bets.entities.Circuit
 import com.google.firebase.firestore.FirebaseFirestore
@@ -17,19 +20,39 @@ class CircuitFragment : Fragment() {
     private lateinit var circuitAdapter: CircuitAdapter
     private lateinit var circuitRecyclerView: RecyclerView
     private val db = FirebaseFirestore.getInstance()
+    private val circuitsLiveData: MutableLiveData<List<Circuit>> = MutableLiveData()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentCircuitBinding.inflate(inflater, container, false)
+
+        binding.btnAddCircuit.setOnClickListener() {
+            Navigation.findNavController(it).navigate(R.id.action_nav_Circuits_to_createCircuitsFragment)
+        }
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        circuitAdapter = CircuitAdapter(mutableListOf()) { _ -> true } // Inicialize the adapter
+
+        // Initialize the RecyclerView and adapter
+        circuitAdapter = CircuitAdapter(mutableListOf()) { circuit ->
+            Navigation.findNavController(view).navigate(R.id.action_nav_Circuits_to_editCircuitFragment)
+        }
         setupRecyclerView()
+
+        // Observe changes in circuitsLiveData
+        circuitsLiveData.observe(viewLifecycleOwner) { circuits ->
+            circuits?.let {
+                // Update the adapter with the new data
+                circuitAdapter.circuitsList = it as MutableList<Circuit>
+                circuitAdapter.notifyDataSetChanged()
+            }
+        }
+        // Fetch circuit data from Firestore
         getCircuitData()
     }
 
@@ -50,8 +73,7 @@ class CircuitFragment : Fragment() {
                     val circuit = document.toObject(Circuit::class.java)
                     circuitsList.add(circuit)
                 }
-                circuitAdapter.circuitsList = circuitsList
-                circuitAdapter.notifyDataSetChanged()
+                circuitsLiveData.value = circuitsList
             }
             .addOnFailureListener { exception ->
             }

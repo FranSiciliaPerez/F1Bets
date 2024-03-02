@@ -14,7 +14,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class CircuitAdapter(
     var circuitsList: MutableList<Circuit>,
-    private val onCircuitShortClick: (Circuit) -> Boolean
+    private val onCircuitEditClick: (Circuit) -> Unit
 
 ) : RecyclerView.Adapter<CircuitAdapter.CircuitViewHolder>()
 {
@@ -77,6 +77,13 @@ class CircuitAdapter(
                         deleteDialogConfirm(circuit)
                     }
                 }
+                /*btnEdit.setOnClickListener {
+                    val position = adapterPosition
+                    if (position != RecyclerView.NO_POSITION) {
+                        val circuit = circuitsList[position]
+                        onCircuitEditClick(circuit)
+                    }
+                }*/
             }
         }
         private fun deleteCircuit(circuit: Circuit) {

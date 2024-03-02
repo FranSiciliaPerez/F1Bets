@@ -81,7 +81,7 @@
     <string name="txtDeleteBet">Bet deleted</string>
     <string name="txtErrDeleteBet">Failed to delete bet</string>
     <string name="txtTitleContextMenu">Click to go to:</string>
-    <string name="txtrrEmptyBetMoney" >Please, add the monet to bet</string>
+    <string name="txtrrEmptyBetMoney">Please, add the monet to bet</string>
     <string name="txtErrDeleteDriverAssigned">Cannot delete the driver because it is assigned to a bet.</string>
     <string name="txtErrDeleteCircuitAssigned">Cannot delete the circuit because it is assigned to a bet</string>
 </resources>

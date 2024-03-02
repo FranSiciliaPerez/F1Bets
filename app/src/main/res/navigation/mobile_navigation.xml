@@ -26,12 +26,26 @@
         android:id="@+id/nav_Circuits"
         android:name="com.example.f1bets.ui.circuit.CircuitFragment"
         android:label="@string/txtMenuCircuits"
-        tools:layout="@layout/fragment_circuit" />
+        tools:layout="@layout/fragment_circuit" >
+        <action
+            android:id="@+id/action_nav_Circuits_to_createCircuitsFragment"
+            app:destination="@id/createCircuitsFragment" />
+        <action
+            android:id="@+id/action_nav_Circuits_to_editCircuitFragment"
+            app:destination="@id/editCircuitFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_Drivers"
         android:name="com.example.f1bets.ui.driver.DriverFragment"
         android:label="@string/txtMenuDrivers"
-        tools:layout="@layout/fragment_driver" />
+        tools:layout="@layout/fragment_driver" >
+        <action
+            android:id="@+id/action_nav_Drivers_to_createDriversFragment"
+            app:destination="@id/createDriversFragment" />
+        <action
+            android:id="@+id/action_nav_Drivers_to_editDriversFragment"
+            app:destination="@id/editDriversFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_Bets"
         android:name="com.example.f1bets.ui.bet.BetFragment"
@@ -54,5 +68,41 @@
         <action
             android:id="@+id/action_createBetsFragment_to_nav_Bets"
             app:destination="@id/nav_Bets" />
+    </fragment>
+    <fragment
+        android:id="@+id/createCircuitsFragment"
+        android:name="com.example.f1bets.ui.circuit.CreateCircuitsFragment"
+        android:label="fragment_create_circuits"
+        tools:layout="@layout/fragment_create_circuits" >
+        <action
+            android:id="@+id/action_createCircuitsFragment_to_nav_Circuits"
+            app:destination="@id/nav_Circuits" />
+    </fragment>
+    <fragment
+        android:id="@+id/createDriversFragment"
+        android:name="com.example.f1bets.ui.driver.CreateDriversFragment"
+        android:label="fragment_create_drivers"
+        tools:layout="@layout/fragment_create_drivers" >
+        <action
+            android:id="@+id/action_createDriversFragment_to_nav_Drivers"
+            app:destination="@id/nav_Drivers" />
+    </fragment>
+    <fragment
+        android:id="@+id/editCircuitFragment"
+        android:name="com.example.f1bets.ui.circuit.EditCircuitFragment"
+        android:label="fragment_edit_circuit"
+        tools:layout="@layout/fragment_edit_circuit" >
+        <action
+            android:id="@+id/action_editCircuitFragment_to_nav_Circuits"
+            app:destination="@id/nav_Circuits" />
+    </fragment>
+    <fragment
+        android:id="@+id/editDriversFragment"
+        android:name="com.example.f1bets.ui.driver.EditDriversFragment"
+        android:label="fragment_edit_drivers"
+        tools:layout="@layout/fragment_edit_drivers" >
+        <action
+            android:id="@+id/action_editDriversFragment_to_nav_Drivers"
+            app:destination="@id/nav_Drivers" />
     </fragment>
 </navigation>

@@ -5,9 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.f1bets.DriverAdapter
+import com.example.f1bets.R
 import com.example.f1bets.databinding.FragmentDriverBinding
 import com.example.f1bets.entities.Driver
 import com.google.firebase.firestore.FirebaseFirestore
@@ -23,6 +25,9 @@ class DriverFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentDriverBinding.inflate(inflater, container, false)
+        binding.btnAddDriver.setOnClickListener() {
+            Navigation.findNavController(it).navigate(R.id.action_nav_Drivers_to_createDriversFragment)
+        }
         return binding.root
     }
 
