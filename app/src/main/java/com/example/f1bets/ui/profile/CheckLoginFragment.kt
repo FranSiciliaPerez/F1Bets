@@ -9,13 +9,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.bumptech.glide.Glide
 import com.example.f1bets.R
 import com.example.f1bets.activities.StartActivity
 import com.example.f1bets.databinding.FragmentCheckLoginBinding
 import com.example.f1bets.entities.User
 import com.example.f1bets.functions.Funciones
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -62,7 +60,7 @@ class CheckLoginFragment : Fragment() {
                     Snackbar.make(root, R.string.errEmpty, Snackbar.LENGTH_LONG).show()
                 }
             }
-            btnCancel.setOnClickListener { findNavController().navigate(R.id.action_checkLoginFragment_to_nav_User) }
+            btnCancel.setOnClickListener { findNavController().navigate(R.id.action_checkLoginFragment_to_nav_Home) }
         }
 
         return binding.root

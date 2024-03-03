@@ -5,15 +5,14 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.MediaController
 import android.widget.PopupMenu
 import android.widget.VideoView
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.example.f1bets.R
 import com.example.f1bets.activities.StartActivity
 import com.example.f1bets.databinding.FragmentHomeBinding
@@ -25,6 +24,11 @@ class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private var videoView: VideoView? = null
     private lateinit var sharedPreferences: SharedPreferences
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true) // to make posible the user settings menu
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -105,7 +109,7 @@ class HomeFragment : Fragment() {
                     editor.putBoolean("showWarning_$userId", false)
                     editor.apply()
                 }
-                // It logs out the user, and redirect him to the main activity
+                // It logs out the user, and redirect him to the user_options_menu activity
                 .setNegativeButton(getString(R.string.txtDeclineAgeAlert)) { _, _ ->
                     FirebaseAuth.getInstance().signOut()
                     val intent = Intent(requireContext(), StartActivity::class.java)
@@ -119,6 +123,22 @@ class HomeFragment : Fragment() {
 
     private fun showWarning(userId: String): Boolean {
         return sharedPreferences.getBoolean("showWarning_$userId", true)
+    }
+
+    // Menu user settings
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.user_options_menu, menu)
+        true
+    }
+    // It control the click on the item of the user settings menu
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_settings -> {
+                findNavController().navigate(R.id.action_nav_Home_to_userSettingsFragment)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     private fun contextMenu() {
