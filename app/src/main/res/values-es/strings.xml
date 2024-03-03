@@ -85,4 +85,9 @@
     <string name="txtErrDeleteDriverAssigned">No se ha podido eliminar el piloto porque pertenece a una apuesta</string>
     <string name="txtDeleteLogAccount">Eliminar cuenta</string>
     <string name="succesDeleteAccount">Eliminada con exito</string>
+    <string name="txtTitleDeleteAccount">Eliminar cuenta</string>
+    <string name="txtTitleUserSettings">Ajustes</string>
+    <string name="txtTitleCreateBet">Crear apuesta</string>
+    <string name="txtTitleCreateCircuit">Crear circuito</string>
+    <string name="txtTitleCreateDriver">Crear piloto</string>
 </resources>

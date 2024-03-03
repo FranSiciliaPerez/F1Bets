@@ -86,4 +86,9 @@
     <string name="txtErrDeleteDriverAssigned">Cannot delete the driver because it is assigned to a bet.</string>
     <string name="txtErrDeleteCircuitAssigned">Cannot delete the circuit because it is assigned to a bet</string>
     <string name="txtDeleteLogAccount">Delete account</string>
+    <string name="txtTitleCreateBet">Create bet</string>
+    <string name="txtTitleCreateCircuit">Create circuit</string>
+    <string name="txtTitleCreateDriver">Create drivers</string>
+    <string name="txtTitleDeleteAccount">Delete account</string>
+    <string name="txtTitleUserSettings">Settings</string>
 </resources>

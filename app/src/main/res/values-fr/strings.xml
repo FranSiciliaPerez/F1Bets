@@ -85,4 +85,9 @@
     <string name="txtErrDeleteCircuitAssigned">Ne se peut pas effaser le circuit parcequ il est dans une pari</string>
     <string name="txtDeleteLogAccount">Effaser l account</string>
     <string name="succesDeleteAccount">Eliminee perfect</string>
+    <string name="txtTitleDeleteAccount">Effaser l account</string>
+    <string name="txtTitleUserSettings">Paramètres</string>
+    <string name="txtTitleCreateDriver">Ajouter pilote</string>
+    <string name="txtTitleCreateCircuit">Ajouter circuit</string>
+    <string name="txtTitleCreateBet">Ajouter pari</string>
 </resources>

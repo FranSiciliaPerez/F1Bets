@@ -70,7 +70,7 @@
     <fragment
         android:id="@+id/createBetsFragment"
         android:name="com.example.f1bets.ui.bet.CreateBetsFragment"
-        android:label="fragment_create_bets"
+        android:label="@string/txtTitleCreateBet"
         tools:layout="@layout/fragment_create_bets" >
         <action
             android:id="@+id/action_createBetsFragment_to_nav_Bets"
@@ -79,7 +79,7 @@
     <fragment
         android:id="@+id/createCircuitsFragment"
         android:name="com.example.f1bets.ui.circuit.CreateCircuitsFragment"
-        android:label="fragment_create_circuits"
+        android:label="@string/txtTitleCreateCircuit"
         tools:layout="@layout/fragment_create_circuits" >
         <action
             android:id="@+id/action_createCircuitsFragment_to_nav_Circuits"
@@ -88,7 +88,7 @@
     <fragment
         android:id="@+id/createDriversFragment"
         android:name="com.example.f1bets.ui.driver.CreateDriversFragment"
-        android:label="fragment_create_drivers"
+        android:label="@string/txtTitleCreateDriver"
         tools:layout="@layout/fragment_create_drivers" >
         <action
             android:id="@+id/action_createDriversFragment_to_nav_Drivers"
@@ -115,7 +115,7 @@
     <fragment
         android:id="@+id/checkLoginFragment"
         android:name="com.example.f1bets.ui.profile.CheckLoginFragment"
-        android:label="fragment_check_login"
+        android:label="@string/txtTitleDeleteAccount"
         tools:layout="@layout/fragment_check_login" >
         <action
             android:id="@+id/action_checkLoginFragment_to_userSettingsFragment"
@@ -130,7 +130,7 @@
     <fragment
         android:id="@+id/userSettingsFragment"
         android:name="com.example.f1bets.ui.profile.UserSettingsFragment"
-        android:label="fragment_user_settings"
+        android:label="@string/txtTitleUserSettings"
         tools:layout="@layout/fragment_user_settings" >
         <action
             android:id="@+id/action_userSettingsFragment_to_nav_Home"
