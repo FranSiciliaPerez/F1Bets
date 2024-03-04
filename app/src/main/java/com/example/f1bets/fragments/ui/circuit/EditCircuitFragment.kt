@@ -1,4 +1,4 @@
-package com.example.f1bets.ui.circuit
+package com.example.f1bets.fragments.ui.circuit
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

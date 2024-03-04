@@ -1,4 +1,4 @@
-package com.example.f1bets.ui.bet
+package com.example.f1bets.fragments.ui.bet
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,17 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.f1bets.BetAdapter
+import com.example.f1bets.adapters.BetAdapter
 import com.example.f1bets.R
 import com.example.f1bets.databinding.FragmentBetBinding
 import com.example.f1bets.entities.Bets
 import com.example.f1bets.entities.Circuit
 import com.example.f1bets.entities.Driver
-import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.firestore.FirebaseFirestore
 
 class BetFragment : Fragment() {

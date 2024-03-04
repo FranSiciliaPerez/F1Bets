@@ -1,4 +1,4 @@
-package com.example.f1bets.ui.profile
+package com.example.f1bets.fragments.ui.profile
 
 import android.content.ContentValues.TAG
 import android.os.Bundle

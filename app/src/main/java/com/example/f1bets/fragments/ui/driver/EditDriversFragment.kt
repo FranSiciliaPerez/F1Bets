@@ -1,4 +1,4 @@
-package com.example.f1bets.ui.driver
+package com.example.f1bets.fragments.ui.driver
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

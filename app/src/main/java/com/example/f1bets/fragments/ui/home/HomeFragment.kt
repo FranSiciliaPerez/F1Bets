@@ -1,4 +1,4 @@
-package com.example.f1bets.ui.home
+package com.example.f1bets.fragments.ui.home
 
 import android.content.Context
 import android.content.Intent

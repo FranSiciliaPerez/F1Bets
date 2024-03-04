@@ -1,10 +1,11 @@
-package com.example.f1bets
+package com.example.f1bets.adapters
 
 import android.content.ContentValues.TAG
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.f1bets.R
 import com.example.f1bets.databinding.BetItemBinding
 import com.example.f1bets.entities.Bets
 import com.example.f1bets.entities.Circuit

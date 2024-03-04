@@ -6,7 +6,7 @@
         android:paddingRight="16dp"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
-        tools:context=".ui.bet.CreateBetsFragment">
+        tools:context=".fragments.ui.bet.CreateBetsFragment">
     <TextView
         android:id="@+id/textViewDriver"
         android:layout_width="wrap_content"

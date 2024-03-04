@@ -1,45 +1,48 @@
-package com.example.f1bets.ui.driver
+package com.example.f1bets.fragments
 
-import android.net.Uri
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.core.content.ContextCompat
-import androidx.navigation.Navigation
 import android.Manifest
 import android.app.Activity.RESULT_OK
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
+import android.net.Uri
+import android.os.Bundle
 import android.provider.MediaStore
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.example.f1bets.R
-import com.example.f1bets.databinding.FragmentCreateDriversBinding
+import com.example.f1bets.activities.MainActivity
+import com.example.f1bets.databinding.FragmentSignUpBinding
+import com.example.f1bets.entities.User
+import com.example.f1bets.functions.Funciones
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import java.io.ByteArrayOutputStream
 import java.io.IOException
-import java.util.*
 
-
-class CreateDriversFragment : Fragment() {
-
-    private lateinit var binding: FragmentCreateDriversBinding
+class SignUpFragment : Fragment() {
+    private lateinit var binding: FragmentSignUpBinding
+    private lateinit var auth: FirebaseAuth
     private lateinit var db: FirebaseFirestore
     private lateinit var storage: FirebaseStorage
     private var selectedImageUri: Uri? = null
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentCreateDriversBinding.inflate(inflater, container, false)
+        binding = FragmentSignUpBinding.inflate(inflater, container, false)
+        auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
         storage = FirebaseStorage.getInstance()
 
@@ -50,33 +53,39 @@ class CreateDriversFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         with(binding) {
-            btnCreateDriver.setOnClickListener {
-                val name = txtNameDriver.text.toString().trim()
-                val team = txtTeam.text.toString().trim()
-                val yearBirth = txtYearBirth.text.toString().toLongOrNull() ?: 0
+            btnSignUp.setOnClickListener {
+                val user = textUser.text.toString()
+                val email = textEmail.text.toString()
+                val password = txtPassword2.text.toString()
 
-                if (name.isNotEmpty() && team.isNotEmpty() && yearBirth > 0) {
-                    selectedImageUri?.let { uri ->
-                        uploadImageAndSaveDriver(uri, name, team, yearBirth)
-                    } ?: run {
-                        val newDriver = hashMapOf(
-                            "name" to name,
-                            "team" to team,
-                            "yearBirth" to yearBirth
-                        )
-                        saveDriverToFirestore(newDriver)
+                if (Funciones.allFilled(user, email, password)) {
+                    if (checkBox.isChecked) {
+                        auth.createUserWithEmailAndPassword(email, password)
+                            .addOnSuccessListener { authResult ->
+                                selectedImageUri?.let { uri ->
+                                    uploadImageAndSaveUser(uri, user, email)
+                                } ?: run {
+                                    val newUser =
+                                        User(authResult.user?.uid ?: "", user, email, "")
+                                    saveUserToFirestore(newUser)
+                                }
+                            }
+                            .addOnFailureListener {
+                                Snackbar.make(root, R.string.errEmail, Snackbar.LENGTH_LONG).show()
+                            }
+                    } else {
+                        Snackbar.make(root, R.string.msgCheckError, Snackbar.LENGTH_LONG).show()
                     }
                 } else {
                     Snackbar.make(root, R.string.errEmpty, Snackbar.LENGTH_LONG).show()
                 }
             }
 
-            imgDriver.setOnClickListener {
+            imageView.setOnClickListener {
                 selectImage()
             }
         }
     }
-
     private fun requestPermissions() {
         if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED ||
             ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
@@ -98,7 +107,7 @@ class CreateDriversFragment : Fragment() {
             if (grantResults.isNotEmpty() && grantResults.all { it == PackageManager.PERMISSION_GRANTED }) {
                 // Permisos concedidos, puedes proceder con la lógica de la cámara o la galería
             } else {
-                Snackbar.make(binding.root, "", Snackbar.LENGTH_LONG).show()
+                Snackbar.make(binding.root, "Los permisos no fueron concedidos", Snackbar.LENGTH_LONG).show()
             }
         }
     }
@@ -136,7 +145,7 @@ class CreateDriversFragment : Fragment() {
             try {
                 Glide.with(requireContext())
                     .load(selectedImageUri)
-                    .into(binding.imgDriver)
+                    .into(binding.imageView)
             } catch (e: IOException) {
                 e.printStackTrace()
             }
@@ -146,7 +155,7 @@ class CreateDriversFragment : Fragment() {
             try {
                 Glide.with(requireContext())
                     .load(selectedImageUri)
-                    .into(binding.imgDriver)
+                    .into(binding.imageView)
             } catch (e: IOException) {
                 e.printStackTrace()
             }
@@ -160,60 +169,33 @@ class CreateDriversFragment : Fragment() {
         return Uri.parse(path)
     }
 
-    private fun uploadImageAndSaveDriver(imageUri: Uri?, name: String, team: String, yearBirth: Long) {
-        if (imageUri != null) {
-            val storageRef = storage.reference
-            val imagesRef = storageRef.child("f1Bets-images/${UUID.randomUUID()}")
+    private fun uploadImageAndSaveUser(imageUri: Uri, userName: String, email: String) {
+        val storageRef = storage.reference
+        val imagesRef = storageRef.child("f1Bets-images/${auth.currentUser?.uid}")
 
-            val uploadTask = imagesRef.putFile(imageUri)
-            uploadTask.addOnSuccessListener { taskSnapshot ->
-                taskSnapshot.storage.downloadUrl.addOnSuccessListener { uri ->
-                    val newDriver = hashMapOf(
-                        "name" to name,
-                        "team" to team,
-                        "yearBirth" to yearBirth,
-                        "picture" to uri.toString() // Save the URL of the img in Firebase Storage
-                    )
-                    saveDriverToFirestore(newDriver)
-
-                }
-            }.addOnFailureListener {
-                Snackbar.make(binding.root, R.string.errImageUpload, Snackbar.LENGTH_LONG).show()
+        val uploadTask = imagesRef.putFile(imageUri)
+        uploadTask.addOnSuccessListener { taskSnapshot ->
+            taskSnapshot.storage.downloadUrl.addOnSuccessListener { uri ->
+                val newUser = User(auth.currentUser?.uid ?: "", userName, email, "", uri.toString())
+                saveUserToFirestore(newUser)
             }
-        } else {
-            val newDriver = hashMapOf(
-                "name" to name,
-                "team" to team,
-                "yearBirth" to yearBirth
-            )
-            saveDriverToFirestore(newDriver)
+        }.addOnFailureListener {
+            Snackbar.make(binding.root, R.string.errImageUpload, Snackbar.LENGTH_LONG).show()
         }
     }
 
-    private fun updateDriverId(driverId: String) {
-        db.collection("driver")
-            .document(driverId)
-            .update("id", driverId)
+    private fun saveUserToFirestore(user: User) {
+        db.collection("user")
+            .document(user.uid)
+            .set(user)
             .addOnSuccessListener {
-                // The id driver field has been updated with the generated id
-                Snackbar.make(binding.root, "Driver succsesfully created", Snackbar.LENGTH_LONG).show()
-                Navigation.findNavController(requireView()).navigate(R.id.action_createDriversFragment_to_nav_Drivers)
+                Snackbar.make(binding.root, R.string.succesLog, Snackbar.LENGTH_LONG).show()
+                val i = Intent(requireContext(), MainActivity::class.java)
+                startActivity(i)
+                requireActivity().finish()
             }
             .addOnFailureListener {
-                Snackbar.make(binding.root, "error_updating_driver_id", Snackbar.LENGTH_LONG).show()
-            }
-    }
-
-    private fun saveDriverToFirestore(driverData: Map<String, Any>) {
-        db.collection("driver")
-            .add(driverData)
-            .addOnSuccessListener { documentReference ->
-                val driverId = documentReference.id
-                // Give back the ID of the driver
-                updateDriverId(driverId)
-            }
-            .addOnFailureListener {
-                Snackbar.make(binding.root, "", Snackbar.LENGTH_LONG).show()
+                Snackbar.make(binding.root, R.string.errSignFirestore, Snackbar.LENGTH_LONG).show()
             }
     }
 

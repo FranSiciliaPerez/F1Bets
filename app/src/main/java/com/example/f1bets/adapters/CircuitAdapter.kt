@@ -1,4 +1,4 @@
-package com.example.f1bets
+package com.example.f1bets.adapters
 
 import android.content.ContentValues
 import android.util.Log
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.f1bets.R
 import com.example.f1bets.databinding.CircuitItemBinding
 import com.example.f1bets.entities.Circuit
 import com.google.android.material.dialog.MaterialAlertDialogBuilder

@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.example.f1bets.SignUpFragment"
+        android:name="com.example.f1bets.fragments.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.f1bets.LoginFragment"
+        android:name="com.example.f1bets.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action

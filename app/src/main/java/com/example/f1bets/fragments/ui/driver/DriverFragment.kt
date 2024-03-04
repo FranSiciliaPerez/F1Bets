@@ -1,4 +1,4 @@
-package com.example.f1bets.ui.driver
+package com.example.f1bets.fragments.ui.driver
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.f1bets.DriverAdapter
+import com.example.f1bets.adapters.DriverAdapter
 import com.example.f1bets.R
 import com.example.f1bets.databinding.FragmentDriverBinding
 import com.example.f1bets.entities.Driver

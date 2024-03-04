@@ -6,7 +6,7 @@
     app:startDestination="@id/nav_Home">
     <fragment
         android:id="@+id/nav_Home"
-        android:name="com.example.f1bets.ui.home.HomeFragment"
+        android:name="com.example.f1bets.fragments.ui.home.HomeFragment"
         android:label="@string/txtMenuHome"
         tools:layout="@layout/fragment_home" >
         <action
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/nav_Circuits"
-        android:name="com.example.f1bets.ui.circuit.CircuitFragment"
+        android:name="com.example.f1bets.fragments.ui.circuit.CircuitFragment"
         android:label="@string/txtMenuCircuits"
         tools:layout="@layout/fragment_circuit" >
         <action
@@ -39,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/nav_Drivers"
-        android:name="com.example.f1bets.ui.driver.DriverFragment"
+        android:name="com.example.f1bets.fragments.ui.driver.DriverFragment"
         android:label="@string/txtMenuDrivers"
         tools:layout="@layout/fragment_driver" >
         <action
@@ -51,7 +51,7 @@
     </fragment>
     <fragment
         android:id="@+id/nav_Bets"
-        android:name="com.example.f1bets.ui.bet.BetFragment"
+        android:name="com.example.f1bets.fragments.ui.bet.BetFragment"
         android:label="@string/txtMenuBets"
         tools:layout="@layout/fragment_bet" >
         <action
@@ -60,7 +60,7 @@
     </fragment>
     <fragment
         android:id="@+id/nav_User"
-        android:name="com.example.f1bets.ui.profile.UserFragment"
+        android:name="com.example.f1bets.fragments.ui.profile.UserFragment"
         android:label="@string/txtMenuUser"
         tools:layout="@layout/fragment_user" >
         <action
@@ -69,7 +69,7 @@
     </fragment>
     <fragment
         android:id="@+id/createBetsFragment"
-        android:name="com.example.f1bets.ui.bet.CreateBetsFragment"
+        android:name="com.example.f1bets.fragments.ui.bet.CreateBetsFragment"
         android:label="@string/txtTitleCreateBet"
         tools:layout="@layout/fragment_create_bets" >
         <action
@@ -78,7 +78,7 @@
     </fragment>
     <fragment
         android:id="@+id/createCircuitsFragment"
-        android:name="com.example.f1bets.ui.circuit.CreateCircuitsFragment"
+        android:name="com.example.f1bets.fragments.ui.circuit.CreateCircuitsFragment"
         android:label="@string/txtTitleCreateCircuit"
         tools:layout="@layout/fragment_create_circuits" >
         <action
@@ -87,7 +87,7 @@
     </fragment>
     <fragment
         android:id="@+id/createDriversFragment"
-        android:name="com.example.f1bets.ui.driver.CreateDriversFragment"
+        android:name="com.example.f1bets.fragments.ui.driver.CreateDriversFragment"
         android:label="@string/txtTitleCreateDriver"
         tools:layout="@layout/fragment_create_drivers" >
         <action
@@ -96,7 +96,7 @@
     </fragment>
     <fragment
         android:id="@+id/editCircuitFragment"
-        android:name="com.example.f1bets.ui.circuit.EditCircuitFragment"
+        android:name="com.example.f1bets.fragments.ui.circuit.EditCircuitFragment"
         android:label="@string/txtEditCircuit"
         tools:layout="@layout/fragment_edit_circuit" >
         <action
@@ -105,7 +105,7 @@
     </fragment>
     <fragment
         android:id="@+id/editDriversFragment"
-        android:name="com.example.f1bets.ui.driver.EditDriversFragment"
+        android:name="com.example.f1bets.fragments.ui.driver.EditDriversFragment"
         android:label="fragment_edit_drivers"
         tools:layout="@layout/fragment_edit_drivers" >
         <action
@@ -114,7 +114,7 @@
     </fragment>
     <fragment
         android:id="@+id/checkLoginFragment"
-        android:name="com.example.f1bets.ui.profile.CheckLoginFragment"
+        android:name="com.example.f1bets.fragments.ui.profile.CheckLoginFragment"
         android:label="@string/txtTitleDeleteAccount"
         tools:layout="@layout/fragment_check_login" >
         <action
@@ -129,7 +129,7 @@
     </fragment>
     <fragment
         android:id="@+id/userSettingsFragment"
-        android:name="com.example.f1bets.ui.profile.UserSettingsFragment"
+        android:name="com.example.f1bets.fragments.ui.profile.UserSettingsFragment"
         android:label="@string/txtTitleUserSettings"
         tools:layout="@layout/fragment_user_settings" >
         <action

@@ -1,4 +1,4 @@
-package com.example.f1bets.ui.circuit
+package com.example.f1bets.fragments.ui.circuit
 
 import android.Manifest
 import android.app.Activity.RESULT_OK

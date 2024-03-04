@@ -1,4 +1,4 @@
-package com.example.f1bets.ui.circuit
+package com.example.f1bets.fragments.ui.circuit
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.f1bets.CircuitAdapter
+import com.example.f1bets.adapters.CircuitAdapter
 import com.example.f1bets.R
 import com.example.f1bets.databinding.FragmentCircuitBinding
 import com.example.f1bets.entities.Circuit

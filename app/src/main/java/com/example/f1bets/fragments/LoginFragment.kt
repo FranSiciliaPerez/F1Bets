@@ -1,4 +1,4 @@
-package com.example.f1bets
+package com.example.f1bets.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.f1bets.R
 import com.example.f1bets.activities.MainActivity
 import com.example.f1bets.databinding.FragmentLoginBinding
 import com.example.f1bets.functions.Funciones

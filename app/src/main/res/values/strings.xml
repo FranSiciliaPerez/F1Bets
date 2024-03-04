@@ -33,6 +33,7 @@
     <string name="errSignFirestore">Registration in Firestore failed</string>
     <string name="errEmail">Incorrect email</string>
     <string name="errPasw">Incorrect password</string>
+    <string name="errPaswAndEmail">Incorrect email or password</string>
     <string name="errDeleteAccount">Error deleting account</string>
     <string name="succesLog">Logged</string>
     <string name="succesDeleteAccount">Deleted successfully</string>
