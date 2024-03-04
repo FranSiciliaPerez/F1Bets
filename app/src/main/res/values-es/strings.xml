@@ -92,4 +92,5 @@
     <string name="txtTitleCreateDriver">Crear piloto</string>
     <string name="btnTxtEdit">Guardar cambios</string>
     <string name="txtEditCircuit">Editar circuito</string>
+    <string name="txtYearBirthDriver">Año de nacimiento</string>
 </resources>

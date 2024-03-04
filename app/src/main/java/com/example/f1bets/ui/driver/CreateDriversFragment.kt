@@ -10,7 +10,6 @@ import androidx.core.content.ContextCompat
 import androidx.navigation.Navigation
 import android.Manifest
 import android.app.Activity.RESULT_OK
-import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -20,6 +19,7 @@ import androidx.core.app.ActivityCompat
 import com.bumptech.glide.Glide
 import com.example.f1bets.R
 import com.example.f1bets.databinding.FragmentCreateDriversBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
@@ -105,19 +105,19 @@ class CreateDriversFragment : Fragment() {
 
     private fun selectImage() {
         val options = arrayOf("Tomar Foto", "Elegir de la Galería", "Cancelar")
-        val builder = AlertDialog.Builder(requireContext())
-        builder.setTitle("Seleccionar Fuente de Imagen")
-        builder.setItems(options) { dialog, which ->
-            when (which) {
-                0 -> dispatchTakePictureIntent()
-                1 -> {
-                    val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-                    startActivityForResult(intent, PICK_IMAGE_REQUEST)
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle("Seleccionar Fuente de Imagen")
+            .setItems(options) { dialog, which ->
+                when (which) {
+                    0 -> dispatchTakePictureIntent()
+                    1 -> {
+                        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+                        startActivityForResult(intent, PICK_IMAGE_REQUEST)
+                    }
+                    2 -> dialog.dismiss()
                 }
-                2 -> dialog.dismiss()
             }
-        }
-        builder.show()
+            .show()
     }
 
     private fun dispatchTakePictureIntent() {
@@ -172,7 +172,7 @@ class CreateDriversFragment : Fragment() {
                         "name" to name,
                         "team" to team,
                         "yearBirth" to yearBirth,
-                        "picture" to uri.toString() // Guarda la URL de la imagen en Firebase Storage
+                        "picture" to uri.toString() // Save the URL of the img in Firebase Storage
                     )
                     saveDriverToFirestore(newDriver)
 
@@ -190,30 +190,30 @@ class CreateDriversFragment : Fragment() {
         }
     }
 
-    private fun saveDriverToFirestore(driverData: Map<String, Any>) {
-        db.collection("driver")
-            .add(driverData)
-            .addOnSuccessListener { documentReference ->
-                val driverId = documentReference.id
-                // Aquí devolvemos el ID del piloto
-                updateDriverId(driverId)
-            }
-            .addOnFailureListener {
-                Snackbar.make(binding.root, "", Snackbar.LENGTH_LONG).show()
-            }
-    }
-
     private fun updateDriverId(driverId: String) {
         db.collection("driver")
             .document(driverId)
             .update("id", driverId)
             .addOnSuccessListener {
-                // El campo id del piloto ha sido actualizado con el ID generado
-                Snackbar.make(binding.root, "El campo id del piloto ha sido actualizado con el ID generado", Snackbar.LENGTH_LONG).show()
+                // The id driver field has been updated with the generated id
+                Snackbar.make(binding.root, "Driver succsesfully created", Snackbar.LENGTH_LONG).show()
                 Navigation.findNavController(requireView()).navigate(R.id.action_createDriversFragment_to_nav_Drivers)
             }
             .addOnFailureListener {
                 Snackbar.make(binding.root, "error_updating_driver_id", Snackbar.LENGTH_LONG).show()
+            }
+    }
+
+    private fun saveDriverToFirestore(driverData: Map<String, Any>) {
+        db.collection("driver")
+            .add(driverData)
+            .addOnSuccessListener { documentReference ->
+                val driverId = documentReference.id
+                // Give back the ID of the driver
+                updateDriverId(driverId)
+            }
+            .addOnFailureListener {
+                Snackbar.make(binding.root, "", Snackbar.LENGTH_LONG).show()
             }
     }
 

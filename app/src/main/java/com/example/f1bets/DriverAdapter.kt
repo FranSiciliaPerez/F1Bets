@@ -14,7 +14,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class DriverAdapter(
     var driversList: MutableList<Driver>,
-    private val onDeleteClickListener: (Driver) -> Unit
+    private val onDriverEditClick: (String) -> Unit
 ) : RecyclerView.Adapter<DriverAdapter.DriverViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DriverViewHolder {
@@ -73,6 +73,9 @@ class DriverAdapter(
                         val driver = driversList[position]
                         deleteDialogConfirm(driver)
                     }
+                }
+                btnEdit.setOnClickListener {
+                    onDriverEditClick(driver.id)
                 }
             }
         }

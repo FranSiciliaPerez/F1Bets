@@ -92,4 +92,5 @@
     <string name="txtTitleCreateBet">Ajouter pari</string>
     <string name="btnTxtEdit">Guardee changez</string>
     <string name="txtEditCircuit">Changez circuit</string>
+    <string name="txtYearBirthDriver">Anée du naissance</string>
 </resources>

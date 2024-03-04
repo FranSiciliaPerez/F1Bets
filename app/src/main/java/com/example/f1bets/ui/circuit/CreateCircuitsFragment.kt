@@ -2,7 +2,6 @@ package com.example.f1bets.ui.circuit
 
 import android.Manifest
 import android.app.Activity.RESULT_OK
-import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -20,6 +19,7 @@ import androidx.navigation.Navigation
 import com.bumptech.glide.Glide
 import com.example.f1bets.R
 import com.example.f1bets.databinding.FragmentCreateCircuitsBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
@@ -107,19 +107,19 @@ class CreateCircuitsFragment : Fragment() {
 
     private fun selectImage() {
         val options = arrayOf("Tomar Foto", "Elegir de la Galería", "Cancelar")
-        val builder = AlertDialog.Builder(requireContext())
-        builder.setTitle("Seleccionar Fuente de Imagen")
-        builder.setItems(options) { dialog, which ->
-            when (which) {
-                0 -> dispatchTakePictureIntent()
-                1 -> {
-                    val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-                    startActivityForResult(intent, PICK_IMAGE_REQUEST)
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle("Seleccionar Fuente de Imagen")
+            .setItems(options) { dialog, which ->
+                when (which) {
+                    0 -> dispatchTakePictureIntent()
+                    1 -> {
+                        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+                        startActivityForResult(intent, PICK_IMAGE_REQUEST)
+                    }
+                    2 -> dialog.dismiss()
                 }
-                2 -> dialog.dismiss()
             }
-        }
-        builder.show()
+            .show()
     }
 
     private fun dispatchTakePictureIntent() {
@@ -175,7 +175,7 @@ class CreateCircuitsFragment : Fragment() {
                         "country" to country,
                         "laps" to laps,
                         "length" to length,
-                        "picture" to uri.toString() // Guarda la URL de la imagen en Firebase Storage
+                        "picture" to uri.toString() // Save the URL of the img in Firebase Storage
                     )
                     saveCircuitToFirestore(newCircuit)
 
@@ -198,8 +198,8 @@ class CreateCircuitsFragment : Fragment() {
             .document(circuitId)
             .update("id", circuitId)
             .addOnSuccessListener {
-                // El campo id del circuito ha sido actualizado con el ID generado
-                Snackbar.make(binding.root, "El campo id del circuito ha sido actualizado con el ID generado", Snackbar.LENGTH_LONG).show()
+                // The id driver field has been updated with the generated id
+                Snackbar.make(binding.root, "Cicuit succsesfully created", Snackbar.LENGTH_LONG).show()
                 Navigation.findNavController(requireView()).navigate(R.id.action_createCircuitsFragment_to_nav_Circuits)
             }
             .addOnFailureListener {
@@ -211,12 +211,9 @@ class CreateCircuitsFragment : Fragment() {
             .add(circuitData)
             .addOnSuccessListener { documentReference ->
                 val circuitId = documentReference.id
-                Snackbar.make(binding.root, "", Snackbar.LENGTH_LONG).show()
-                // Aquí devolvemos el ID del circuito
+                // Give back the ID of the circuit
                 updateCircuitId(circuitId)
             }
-
-                // Lógica adicional después de guardar el circuito, si es necesario
             .addOnFailureListener {
                 Snackbar.make(binding.root, "", Snackbar.LENGTH_LONG).show()
             }

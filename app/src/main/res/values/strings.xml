@@ -93,4 +93,5 @@
     <string name="txtTitleUserSettings">Settings</string>
     <string name="btnTxtEdit">Save changes</string>
     <string name="txtEditCircuit">Circuit edit</string>
+    <string name="txtYearBirthDriver">Year of Birth</string>
 </resources>

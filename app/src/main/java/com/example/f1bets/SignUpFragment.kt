@@ -21,6 +21,7 @@ import com.example.f1bets.activities.MainActivity
 import com.example.f1bets.databinding.FragmentSignUpBinding
 import com.example.f1bets.entities.User
 import com.example.f1bets.functions.Funciones
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -113,19 +114,19 @@ class SignUpFragment : Fragment() {
 
     private fun selectImage() {
         val options = arrayOf("Tomar Foto", "Elegir de la Galería", "Cancelar")
-        val builder = AlertDialog.Builder(requireContext())
-        builder.setTitle("Seleccionar Fuente de Imagen")
-        builder.setItems(options) { dialog, which ->
-            when (which) {
-                0 -> dispatchTakePictureIntent()
-                1 -> {
-                    val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-                    startActivityForResult(intent, PICK_IMAGE_REQUEST)
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle("Seleccionar Fuente de Imagen")
+            .setItems(options) { dialog, which ->
+                when (which) {
+                    0 -> dispatchTakePictureIntent()
+                    1 -> {
+                        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+                        startActivityForResult(intent, PICK_IMAGE_REQUEST)
+                    }
+                    2 -> dialog.dismiss()
                 }
-                2 -> dialog.dismiss()
             }
-        }
-        builder.show()
+            .show()
     }
 
     private fun dispatchTakePictureIntent() {

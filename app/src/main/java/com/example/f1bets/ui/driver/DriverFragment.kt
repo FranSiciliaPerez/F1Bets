@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.MutableLiveData
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.f1bets.DriverAdapter
@@ -19,6 +21,7 @@ class DriverFragment : Fragment() {
     private lateinit var driverAdapter: DriverAdapter
     private lateinit var driverRecyclerView: RecyclerView
     private val db = FirebaseFirestore.getInstance()
+    private val driversLiveData: MutableLiveData<List<Driver>> = MutableLiveData()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,8 +36,29 @@ class DriverFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        driverAdapter = DriverAdapter(mutableListOf()) { _ -> true } // Inicialize the adapter
+
+        // Initialize the RecyclerView and adapter
+        driverAdapter = DriverAdapter(mutableListOf()) { driverId ->
+            // Format el ID driver to ensure that has no bad caracters
+            val formattedDriverId = driverId.replace(Regex("[^a-zA-Z0-9]"), "")
+            val driver = Driver(formattedDriverId) // Get the driver from the list
+
+            // Call the function editDriver with the selected driver
+            editDriver(driver)
+        }
+
+        // Initialize RecyclerView
         setupRecyclerView()
+
+        // Observe changes in circuitsLiveData
+        driversLiveData.observe(viewLifecycleOwner) { drivers ->
+            drivers?.let {
+                // Update the adapter with the new data
+                driverAdapter.driversList = it as MutableList<Driver>
+                driverAdapter.notifyDataSetChanged()
+            }
+        }
+        // Fetch driver data from Firestore
         getDriverData()
     }
 
@@ -55,10 +79,17 @@ class DriverFragment : Fragment() {
                     val driver = document.toObject(Driver::class.java)
                     driversList.add(driver)
                 }
-                driverAdapter.driversList = driversList
-                driverAdapter.notifyDataSetChanged()
+                driversLiveData.value = driversList
             }
             .addOnFailureListener { exception ->
             }
+    }
+
+    private fun editDriver(driver: Driver) {
+        // Make a Bundle to give the ID of the driver to EditDriverFragment
+        val bundle = Bundle()
+        bundle.putString("driverId", driver.id)
+        // Navigate with the Bundle
+        findNavController().navigate(R.id.editDriversFragment, bundle)
     }
 }
