@@ -16,15 +16,47 @@
         android:layout_height="match_parent"
         android:padding="8dp">
 
+
+
+        <TextView
+            android:id="@+id/txtTitleDriverBet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="23dp"
+            android:text="@string/nameDriverItem"
+            android:textColor="#FFFFFF"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/nameDriverBet"
+            app:layout_constraintHorizontal_bias="0.375"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/nameDriverBet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="4dp"
             android:text="@string/nameDriverItem"
             android:textColor="#FFFFFF"
             android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTitleCircuitBet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/nameCircuitItem"
+            android:textColor="#FFFFFF"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/nameCircuitBet"
+            app:layout_constraintHorizontal_bias="0.642"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,11 +64,26 @@
             android:id="@+id/nameCircuitBet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="128dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="32dp"
             android:text="@string/nameCircuitItem"
             android:textColor="#FFFFFF"
             android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTitleMoneyBet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/txtmoneybet"
+            android:textColor="#FFFFFF"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/nameCircuitBet"
+            app:layout_constraintHorizontal_bias="0.642"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -44,7 +91,7 @@
             android:id="@+id/moneyBet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="84dp"
+            android:layout_marginStart="120dp"
             android:layout_marginTop="60dp"
             android:text="@string/txtmoneybet"
             android:textColor="#FFFFFF"
@@ -61,19 +108,6 @@
             android:drawableTop="@drawable/ic_delete"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.982"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnEdit"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="250dp"
-            android:layout_marginTop="52dp"
-            android:background="@color/transparent"
-            android:drawableTop="@drawable/ic_edit"
-            app:layout_constraintEnd_toStartOf="@+id/btnDelete"
-            app:layout_constraintHorizontal_bias="0.744"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

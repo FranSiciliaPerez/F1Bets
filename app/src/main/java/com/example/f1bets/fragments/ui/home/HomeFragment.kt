@@ -14,6 +14,7 @@ import com.example.f1bets.activities.StartActivity
 import com.example.f1bets.databinding.FragmentHomeBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class HomeFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
@@ -34,12 +35,8 @@ class HomeFragment : Fragment() {
 
         // Initialize SharedPreferences
         sharedPreferences = requireContext().getSharedPreferences("prefs", Context.MODE_PRIVATE)
-
-        // Show warning message if user logged in for the first time
-        val userId = FirebaseAuth.getInstance().currentUser?.uid
-        if (userId != null && isLoggedIn() && showWarning(userId)) {
-            showMessageDialog()
-        }
+        // Verify that the user exist before letting acces to other functions
+        userAuthCheck()
 
         // Handle back button press
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
@@ -50,7 +47,7 @@ class HomeFragment : Fragment() {
                     .setMessage(R.string.txtCloseApp)
                     .setPositiveButton(R.string.txtYes) { dialog, _ ->
                         dialog.dismiss()
-                        requireActivity().finishAffinity() // This method close the actual activity and all associated to it
+                        requireActivity().finishAffinity() // Method to close the current activity and all the conected around
                     }
                     .setNegativeButton(R.string.txtNo) { dialog, _ ->
                         dialog.dismiss()
@@ -60,14 +57,45 @@ class HomeFragment : Fragment() {
                 dialogBuilder.show()
             }
         })
-        // Set the long click in the screen
-        binding.root.setOnLongClickListener{
+
+        // With the long click apears the context menu
+        binding.root.setOnLongClickListener {
             contextMenu()
             true
         }
         return view
     }
 
+    // Check if user is logged in
+    private fun userAuthCheck() {
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        if (currentUser == null) {
+            // if user is not autenticated, redirect to login
+            val intent = Intent(requireContext(), StartActivity::class.java)
+            startActivity(intent)
+            requireActivity().finish()
+        } else {
+            // Check if the user exist in the bbdd in firebase
+            val db = FirebaseFirestore.getInstance()
+            db.collection("user").document(currentUser.uid)
+                .get()
+                .addOnSuccessListener { document ->
+                    if (!document.exists()) {
+                        // If the user document, doesn t exist in Firestore, it will signOut and redirect to the login activity
+                        FirebaseAuth.getInstance().signOut()
+                        val intent = Intent(requireContext(), StartActivity::class.java)
+                        startActivity(intent)
+                        requireActivity().finish()
+                    } else {
+                        // If user is logged in for the first time in this device, show the warning age message
+                        val userId = currentUser.uid
+                        if (isLoggedIn() && showWarning(userId)) {
+                            showMessageDialog()
+                        }
+                    }
+                }
+        }
+    }
     // Check if user is logged in
     private fun isLoggedIn(): Boolean {
         auth = FirebaseAuth.getInstance()
@@ -89,7 +117,7 @@ class HomeFragment : Fragment() {
                     editor.putBoolean("showWarning_$userId", false)
                     editor.apply()
                 }
-                // It logs out the user, and redirect him to the user_options_menu activity
+                // It logs out the user, and redirect him to the main activity
                 .setNegativeButton(getString(R.string.txtDeclineAgeAlert)) { _, _ ->
                     FirebaseAuth.getInstance().signOut()
                     val intent = Intent(requireContext(), StartActivity::class.java)
