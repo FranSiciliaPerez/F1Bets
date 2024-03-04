@@ -90,4 +90,6 @@
     <string name="txtTitleCreateDriver">Create drivers</string>
     <string name="txtTitleCreateCircuit">Create circuit</string>
     <string name="txtTitleCreateBet">Create bet</string>
+    <string name="btnTxtEdit">Save changes</string>
+    <string name="txtEditCircuit">Circuit edit</string>
 </resources>

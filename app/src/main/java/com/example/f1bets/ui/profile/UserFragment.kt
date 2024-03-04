@@ -1,7 +1,6 @@
 package com.example.f1bets.ui.profile
 
 import android.content.ContentValues.TAG
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.*
@@ -9,10 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.f1bets.R
-import com.example.f1bets.activities.StartActivity
 import com.example.f1bets.databinding.FragmentUserBinding
 import com.example.f1bets.entities.User
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore

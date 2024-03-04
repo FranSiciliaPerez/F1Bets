@@ -90,4 +90,6 @@
     <string name="txtTitleCreateDriver">Ajouter pilote</string>
     <string name="txtTitleCreateCircuit">Ajouter circuit</string>
     <string name="txtTitleCreateBet">Ajouter pari</string>
+    <string name="btnTxtEdit">Guardee changez</string>
+    <string name="txtEditCircuit">Changez circuit</string>
 </resources>

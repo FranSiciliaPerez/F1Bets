@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.f1bets.CircuitAdapter
@@ -39,9 +40,16 @@ class CircuitFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Initialize the RecyclerView and adapter
-        circuitAdapter = CircuitAdapter(mutableListOf()) { circuit ->
-            Navigation.findNavController(view).navigate(R.id.action_nav_Circuits_to_editCircuitFragment)
+        circuitAdapter = CircuitAdapter(mutableListOf()) { circuitId ->
+            // Format el ID circuit to ensure that has no bad caracters
+            val formattedCircuitId = circuitId.replace(Regex("[^a-zA-Z0-9]"), "")
+            val circuit = Circuit(formattedCircuitId) // Obtain the curcuit from the list
+
+            // Call the function editCircuit with the selected circuit
+            editCircuit(circuit)
         }
+
+        // Initialize RecyclerView
         setupRecyclerView()
 
         // Observe changes in circuitsLiveData
@@ -76,6 +84,15 @@ class CircuitFragment : Fragment() {
                 circuitsLiveData.value = circuitsList
             }
             .addOnFailureListener { exception ->
+                // Handle failure
             }
+    }
+
+    private fun editCircuit(circuit: Circuit) {
+        // Make a Bundle to give the ID of the circuit to EditCircuitFragment
+        val bundle = Bundle()
+        bundle.putString("circuitId", circuit.id)
+        // Navigate with the Bundle
+        findNavController().navigate(R.id.editCircuitFragment, bundle)
     }
 }

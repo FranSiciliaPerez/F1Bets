@@ -90,4 +90,6 @@
     <string name="txtTitleCreateBet">Crear apuesta</string>
     <string name="txtTitleCreateCircuit">Crear circuito</string>
     <string name="txtTitleCreateDriver">Crear piloto</string>
+    <string name="btnTxtEdit">Guardar cambios</string>
+    <string name="txtEditCircuit">Editar circuito</string>
 </resources>

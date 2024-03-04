@@ -91,4 +91,6 @@
     <string name="txtTitleCreateDriver">Create drivers</string>
     <string name="txtTitleDeleteAccount">Delete account</string>
     <string name="txtTitleUserSettings">Settings</string>
+    <string name="btnTxtEdit">Save changes</string>
+    <string name="txtEditCircuit">Circuit edit</string>
 </resources>

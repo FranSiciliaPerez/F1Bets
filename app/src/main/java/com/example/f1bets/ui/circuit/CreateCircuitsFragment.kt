@@ -1,7 +1,6 @@
 package com.example.f1bets.ui.circuit
 
 import android.Manifest
-import android.app.Activity
 import android.app.Activity.RESULT_OK
 import android.app.AlertDialog
 import android.content.Context

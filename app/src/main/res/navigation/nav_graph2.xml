@@ -97,7 +97,7 @@
     <fragment
         android:id="@+id/editCircuitFragment"
         android:name="com.example.f1bets.ui.circuit.EditCircuitFragment"
-        android:label="fragment_edit_circuit"
+        android:label="@string/txtEditCircuit"
         tools:layout="@layout/fragment_edit_circuit" >
         <action
             android:id="@+id/action_editCircuitFragment_to_nav_Circuits"
