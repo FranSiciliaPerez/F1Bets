@@ -24,6 +24,12 @@
         <action
             android:id="@+id/action_nav_Home_to_userSettingsFragment"
             app:destination="@id/userSettingsFragment" />
+        <action
+            android:id="@+id/action_nav_Home_self"
+            app:destination="@id/nav_Home" />
+        <action
+            android:id="@+id/action_nav_Home_to_infoFragment"
+            app:destination="@id/infoFragment" />
     </fragment>
     <fragment
         android:id="@+id/nav_Circuits"
@@ -141,5 +147,14 @@
         <action
             android:id="@+id/action_userSettingsFragment_to_checkLoginFragment"
             app:destination="@id/checkLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.f1bets.fragments.ui.home.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_infoFragment_to_nav_Home"
+            app:destination="@id/nav_Home" />
     </fragment>
 </navigation>

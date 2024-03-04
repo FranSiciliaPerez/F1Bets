@@ -94,4 +94,5 @@
     <string name="txtEditCircuit">Circuit edit</string>
     <string name="txtYearBirthDriver">Year of Birth</string>
     <string name="errPaswAndEmail">Incorrect email or password</string>
+    <string name="txtMenuInfo">Information</string>
 </resources>

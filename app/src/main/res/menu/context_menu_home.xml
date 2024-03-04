@@ -7,15 +7,9 @@
             android:enabled="false"/>
     </group>
     <item
-        android:id="@+id/contextMenuDriver"
-        android:title="@string/txtMenuDrivers"/>
+        android:id="@+id/contextMenuInfo"
+        android:title="@string/txtMenuInfo"/>
     <item
-        android:id="@+id/contextMenuCircuit"
-        android:title="@string/txtMenuCircuits"/>
-    <item
-        android:id="@+id/contextMenuBets"
-        android:title="@string/txtMenuBets"/>
-    <item
-        android:id="@+id/contextMenuUser"
-        android:title="@string/txtMenuUser"/>
+        android:id="@+id/contextMenuSettings"
+        android:title="@string/action_settings"/>
 </menu>

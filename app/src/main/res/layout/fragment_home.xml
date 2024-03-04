@@ -6,19 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".fragments.ui.home.HomeFragment">
 
-    <VideoView
-        android:id="@+id/videoView"
-        android:layout_width="297dp"
-        android:layout_height="328dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginEnd="62dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"

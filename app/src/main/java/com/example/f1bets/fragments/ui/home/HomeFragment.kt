@@ -3,15 +3,11 @@ package com.example.f1bets.fragments.ui.home
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import android.net.Uri
 import android.os.Bundle
 import android.view.*
-import android.widget.MediaController
 import android.widget.PopupMenu
-import android.widget.VideoView
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.example.f1bets.R
 import com.example.f1bets.activities.StartActivity
@@ -22,7 +18,6 @@ import com.google.firebase.auth.FirebaseAuth
 class HomeFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: FragmentHomeBinding
-    private var videoView: VideoView? = null
     private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -65,21 +60,6 @@ class HomeFragment : Fragment() {
                 dialogBuilder.show()
             }
         })
-
-        // // Initialize the VideoView after the inflate of the dessign
-        videoView = view.findViewById(R.id.videoView)
-
-        // Initialize mediaController to play, pause, go fast forguard etc..
-        val mediaController = MediaController(requireContext())
-        mediaController.setAnchorView(videoView)
-
-        // Set video uri  from the resources
-        val videoUri = Uri.parse("android.resource://" + requireActivity().packageName + "/" + R.raw.betf1)
-        videoView?.apply {
-            setMediaController(mediaController)
-            // Config the path to play it at the VideoView
-            setVideoURI(videoUri)
-        }
         // Set the long click in the screen
         binding.root.setOnLongClickListener{
             contextMenu()
@@ -142,25 +122,16 @@ class HomeFragment : Fragment() {
     }
 
     private fun contextMenu() {
-        val navController = Navigation.findNavController(requireView())
         val popupMenu = PopupMenu(requireContext(), binding.textView)
         popupMenu.menuInflater.inflate(R.menu.context_menu_home, popupMenu.menu)
         popupMenu.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.contextMenuDriver -> {
-                    navController.navigate(R.id.nav_Drivers)
+                R.id.contextMenuInfo -> {
+                    findNavController().navigate(R.id.action_nav_Home_to_infoFragment)
                     true
                 }
-                R.id.contextMenuCircuit -> {
-                    navController.navigate(R.id.createBetsFragment)
-                    true
-                }
-                R.id.contextMenuBets -> {
-                    navController.navigate(R.id.nav_Bets)
-                    true
-                }
-                R.id.contextMenuUser -> {
-                    navController.navigate(R.id.nav_User)
+                R.id.contextMenuSettings -> {
+                    findNavController().navigate(R.id.action_nav_Home_to_userSettingsFragment)
                     true
                 }
                 else -> false
