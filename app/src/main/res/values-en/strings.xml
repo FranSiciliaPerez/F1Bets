@@ -107,4 +107,5 @@
     <string name="txtMaterialAlertGalery">Choose from gallery</string>
     <string name="txtMaterialAlertCancel">Cancel</string>
     <string name="txtMaterialAlertTittle">Select image source</string>
+    <string name="txtTitleInfoFrag">Info about the app</string>
 </resources>

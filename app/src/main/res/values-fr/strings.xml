@@ -107,4 +107,5 @@
     <string name="txtMaterialAlertPhoto">Prendre une photo</string>
     <string name="txtErrGalleryPermission">Autorisation de la galerie refusée</string>
     <string name="txtErrCameraPermission">Autorisation de la caméra refusée</string>
+    <string name="txtTitleInfoFrag">Information sur l app</string>
 </resources>

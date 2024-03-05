@@ -151,7 +151,7 @@
     <fragment
         android:id="@+id/infoFragment"
         android:name="com.example.f1bets.fragments.ui.home.InfoFragment"
-        android:label="fragment_info"
+        android:label="@string/txtTitleInfoFrag"
         tools:layout="@layout/fragment_info" >
         <action
             android:id="@+id/action_infoFragment_to_nav_Home"

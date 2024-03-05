@@ -107,4 +107,5 @@
     <string name="txtMaterialAlertTittle">Seleccionar fuente de imagen</string>
     <string name="txtErrGalleryPermission">Permiso de la galeria denegado</string>
     <string name="txtErrCameraPermission">Permiso de la camara denegado</string>
+    <string name="txtTitleInfoFrag">Información sobre la app</string>
 </resources>
