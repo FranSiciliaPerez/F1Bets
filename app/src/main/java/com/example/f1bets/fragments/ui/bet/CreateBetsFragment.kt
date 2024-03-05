@@ -57,12 +57,20 @@ class CreateBetsFragment : Fragment() {
             val selectCircuit = circSpin.selectedItem.toString()
             val betMoney = txtBetMoney.text.toString()
 
-            if (Funciones.allFilled(betMoney)) {
+            if (Funciones.allFilled(betMoney) && selectDriver != "Select a driver" && selectCircuit != "Tap to select a circuit") {
                 val betMoneyValue = betMoney.toLong()
                 createNewBet(selectDriver, selectCircuit, betMoneyValue)
             } else {
+            if (selectDriver == "Select a driver" && selectCircuit == "Tap to select a circuit") {
+                Snackbar.make(view, "You must select a driver and a circuit", Snackbar.LENGTH_LONG).show()
+            } else if (selectDriver == "Select a driver") {
+                Snackbar.make(view, "You must select a driver", Snackbar.LENGTH_LONG).show()
+            } else if (selectCircuit == "Tap to select a circuit") {
+                Snackbar.make(view, "You must select a circuit", Snackbar.LENGTH_LONG).show()
+            } else {
                 Snackbar.make(view, getString(R.string.txtrrEmptyBetMoney), Snackbar.LENGTH_LONG).show()
             }
+        }
         }
 
         return view

@@ -16,8 +16,6 @@
         android:layout_height="match_parent"
         android:padding="8dp">
 
-
-
         <TextView
             android:id="@+id/txtTitleDriverBet"
             android:layout_width="wrap_content"

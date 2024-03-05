@@ -22,7 +22,7 @@
     <string name="previous">Anterior</string>
     <string name="hello_first_fragment">¡Hola primer fragmento!</string>
     <string name="hello_second_fragment">¡Hola segundo fragmento!</string>
-    <string name="txtLogin">Iniciar sesión</string>
+    <string name="btnTxtLogin">Iniciar sesión</string>
     <string name="txtSign">Registrarse</string>
     <string name="txtPasw">Contraseña</string>
     <string name="txtEmail">Correo electrónico</string>
@@ -108,4 +108,10 @@
     <string name="txtErrGalleryPermission">Permiso de la galeria denegado</string>
     <string name="txtErrCameraPermission">Permiso de la camara denegado</string>
     <string name="txtTitleInfoFrag">Información sobre la app</string>
+    <string name="txtTitleImg">Imagen</string>
+    <string name="txtEditDriver">Editar piloto</string>
+    <string name="txtLapsNumber">Numero de vueltas</string>
+    <string name="txtLengthEdit">Longitud(metros)</string>
+    <string name="txtLogin">Logeate para entrar a la app</string>
+    <string name="txtCountry">Pais</string>
 </resources>

@@ -112,7 +112,7 @@
     <fragment
         android:id="@+id/editDriversFragment"
         android:name="com.example.f1bets.fragments.ui.driver.EditDriversFragment"
-        android:label="fragment_edit_drivers"
+        android:label="@string/txtEditDriver"
         tools:layout="@layout/fragment_edit_drivers" >
         <action
             android:id="@+id/action_editDriversFragment_to_nav_Drivers"

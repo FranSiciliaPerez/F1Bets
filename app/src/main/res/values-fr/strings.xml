@@ -22,7 +22,7 @@
     <string name="previous">Précédent</string>
     <string name="hello_first_fragment">Bonjour premier fragment</string>
     <string name="hello_second_fragment">Bonjour deuxième fragment</string>
-    <string name="txtLogin">Connexion</string>
+    <string name="btnTxtLogin">Connexion</string>
     <string name="txtSign">Inscription</string>
     <string name="txtPasw">Mot de passe</string>
     <string name="txtEmail">E-mail</string>
@@ -108,4 +108,10 @@
     <string name="txtErrGalleryPermission">Autorisation de la galerie refusée</string>
     <string name="txtErrCameraPermission">Autorisation de la caméra refusée</string>
     <string name="txtTitleInfoFrag">Information sur l app</string>
+    <string name="txtTitleImg">Image</string>
+    <string name="txtCountry">Pays</string>
+    <string name="txtLengthEdit">Longitude(metres)</string>
+    <string name="txtLapsNumber">Numero de tourness</string>
+    <string name="txtEditDriver">Modifier pilote</string>
+    <string name="txtLogin">"Se connecter pour accéder à l application "</string>
 </resources>

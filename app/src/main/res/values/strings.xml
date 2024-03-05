@@ -23,7 +23,7 @@
     <string name="previous">Previous</string>
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment</string>
-    <string name="txtLogin">Login</string>
+    <string name="btnTxtLogin">Login</string>
     <string name="txtSign">Sign up</string>
     <string name="txtPasw">Password</string>
     <string name="txtEmail">Email</string>
@@ -109,4 +109,10 @@
     <string name="txtMaterialAlertTittle">Select image source</string>
     <string name="txtMaterialAlertPhoto">Take a picture</string>
     <string name="txtTitleInfoFrag">Info about the app</string>
+    <string name="txtTitleImg">Image</string>
+    <string name="txtLogin">Log in to enter the app</string>
+    <string name="txtLengthEdit">Length (meters)</string>
+    <string name="txtCountry">Country</string>
+    <string name="txtLapsNumber">Number of laps</string>
+    <string name="txtEditDriver">Driver edit</string>
 </resources>

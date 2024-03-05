@@ -6,26 +6,6 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <EditText
-        android:id="@+id/txtNameDriver"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Driver Name"/>
-
-    <EditText
-        android:id="@+id/txtTeam"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Team"/>
-
-    <EditText
-        android:id="@+id/txtYearBirth"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:hint="Year of Birth"/>
-
-
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imgDriver"
         android:layout_width="68dp"
@@ -38,6 +18,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.189"
         android:src="@drawable/ic_person"/>
+
+    <EditText
+        android:id="@+id/txtNameDriver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Driver Name"
+        android:maxLength="26"/>
+
+    <EditText
+        android:id="@+id/txtTeam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Team"
+        android:maxLength="19"/>
+
+    <EditText
+        android:id="@+id/txtYearBirth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Year of Birth"
+        android:maxLength="4"/>
+
 
     <Button
         android:id="@+id/btnCreateDriver"

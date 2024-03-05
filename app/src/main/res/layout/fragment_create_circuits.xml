@@ -6,31 +6,6 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <EditText
-        android:id="@+id/txtNameCircuit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Circuit Name" />
-
-    <EditText
-        android:id="@+id/txtCountry"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Country" />
-
-    <EditText
-        android:id="@+id/txtLaps"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:hint="Laps" />
-
-    <EditText
-        android:id="@+id/txtLegth"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:hint="Length (m)" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imgCircuit"
@@ -44,6 +19,37 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.189"
         android:src="@drawable/ic_person"/>
+
+    <EditText
+        android:id="@+id/txtNameCircuit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Circuit Name"
+        android:maxLength="26"/>
+
+    <EditText
+        android:id="@+id/txtCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Country"
+        android:maxLength="26"/>
+
+    <EditText
+        android:id="@+id/txtLaps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Laps"
+        android:maxLength="4"/>
+
+    <EditText
+        android:id="@+id/txtLegth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Length (m)"
+        android:maxLength="8"/>
+
 
     <Button
         android:id="@+id/btnAddCircuit"

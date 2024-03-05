@@ -6,21 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".fragments.ui.circuit.EditCircuitFragment">
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgCircuit"
+        android:layout_width="68dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_person"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.104" />
+
     <EditText
         android:id="@+id/txtNameCircuit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Circuit Name"
+        android:layout_marginTop="172dp"
+        android:hint="@string/nameCircuitItem"
+        android:maxLength="26"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <EditText
         android:id="@+id/txtCountry"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Country"
+        android:layout_marginTop="4dp"
+        android:hint="@string/txtCountry"
+        android:maxLength="29"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNameCircuit" />
 
@@ -28,9 +48,12 @@
         android:id="@+id/txtLaps"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Number of Laps"
+        android:layout_marginTop="4dp"
+        android:hint="@string/txtLapsNumber"
         android:inputType="number"
+        android:maxLength="3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCountry" />
 
@@ -38,9 +61,12 @@
         android:id="@+id/txtLength"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Length (meters)"
+        android:layout_marginTop="4dp"
+        android:hint="@string/txtLengthEdit"
         android:inputType="numberDecimal"
+        android:maxLength="8"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtLaps" />
 
@@ -48,10 +74,10 @@
         android:id="@+id/btnSaveEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:text="@string/btnTxtEdit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtLength" />
 
@@ -59,23 +85,11 @@
         android:id="@+id/btnCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:text="@string/txtCancel"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.446"
         app:layout_constraintStart_toEndOf="@+id/btnSaveEdit"
         app:layout_constraintTop_toBottomOf="@+id/txtLength" />
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imgCircuit"
-        android:layout_width="68dp"
-        android:layout_height="75dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.877"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.189"
-        android:src="@drawable/ic_person"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
