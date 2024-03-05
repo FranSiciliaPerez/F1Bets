@@ -98,7 +98,7 @@ class CreateCircuitsFragment : Fragment() {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == REQUEST_PERMISSION_CODE) {
             if (grantResults.isNotEmpty() && grantResults.all { it == PackageManager.PERMISSION_GRANTED }) {
-                // Permisos concedidos, puedes proceder con la lógica de la cámara o la galería
+                selectImage()
             } else {
                 Snackbar.make(binding.root, "", Snackbar.LENGTH_LONG).show()
             }

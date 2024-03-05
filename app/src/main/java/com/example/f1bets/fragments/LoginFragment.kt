@@ -45,7 +45,7 @@ class LoginFragment : Fragment() {
                         }
                         .addOnFailureListener {
                             // If email or password are incorrect it will show a message
-                            Snackbar.make(root, R.string.errEmail, Snackbar.LENGTH_LONG).show()
+                            Snackbar.make(root, R.string.errPaswAndEmail, Snackbar.LENGTH_LONG).show()
                         }
                 } else {
                     // If some field is empty show an error

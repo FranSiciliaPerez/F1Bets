@@ -95,4 +95,10 @@
     <string name="txtYearBirthDriver">Anée du naissance</string>
     <string name="errPaswAndEmail">E-mail au mot de passe incorrect</string>
     <string name="txtMenuInfo">Information</string>
+    <string name="txterrDocuNotExist">Le document n existe pas</string>
+    <string name="txtDriverUpdateSuccess">Pilote mis à jour avec succès</string>
+    <string name="txtCircuitUpdateSuccess">Circuit mis à jour avec succès</string>
+    <string name="txtErrUpdateCircuit">Erreur lors de la mise à jour du circuit</string>
+    <string name="txtErrUpdateDriver">Erreur lors de la mise à jour du pilote</string>
+    <string name="txtNoChange">Aucun changement</string>
 </resources>

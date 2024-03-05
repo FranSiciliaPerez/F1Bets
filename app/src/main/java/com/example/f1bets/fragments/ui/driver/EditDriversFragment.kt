@@ -87,10 +87,10 @@ class EditDriversFragment : Fragment() {
             .update(updatedDriverData)
             .addOnSuccessListener {
                 findNavController().navigate(R.id.action_editDriversFragment_to_nav_Drivers)
-                Snackbar.make(requireView(),"Driver updated successfully", Snackbar.LENGTH_SHORT).show()
+                Snackbar.make(requireView(),getString(R.string.txtDriverUpdateSuccess), Snackbar.LENGTH_SHORT).show()
             }
             .addOnFailureListener { e ->
-                Snackbar.make(requireView(),"Error updating driver: ${e.message}", Snackbar.LENGTH_SHORT).show()
+                Snackbar.make(requireView(),getString(R.string.txtErrUpdateDriver), Snackbar.LENGTH_SHORT).show()
             }
     }
 }

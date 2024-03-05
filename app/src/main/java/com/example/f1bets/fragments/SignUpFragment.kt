@@ -82,7 +82,7 @@ class SignUpFragment : Fragment() {
             }
 
             imageView.setOnClickListener {
-                selectImage()
+                requestPermissions()
             }
         }
     }
@@ -98,6 +98,8 @@ class SignUpFragment : Fragment() {
                 ),
                 REQUEST_PERMISSION_CODE
             )
+        } else {
+            selectImage()
         }
     }
 
@@ -105,7 +107,7 @@ class SignUpFragment : Fragment() {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == REQUEST_PERMISSION_CODE) {
             if (grantResults.isNotEmpty() && grantResults.all { it == PackageManager.PERMISSION_GRANTED }) {
-                // Permisos concedidos, puedes proceder con la lógica de la cámara o la galería
+                requestPermissions()
             } else {
                 Snackbar.make(binding.root, "Los permisos no fueron concedidos", Snackbar.LENGTH_LONG).show()
             }
