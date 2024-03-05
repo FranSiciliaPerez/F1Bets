@@ -172,8 +172,8 @@ class EditDriversFragment : Fragment() {
             .setTitle(getString(R.string.txtMaterialAlertTittle))
             .setItems(options) { dialog, which ->
                 when (which) {
-                    0 -> requestGalleryPermission()
-                    1 -> requestCameraPermission()
+                    0 -> requestCameraPermission()
+                    1 -> requestGalleryPermission()
                     2 -> dialog.dismiss()
                 }
             }

@@ -177,8 +177,8 @@ class EditCircuitFragment : Fragment() {
             .setTitle(getString(R.string.txtMaterialAlertTittle))
             .setItems(options) { dialog, which ->
                 when (which) {
-                    0 -> dispatchGalleryIntent()
-                    1 -> requestCameraPermission()
+                    0 -> requestCameraPermission()
+                    1 -> dispatchGalleryIntent()
                     2 -> dialog.dismiss()
                 }
             }
