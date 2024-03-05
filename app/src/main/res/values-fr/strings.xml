@@ -101,4 +101,10 @@
     <string name="txtErrUpdateCircuit">Erreur lors de la mise à jour du circuit</string>
     <string name="txtErrUpdateDriver">Erreur lors de la mise à jour du pilote</string>
     <string name="txtNoChange">Aucun changement</string>
+    <string name="txtMaterialAlertTittle">Sélectionnez la source de l\'image</string>
+    <string name="txtMaterialAlertCancel">Annuler</string>
+    <string name="txtMaterialAlertGalery">Choisir au galerie</string>
+    <string name="txtMaterialAlertPhoto">Prendre une photo</string>
+    <string name="txtErrGalleryPermission">Autorisation de la galerie refusée</string>
+    <string name="txtErrCameraPermission">Autorisation de la caméra refusée</string>
 </resources>

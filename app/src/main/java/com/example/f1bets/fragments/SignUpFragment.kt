@@ -115,9 +115,13 @@ class SignUpFragment : Fragment() {
     }
 
     private fun selectImage() {
-        val options = arrayOf("Tomar Foto", "Elegir de la Galería", "Cancelar")
+        val options = arrayOf(
+            requireContext().getString(R.string.txtMaterialAlertPhoto),
+            requireContext().getString(R.string.txtMaterialAlertGalery),
+            requireContext().getString(R.string.txtMaterialAlertCancel)
+        )
         MaterialAlertDialogBuilder(requireContext())
-            .setTitle("Seleccionar Fuente de Imagen")
+            .setTitle(getString(R.string.txtMaterialAlertTittle))
             .setItems(options) { dialog, which ->
                 when (which) {
                     0 -> dispatchTakePictureIntent()

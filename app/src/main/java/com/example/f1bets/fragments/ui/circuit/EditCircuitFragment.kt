@@ -1,8 +1,8 @@
 package com.example.f1bets.fragments.ui.circuit
 
-import android.app.Activity.RESULT_OK
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
@@ -11,8 +11,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
+import android.Manifest
+import android.app.Activity
 import com.example.f1bets.R
 import com.example.f1bets.databinding.FragmentEditCircuitBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -76,6 +80,9 @@ class EditCircuitFragment : Fragment() {
             }
         }
 
+        binding.btnCancel.setOnClickListener {
+            findNavController().navigate(R.id.action_editCircuitFragment_to_nav_Circuits)
+        }
         // Fetch the current circuit details and display them
         fetchCircuitFromFirestore()
     }
@@ -100,9 +107,6 @@ class EditCircuitFragment : Fragment() {
                         Glide.with(requireContext())
                             .load(imageUrl)
                             .into(binding.imgCircuit)
-                    }
-                    binding.btnCancel.setOnClickListener {
-                        findNavController().navigate(R.id.action_editCircuitFragment_to_nav_Circuits)
                     }
                 } else {
                     // Document does not exist
@@ -149,7 +153,6 @@ class EditCircuitFragment : Fragment() {
             saveCircuitToFirestore(newCircuit)
         }
     }
-
     private fun saveCircuitToFirestore(circuitData: Map<String, Any>) {
         db.collection("circuit")
             .document(circuitId)
@@ -163,15 +166,20 @@ class EditCircuitFragment : Fragment() {
             }
     }
 
-    // Select an image from the gallery
+    // Select an image from the gallery or take a photo with the camera
     private fun selectImage() {
-        val options = arrayOf("Choose from Gallery", "Cancel")
+        val options = arrayOf(
+            requireContext().getString(R.string.txtMaterialAlertPhoto),
+            requireContext().getString(R.string.txtMaterialAlertGalery),
+            requireContext().getString(R.string.txtMaterialAlertCancel)
+        )
         MaterialAlertDialogBuilder(requireContext())
-            .setTitle("Select Image Source")
+            .setTitle(getString(R.string.txtMaterialAlertTittle))
             .setItems(options) { dialog, which ->
                 when (which) {
                     0 -> dispatchGalleryIntent()
-                    1 -> dialog.dismiss()
+                    1 -> requestCameraPermission()
+                    2 -> dialog.dismiss()
                 }
             }
             .show()
@@ -179,13 +187,42 @@ class EditCircuitFragment : Fragment() {
 
     // Pick an image from the gallery
     private fun dispatchGalleryIntent() {
-        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-        startActivityForResult(intent, REQUEST_PICK_IMAGE)
+        if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(
+                requireActivity(),
+                arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
+                REQUEST_GALLERY_PERMISSION
+            )
+        } else {
+            val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+            startActivityForResult(intent, REQUEST_PICK_IMAGE)
+        }
+    }
+
+    // Take a photo with the camera
+    private fun dispatchTakePictureIntent() {
+        val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        if (takePictureIntent.resolveActivity(requireActivity().packageManager) != null) {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
+        }
+    }
+
+    // Request camera permission
+    private fun requestCameraPermission() {
+        if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(
+                requireActivity(),
+                arrayOf(Manifest.permission.CAMERA),
+                REQUEST_CAMERA_PERMISSION
+            )
+        } else {
+            dispatchTakePictureIntent()
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == RESULT_OK) {
+        if (resultCode == Activity.RESULT_OK) {
             when (requestCode) {
                 REQUEST_IMAGE_CAPTURE -> {
                     val imageBitmap = data?.extras?.get("data") as Bitmap
@@ -197,7 +234,7 @@ class EditCircuitFragment : Fragment() {
                     }
                 }
             }
-            // Load the image into the image view using Glide
+            // Load the image into the image with Glide
             selectedImageUri?.let { uri ->
                 Glide.with(requireContext())
                     .load(uri)
@@ -214,8 +251,30 @@ class EditCircuitFragment : Fragment() {
         return Uri.parse(path)
     }
 
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        when (requestCode) {
+            REQUEST_CAMERA_PERMISSION -> {
+                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    dispatchTakePictureIntent()
+                } else {
+                    Snackbar.make(binding.root, R.string.txtErrCameraPermission, Snackbar.LENGTH_LONG).show()
+                }
+            }
+            REQUEST_GALLERY_PERMISSION -> {
+                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    dispatchGalleryIntent()
+                } else {
+                    Snackbar.make(binding.root, R.string.txtErrGalleryPermission, Snackbar.LENGTH_LONG).show()
+                }
+            }
+        }
+    }
+
     companion object {
         private const val REQUEST_IMAGE_CAPTURE = 0
         private const val REQUEST_PICK_IMAGE = 1
+        private const val REQUEST_CAMERA_PERMISSION = 100
+        private const val REQUEST_GALLERY_PERMISSION = 101
     }
 }

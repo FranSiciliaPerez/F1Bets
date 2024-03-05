@@ -101,4 +101,10 @@
     <string name="txtErrUpdateCircuit">Error updating the circuit</string>
     <string name="txtErrUpdateDriver">Error updating driver</string>
     <string name="txtNoChange">Doesnt have any changes</string>
+    <string name="txtErrCameraPermission">Camera permission denied</string>
+    <string name="txtErrGalleryPermission">Gallery permission denied</string>
+    <string name="txtMaterialAlertPhoto">Take a picture</string>
+    <string name="txtMaterialAlertGalery">Choose from gallery</string>
+    <string name="txtMaterialAlertCancel">Cancel</string>
+    <string name="txtMaterialAlertTittle">Select image source</string>
 </resources>

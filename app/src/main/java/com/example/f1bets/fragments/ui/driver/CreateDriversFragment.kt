@@ -96,7 +96,7 @@ class CreateDriversFragment : Fragment() {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == REQUEST_PERMISSION_CODE) {
             if (grantResults.isNotEmpty() && grantResults.all { it == PackageManager.PERMISSION_GRANTED }) {
-                // Permisos concedidos, puedes proceder con la lógica de la cámara o la galería
+                selectImage()
             } else {
                 Snackbar.make(binding.root, "", Snackbar.LENGTH_LONG).show()
             }
@@ -104,9 +104,13 @@ class CreateDriversFragment : Fragment() {
     }
 
     private fun selectImage() {
-        val options = arrayOf("Tomar Foto", "Elegir de la Galería", "Cancelar")
+        val options = arrayOf(
+            requireContext().getString(R.string.txtMaterialAlertPhoto),
+            requireContext().getString(R.string.txtMaterialAlertGalery),
+            requireContext().getString(R.string.txtMaterialAlertCancel)
+        )
         MaterialAlertDialogBuilder(requireContext())
-            .setTitle("Seleccionar Fuente de Imagen")
+            .setTitle(getString(R.string.txtMaterialAlertTittle))
             .setItems(options) { dialog, which ->
                 when (which) {
                     0 -> dispatchTakePictureIntent()
