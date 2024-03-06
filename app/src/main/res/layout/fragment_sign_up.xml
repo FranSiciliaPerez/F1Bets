@@ -93,7 +93,8 @@
             android:id="@+id/txtPassword2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/txtPasswordExample" />
+            android:hint="@string/txtPasswordExample"
+            android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <CheckBox
