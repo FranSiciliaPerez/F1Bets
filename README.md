@@ -57,26 +57,39 @@ https://github.com/FranSiciliaPerez/F1Bets/releases/download/V1_Apk/F1Bets.apk
 ## Tutorial de uso y secciones de la app
 Nada mas abras la aplicacion, si tienes el sonido activado, escucharás un sonido de coche de F1
 y verás en el dispositivo al mismo tiempo una pantala splash que aparecerá y desaparecerá junto con el sonido en unos segundos.
+![splash](https://github.com/FranSiciliaPerez/F1Bets/assets/72436014/abbe5e75-17e2-400e-9d7f-e3aa0a684088)
+
 A coninuación, nos encontramos en la primera o tecnicamente la segunda pantalla, la pantalla de login.
+![login](https://github.com/FranSiciliaPerez/F1Bets/assets/72436014/c7c170f3-7afe-43b5-88a0-7f267ca32421)
+
 Si estas registrado, solo tendras que poner tus credenciales y podras acceder a la pantalla home, 
 pero si eres nuevo usuario o has eliminado tu cuenta anterior, tendras que pulsar el boton register que te redirigirá a la pantalla
-donde puedes llevar a cabo el registro. Un vez registrado, estarás en la pantala home, donde un mensaje emergente de preguntará si eres
+donde puedes llevar a cabo el registro.
+![reister](https://github.com/FranSiciliaPerez/F1Bets/assets/72436014/28ceb9e5-4c02-4d2c-b42e-9c4e2ea012e0)
+
+Un vez registrado, estarás en la pantala home, donde un mensaje emergente de preguntará si eres
 o no mayor de edad(si se pulsa que no, se cerrará la sesion y le redirigirá a la pantalla d login), si somos mayores de edad y continuamos, 
-y se nos presentan varias opciones. 
+y se nos presentan varias opciones.
+![homeAlert](https://github.com/FranSiciliaPerez/F1Bets/assets/72436014/2a806138-6f9c-4d42-9b46-fa5ac23be947)
+
 El usuario puede pulsar en el menú desplegable para navegar a las pantallas de pilotos, circuitos y apuestas, puede, si deja pulsado 
 la pantalla durante un tiempo, hacer aparecer un menmú desplegale con dos opciones para ir a una pantalla de informacion(donde además se encuentra
 un video tutorial sobre como apostar en la F1), o ir a ajustes, pantalla a la que tambien se puede acceder pulsando el engranaje de la barra superior
 a la derecha(tanto en la pantalla home como en la de user info).
-
 Si elegimos la opcion de pulsar el engranaje e ir a ajustes, veremos una pantalla con dos botones para cerrar sesión, y otro para eliminar
 la cuenta. Si el usuario pulsa el boton cerrar sesión, le redirigirá al login, en cambio si pulsa eliminar y confirma que quiere borrar
 la cuenta, irá a la pantalla de eliminar cuenta, donde despues de logearse ppor ultima vez, se eliminara su cuenta y le llevará
 directo a la pantalla login de nuevo.
+![ajustes](https://github.com/FranSiciliaPerez/F1Bets/assets/72436014/1004e43c-d874-4f72-9f1a-5e2fcd60c41a)
+![confirmDeleteAccount](https://github.com/FranSiciliaPerez/F1Bets/assets/72436014/3ab4fbe9-97f4-425a-a491-ad5fd42cdacf)
+![deleteFraGMENT](https://github.com/FranSiciliaPerez/F1Bets/assets/72436014/a89a4006-ae7a-4391-aaa1-a5f4e47912dc)
 
 Si desplegamos el menu lateral, se podrá ir a las diferentes pantallas. Pilotos, Circuitos, Apuestas y Usuario.
+![menuLateral](https://github.com/FranSiciliaPerez/F1Bets/assets/72436014/49a84384-6749-408d-85cb-219879151307)
+
 Tanto en la seccion de pilotos como en la de circuitos se puede eliminar, editar y añadir(pulsando los botones de la papelera, el lápiz y
 el simbolo más).
-
+![pantallaPiloto](https://github.com/FranSiciliaPerez/F1Bets/assets/72436014/51268120-7892-488b-800a-b175f14bff48)
 En la seccion de apuestas, se podrá crear, y eliminar apuestas(creadas con un piloto y un circuito)
 
 Si vamos al apartado usuario, se mostrará una pantalla con la información del usuario actual y como he dicho antes, se puede ir a los ajustes
