@@ -48,7 +48,7 @@
     <string name="msgCheckError">You must accept the cookies</string>
     <string name="btnLogout">Log out</string>
     <string name="btnDeleteAccount">Delete account</string>
-    <string name="txtContinue">Continue and log again to confirm</string>
+    <string name="txtContinue">Log again to confirm</string>
     <string name="errImageUpload">Could not upload image</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nav_header_title">Welcome to F1Bets</string>
@@ -96,12 +96,12 @@
     <string name="txtEditCircuit">Circuit edit</string>
     <string name="txtYearBirthDriver">Year of Birth</string>
     <string name="txtMenuInfo">Information</string>
-    <string name="txterrDocuNotExist">Document doesnt exist</string>
+    <string name="txterrDocuNotExist">Document doesn t exist</string>
     <string name="txtDriverUpdateSuccess">Driver updated successfully</string>
     <string name="txtCircuitUpdateSuccess">Circuit updated successfully</string>
     <string name="txtErrUpdateCircuit">Error updating the circuit</string>
     <string name="txtErrUpdateDriver">Error updating driver</string>
-    <string name="txtNoChange">Doesnt have any changes</string>
+    <string name="txtNoChange">Doesn t have any changes</string>
     <string name="txtErrGalleryPermission">Gallery permission denied</string>
     <string name="txtErrCameraPermission">Camera permission denied</string>
     <string name="txtMaterialAlertGalery">Choose from gallery</string>
