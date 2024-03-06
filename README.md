@@ -55,8 +55,35 @@ Una vez descargado, ejecutala para que comience la instalación.
 https://github.com/FranSiciliaPerez/F1Bets/releases/download/V1_Apk/F1Bets.apk
 
 ## Tutorial de uso y secciones de la app
+Nada mas abras la aplicacion, si tienes el sonido activado, escucharás un sonido de coche de F1
+y verás en el dispositivo al mismo tiempo una pantala splash que aparecerá y desaparecerá junto con el sonido en unos segundos.
+A coninuación, nos encontramos en la primera o tecnicamente la segunda pantalla, la pantalla de login.
+Si estas registrado, solo tendras que poner tus credenciales y podras acceder a la pantalla home, 
+pero si eres nuevo usuario o has eliminado tu cuenta anterior, tendras que pulsar el boton register que te redirigirá a la pantalla
+donde puedes llevar a cabo el registro. Un vez registrado, estarás en la pantala home, donde un mensaje emergente de preguntará si eres
+o no mayor de edad(si se pulsa que no, se cerrará la sesion y le redirigirá a la pantalla d login), si somos mayores de edad y continuamos, 
+y se nos presentan varias opciones. 
+El usuario puede pulsar en el menú desplegable para navegar a las pantallas de pilotos, circuitos y apuestas, puede, si deja pulsado 
+la pantalla durante un tiempo, hacer aparecer un menmú desplegale con dos opciones para ir a una pantalla de informacion(donde además se encuentra
+un video tutorial sobre como apostar en la F1), o ir a ajustes, pantalla a la que tambien se puede acceder pulsando el engranaje de la barra superior
+a la derecha(tanto en la pantalla home como en la de user info).
 
+Si elegimos la opcion de pulsar el engranaje e ir a ajustes, veremos una pantalla con dos botones para cerrar sesión, y otro para eliminar
+la cuenta. Si el usuario pulsa el boton cerrar sesión, le redirigirá al login, en cambio si pulsa eliminar y confirma que quiere borrar
+la cuenta, irá a la pantalla de eliminar cuenta, donde despues de logearse ppor ultima vez, se eliminara su cuenta y le llevará
+directo a la pantalla login de nuevo.
 
+Si desplegamos el menu lateral, se podrá ir a las diferentes pantallas. Pilotos, Circuitos, Apuestas y Usuario.
+Tanto en la seccion de pilotos como en la de circuitos se puede eliminar, editar y añadir(pulsando los botones de la papelera, el lápiz y
+el simbolo más).
+
+En la seccion de apuestas, se podrá crear, y eliminar apuestas(creadas con un piloto y un circuito)
+
+Si vamos al apartado usuario, se mostrará una pantalla con la información del usuario actual y como he dicho antes, se puede ir a los ajustes
+pulsando el engranaje arriba a la derecha de la pantalla.
+
+Y por ultimo, si le damos al boton atras, en la pantalla home, aparecerá un mensaje para saber si quiere seguir en la app, o
+si el usuario quiere salir de ella, en cuyo caso, se cerrará la aplicación.
 
 ## Bibliografia
 Estos son algunos de los recursos que mas he estado utilizando
