@@ -4,17 +4,11 @@ Parte en nativo del TFG
 
 ## Descripción
 F1Bets, es una aplicacion de apuestas movil con la temática del deporte del motor, F1(Fórmula 1).
-
 Para acceder a ella, debes obligatoriamente registrarte primero agregando un email y contraseña.
-
 En esta aplicación se pueden añadir, editar y borrar tanto pilotos como circuitos en sus respectivas pestañas.
-
 Una vez el usuario haya añadido los pilotos y circuitos, solo tendrá que ir al apartado de apuestas para empezar a divertirse y apostar(donde además de añadir, tambien se puede eliminar la apuesta).
-
 Para poder hacer todas estas cosas, es necesario desplegar el menu lateral y verán rapidamente donde se encuentran todas las cosas.
-
 Tambien hay un apartado reservado para ver la información del usuario actual
-
 Por supuesto que el dinero apostado no es real, y la cantidad puede ser imaginaria, además que esta app está hecha solo con fines educativos y de entretenimiento.
 
 ## APK
@@ -59,6 +53,10 @@ Solo hay que ir a este enlace donde se encuentra el archivo instalable .apk y de
 
 Una vez descargado, ejecutala para que comience la instalación.
 https://github.com/FranSiciliaPerez/F1Bets/releases/download/V1_Apk/F1Bets.apk
+
+## Tutorial de uso y secciones de la app
+
+
 
 ## Bibliografia
 Estos son algunos de los recursos que mas he estado utilizando
