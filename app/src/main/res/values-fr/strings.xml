@@ -127,4 +127,14 @@
     <string name="txtEmailExample">quelquechose@gmail.com</string>
     <string name="txtPasswordExample">Aa123456</string>
     <string name="txtPermissionDenied">Les autorisations n ont pas été accordées</string>
+    <string name="txtCodeSelectDriver">Sélectionnez un pilote</string>
+    <string name="txtCodeSelectCircuit">Appuyez pour sélectionner un circuit</string>
+    <string name="txtCodeSelectDriverAndCircuit">Vous devez sélectionner un pilote et un circuit</string>
+    <string name="txtCodeMustSelectDriver">Vous devez sélectionner un pilote</string>
+    <string name="txtCoedMustSelectCircuit">Vous devez sélectionner un circuit</string>
+    <string name="txtCircuitCreated">Circuit créé avec succès</string>
+    <string name="txtErrorUpdateId">Erreur lors de la mise à jour de l ID du circuit</string>
+    <string name="txtCreateDriverSuccess">Pilote créé avec succès</string>
+    <string name="txtErrorUpdateIdDriver">Erreur lors de la mise à jour de driveIid</string>
+    <string name="txtUserNotAuth">Utilisateur non authentifié</string>
 </resources>

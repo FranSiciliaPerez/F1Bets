@@ -128,4 +128,14 @@
     <string name="txtEmailExample">something@gmail.com</string>
     <string name="txtPasswordExample">Aa123456</string>
     <string name="txtPermissionDenied">Permissions were not granted</string>
+    <string name="txtCodeSelectDriver">Select a driver</string>
+    <string name="txtCodeSelectCircuit">Tap to select a circuit</string>
+    <string name="txtCodeSelectDriverAndCircuit">You must select a driver and a circuit</string>
+    <string name="txtCodeMustSelectDriver">You must select a driver</string>
+    <string name="txtCoedMustSelectCircuit">You must select a circuit</string>
+    <string name="txtCircuitCreated">Circuit successfully created</string>
+    <string name="txtErrorUpdateId">Error updating circuitId</string>
+    <string name="txtCreateDriverSuccess">Driver successfully created</string>
+    <string name="txtErrorUpdateIdDriver">Error updating driveIid</string>
+    <string name="txtUserNotAuth">User not authenticated</string>
 </resources>

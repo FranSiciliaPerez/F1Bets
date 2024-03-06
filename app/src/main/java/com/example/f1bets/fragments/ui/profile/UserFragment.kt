@@ -65,13 +65,13 @@ class UserFragment : Fragment() {
                         }
                     }
                 } else {
-                    Log.d(TAG, "El documento no existe")
+                    Log.d(TAG, "The document doesnt exist")
                 }
             }.addOnFailureListener { exception ->
-                Log.d(TAG, "Error obteniendo el documento:", exception)
+                Log.d(TAG, "Error getting the document:", exception)
             }
         } else {
-            binding.textViewUserEmail.text = "Usuario no autenticado"
+            binding.textViewUserEmail.text = getString(R.string.txtUserNotAuth)
         }
     }
 

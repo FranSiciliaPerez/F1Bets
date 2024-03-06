@@ -84,7 +84,7 @@ class CheckLoginFragment : Fragment() {
                     binding.email.setText(user.email)
                 }
             } else {
-                Log.d(ContentValues.TAG, "El documento no existe")
+                Log.d(ContentValues.TAG, "The document doesnt exist")
             }
         }
         } else {

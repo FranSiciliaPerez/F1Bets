@@ -204,11 +204,11 @@ class CreateDriversFragment : Fragment() {
             .update("id", driverId)
             .addOnSuccessListener {
                 // The id driver field has been updated with the generated id
-                Snackbar.make(binding.root, "Driver succsesfully created", Snackbar.LENGTH_LONG).show()
+                Snackbar.make(binding.root, R.string.txtCreateDriverSuccess, Snackbar.LENGTH_LONG).show()
                 Navigation.findNavController(requireView()).navigate(R.id.action_createDriversFragment_to_nav_Drivers)
             }
             .addOnFailureListener {
-                Snackbar.make(binding.root, "error_updating_driver_id", Snackbar.LENGTH_LONG).show()
+                Snackbar.make(binding.root, getString(R.string.txtErrorUpdateIdDriver), Snackbar.LENGTH_LONG).show()
             }
     }
 

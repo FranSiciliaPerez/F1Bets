@@ -1,6 +1,8 @@
 package com.example.f1bets.fragments.ui.bet
 
+import android.content.ContentValues
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -83,6 +85,7 @@ class BetFragment : Fragment() {
                 betsLiveData.value = betsList
             }
             .addOnFailureListener { exception ->
+                Log.e(ContentValues.TAG, "Error getting the bet data", exception)
             }
     }
 
@@ -98,6 +101,7 @@ class BetFragment : Fragment() {
                 callback(driverMap)
             }
             .addOnFailureListener { exception ->
+                Log.e(ContentValues.TAG, "Error getting the driver data", exception)
             }
     }
 
@@ -113,6 +117,7 @@ class BetFragment : Fragment() {
                 callback(circuitMap)
             }
             .addOnFailureListener { exception ->
+                Log.e(ContentValues.TAG, "Error getting the circuit data", exception)
             }
     }
 }

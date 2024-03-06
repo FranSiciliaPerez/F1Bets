@@ -43,7 +43,7 @@ class CircuitFragment : Fragment() {
         circuitAdapter = CircuitAdapter(mutableListOf()) { circuitId ->
             // Format el ID circuit to ensure that has no bad caracters
             val formattedCircuitId = circuitId.replace(Regex("[^a-zA-Z0-9]"), "")
-            val circuit = Circuit(formattedCircuitId) // Obtain the curcuit from the list
+            val circuit = Circuit(formattedCircuitId) // Obtain the circuit from the list
 
             // Call the function editCircuit with the selected circuit
             editCircuit(circuit)

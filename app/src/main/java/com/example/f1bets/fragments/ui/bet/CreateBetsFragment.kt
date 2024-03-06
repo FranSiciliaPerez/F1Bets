@@ -57,16 +57,16 @@ class CreateBetsFragment : Fragment() {
             val selectCircuit = circSpin.selectedItem.toString()
             val betMoney = txtBetMoney.text.toString()
 
-            if (Funciones.allFilled(betMoney) && selectDriver != "Select a driver" && selectCircuit != "Tap to select a circuit") {
+            if (Funciones.allFilled(betMoney) && selectDriver != getString(R.string.txtCodeSelectDriver) && selectCircuit != getString(R.string.txtCodeSelectCircuit)) {
                 val betMoneyValue = betMoney.toLong()
                 createNewBet(selectDriver, selectCircuit, betMoneyValue)
             } else {
-            if (selectDriver == "Select a driver" && selectCircuit == "Tap to select a circuit") {
-                Snackbar.make(view, "You must select a driver and a circuit", Snackbar.LENGTH_LONG).show()
-            } else if (selectDriver == "Select a driver") {
-                Snackbar.make(view, "You must select a driver", Snackbar.LENGTH_LONG).show()
-            } else if (selectCircuit == "Tap to select a circuit") {
-                Snackbar.make(view, "You must select a circuit", Snackbar.LENGTH_LONG).show()
+            if (selectDriver == getString(R.string.txtCodeSelectDriver) && selectCircuit == getString(R.string.txtCodeSelectCircuit)) {
+                Snackbar.make(view, getString(R.string.txtCodeSelectDriverAndCircuit), Snackbar.LENGTH_LONG).show()
+            } else if (selectDriver == getString(R.string.txtCodeSelectDriver)) {
+                Snackbar.make(view, getString(R.string.txtCodeMustSelectDriver), Snackbar.LENGTH_LONG).show()
+            } else if (selectCircuit == getString(R.string.txtCodeSelectCircuit)) {
+                Snackbar.make(view, getString(R.string.txtCoedMustSelectCircuit), Snackbar.LENGTH_LONG).show()
             } else {
                 Snackbar.make(view, getString(R.string.txtrrEmptyBetMoney), Snackbar.LENGTH_LONG).show()
             }
@@ -87,7 +87,7 @@ class CreateBetsFragment : Fragment() {
             .get()
             .addOnSuccessListener { documents ->
                 val driverList = documents.map { it.getString("name") ?: "" }
-                val titleDriver = listOf("Select a driver") + driverList
+                val titleDriver = listOf(getString(R.string.txtCodeSelectDriver)) + driverList
                 driversLiveData.value = titleDriver
             }
             .addOnFailureListener {
@@ -100,7 +100,7 @@ class CreateBetsFragment : Fragment() {
             .get()
             .addOnSuccessListener { documents ->
                 val circuitList = documents.map { it.getString("nameCircuit") ?: "" }
-                val titleCircuit = listOf("Tap to select a circuit") + circuitList
+                val titleCircuit = listOf(getString(R.string.txtCodeSelectCircuit)) + circuitList
                 circuitsLiveData.value = titleCircuit
             }
             .addOnFailureListener {

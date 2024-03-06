@@ -207,11 +207,11 @@ class CreateCircuitsFragment : Fragment() {
             .update("id", circuitId)
             .addOnSuccessListener {
                 // The id driver field has been updated with the generated id
-                Snackbar.make(binding.root, "Cicuit succsesfully created", Snackbar.LENGTH_LONG).show()
+                Snackbar.make(binding.root, R.string.txtCircuitCreated, Snackbar.LENGTH_LONG).show()
                 Navigation.findNavController(requireView()).navigate(R.id.action_createCircuitsFragment_to_nav_Circuits)
             }
             .addOnFailureListener {
-                Snackbar.make(binding.root, "error_updating_circuit_id", Snackbar.LENGTH_LONG).show()
+                Snackbar.make(binding.root, R.string.txtErrorUpdateId, Snackbar.LENGTH_LONG).show()
             }
     }
     private fun saveCircuitToFirestore(circuitData: Map<String, Any>) {
