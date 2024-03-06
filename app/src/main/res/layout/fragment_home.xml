@@ -14,7 +14,25 @@
         android:layout_marginTop="42dp"
         android:layout_marginEnd="182dp"
         android:text="@string/welcome"
+        android:textColor="@color/f1Black"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="356dp"
+        android:layout_height="489dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="149dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="123dp"
+        android:src="@drawable/home_f1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

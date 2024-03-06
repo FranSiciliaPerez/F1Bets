@@ -114,4 +114,17 @@
     <string name="txtLapsNumber">Numero de tourness</string>
     <string name="txtEditDriver">Modifier pilote</string>
     <string name="txtLogin">"Se connecter pour accéder à l application "</string>
+    <string name="txtUserDataTitle">Données utilisateur</string>
+    <string name="txtCreateBet">Créer un pari</string>
+    <string name="txtCreateBetMoney">Argent misé :</string>
+    <string name="txtDriver_name">Nom du pilote</string>
+    <string name="txtTeam">Équipe</string>
+    <string name="txtYearOfBirth">Année de naissance</string>
+    <string name="create_driver">Créer un pilote</string>
+    <string name="txtSelectCircuit">Sélectionnez un circuit :</string>
+    <string name="txtSelecDriver">Sélectionnez un pilote :</string>
+    <string name="txtInfoInfo">Créé par : Francisco Javier Sicilia Pérez\n Date de livraison : 06/03/2024\n Réalisé avec : Android Studio\n Langage : Kotlin\n\n Pour plus d informations sur la manière de parier sur les courses de F1, cliquez sur la boîte noire et appuyez sur play :</string>
+    <string name="txtEmailExample">quelquechose@gmail.com</string>
+    <string name="txtPasswordExample">Aa123456</string>
+    <string name="txtPermissionDenied">Les autorisations n ont pas été accordées</string>
 </resources>

@@ -16,6 +16,7 @@ import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.provider.MediaStore
 import androidx.core.app.ActivityCompat
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.f1bets.R
 import com.example.f1bets.databinding.FragmentCreateDriversBinding
@@ -69,6 +70,9 @@ class CreateDriversFragment : Fragment() {
                 } else {
                     Snackbar.make(root, R.string.errEmpty, Snackbar.LENGTH_LONG).show()
                 }
+            }
+            binding.btnCancel.setOnClickListener {
+                findNavController().navigate(R.id.action_createDriversFragment_to_nav_Drivers)
             }
 
             imgDriver.setOnClickListener {

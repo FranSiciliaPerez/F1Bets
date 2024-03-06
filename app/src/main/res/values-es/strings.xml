@@ -41,7 +41,7 @@
     <string name="txtNo">No</string>
     <string name="txtYes">Sí</string>
     <string name="btnCheck">Acepto los términos y condiciones</string>
-    <string name="txtSignUp">Registrarse</string>
+    <string name="txtSignUp">Registro</string>
     <string name="msgCheckError">Debes aceptar las cookies</string>
     <string name="btnLogout">Cerrar sesión</string>
     <string name="btnDeleteAccount">Eliminar cuenta</string>
@@ -114,4 +114,17 @@
     <string name="txtLengthEdit">Longitud(metros)</string>
     <string name="txtLogin">Logeate para entrar a la app</string>
     <string name="txtCountry">Pais</string>
+    <string name="txtUserDataTitle">Datos del usuario</string>
+    <string name="txtCreateBet">Crear apuesta</string>
+    <string name="txtCreateBetMoney">Dinero apostado:</string>
+    <string name="txtDriver_name">Nombre del piloto</string>
+    <string name="txtTeam">Equipo</string>
+    <string name="txtYearOfBirth">Año de nacimiento</string>
+    <string name="create_driver">Crear piloto</string>
+    <string name="txtSelectCircuit">Seleccionar circuito:</string>
+    <string name="txtSelecDriver">Seleccionar piloto:</string>
+    <string name="txtInfoInfo">Creado por: Francisco Javier Sicilia Pérez\n Fecha de entrega: 06/03/2024\n Realizado con: Android Studio\n Lenguaje: Kotlin\n\n Para más información sobre cómo apostar en las carreras de F1, haga clic en el recuadro negro y presione play:</string>
+    <string name="txtEmailExample">algo@gmail.com</string>
+    <string name="txtPasswordExample">Aa123456</string>
+    <string name="txtPermissionDenied">Los permisos no fueron concedidos</string>
 </resources>

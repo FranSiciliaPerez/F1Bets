@@ -13,14 +13,13 @@
 
     <TextView
         android:id="@+id/textTitle"
-        android:layout_width="247dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
         android:text="@string/txtSignUp"
-        android:textSize="50sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,10 +28,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="67dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="271dp"
         android:text="@string/txtTitleImg"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.181"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textTitle" />
 
@@ -44,10 +45,10 @@
         android:src="@drawable/ic_person"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.237" />
+        app:layout_constraintVertical_bias="0.231" />
 
     <TextView
         android:id="@+id/txtTitleUser"
@@ -92,7 +93,7 @@
             android:id="@+id/txtPassword2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Aa123456" />
+            android:hint="@string/txtPasswordExample" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <CheckBox
@@ -125,7 +126,7 @@
         android:layout_height="52dp"
         android:layout_marginTop="372dp"
         android:ems="10"
-        android:hint="algo@gmail.com"
+        android:hint="@string/txtEmailExample"
         android:inputType="textEmailAddress"
         android:textColorHint="#757575"
         app:boxBackgroundColor="@android:color/transparent"
@@ -162,6 +163,17 @@
         app:layout_constraintHorizontal_bias="0.175"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="19dp"
+        android:src="@mipmap/ic_launcher_foreground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnSignUp"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

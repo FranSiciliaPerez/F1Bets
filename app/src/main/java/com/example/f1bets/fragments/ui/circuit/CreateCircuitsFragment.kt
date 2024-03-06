@@ -16,6 +16,7 @@ import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.f1bets.R
 import com.example.f1bets.databinding.FragmentCreateCircuitsBinding
@@ -71,6 +72,9 @@ class CreateCircuitsFragment : Fragment() {
                 } else {
                     Snackbar.make(root, R.string.errEmpty, Snackbar.LENGTH_LONG).show()
                 }
+            }
+            binding.btnCancel.setOnClickListener {
+                findNavController().navigate(R.id.action_createCircuitsFragment_to_nav_Circuits)
             }
 
             imgCircuit.setOnClickListener {

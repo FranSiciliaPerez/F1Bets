@@ -8,20 +8,21 @@
     android:layout_height="match_parent"
     android:padding="15dp"
     tools:context=".fragments.ui.profile.CheckLoginFragment">
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="305dp"
-        android:layout_height="129dp"
-        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:text="@string/txtDeleteLogAccount"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="305dp"
+        android:layout_height="129dp"
+        app:srcCompat="@drawable/logo" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"

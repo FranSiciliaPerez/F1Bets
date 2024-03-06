@@ -114,4 +114,17 @@
     <string name="txtLengthEdit">Length (meters)</string>
     <string name="txtCountry">Country</string>
     <string name="txtLogin">Log in to enter the app</string>
+    <string name="txtUserDataTitle">User data</string>
+    <string name="txtCreateBet">Create bet</string>
+    <string name="txtCreateBetMoney">Bet money:</string>
+    <string name="txtDriver_name">Driver name</string>
+    <string name="txtTeam">Team</string>
+    <string name="txtYearOfBirth">Year of Birth</string>
+    <string name="create_driver">Create driver</string>
+    <string name="txtSelectCircuit">Select circuit:</string>
+    <string name="txtSelecDriver">Select driver:</string>
+    <string name="txtInfoInfo">Created by: Francisco Javier Sicilia Pérez\n Delivery date: 06/03/2024\n Made with: Android Studio\n Language: Kotlin\n\n For more information on how to bet on F1 races, click on the black box and press play:</string>
+    <string name="txtEmailExample">something@gmail.com</string>
+    <string name="txtPasswordExample">Aa123456</string>
+    <string name="txtPermissionDenied">Permissions were not granted</string>
 </resources>

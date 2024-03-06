@@ -109,7 +109,7 @@ class SignUpFragment : Fragment() {
             if (grantResults.isNotEmpty() && grantResults.all { it == PackageManager.PERMISSION_GRANTED }) {
                 requestPermissions()
             } else {
-                Snackbar.make(binding.root, "Los permisos no fueron concedidos", Snackbar.LENGTH_LONG).show()
+                Snackbar.make(binding.root, R.string.txtPermissionDenied, Snackbar.LENGTH_LONG).show()
             }
         }
     }
