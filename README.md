@@ -86,17 +86,25 @@ directo a la pantalla login de nuevo.
 
 Si desplegamos el menu lateral, se podrá ir a las diferentes pantallas. Pilotos, Circuitos, Apuestas y Usuario.
 ![menuLateral](https://github.com/FranSiciliaPerez/F1Bets/assets/72436014/49a84384-6749-408d-85cb-219879151307)
-
 Tanto en la seccion de pilotos como en la de circuitos se puede eliminar, editar y añadir(pulsando los botones de la papelera, el lápiz y
 el simbolo más).
+![pantallaCircuitos](https://github.com/FranSiciliaPerez/F1Bets/assets/72436014/8e16b145-bba8-4cb1-a4fb-a00f1060e453)
 ![pantallaPiloto](https://github.com/FranSiciliaPerez/F1Bets/assets/72436014/51268120-7892-488b-800a-b175f14bff48)
+![pantallaCreaCircuito](https://github.com/FranSiciliaPerez/F1Bets/assets/72436014/1485bc4b-a27b-4573-b216-fff785dffc6d)
+![pantllaEditarPiloto](https://github.com/FranSiciliaPerez/F1Bets/assets/72436014/93dc2b55-5f80-4502-b039-7cbbde75347c)
+![deletePiloto](https://github.com/FranSiciliaPerez/F1Bets/assets/72436014/e4fb0569-b41e-4e9a-b8c3-5a05ccb30357)
+
 En la seccion de apuestas, se podrá crear, y eliminar apuestas(creadas con un piloto y un circuito)
+![pantallaApustas](https://github.com/FranSiciliaPerez/F1Bets/assets/72436014/10658523-f454-4b6f-95d9-59967f6f1e78)
+![pantallaCreateApuesta](https://github.com/FranSiciliaPerez/F1Bets/assets/72436014/17708b9e-531b-488a-9c8e-ffef090eac50)
 
 Si vamos al apartado usuario, se mostrará una pantalla con la información del usuario actual y como he dicho antes, se puede ir a los ajustes
 pulsando el engranaje arriba a la derecha de la pantalla.
+![pantallaUsuario](https://github.com/FranSiciliaPerez/F1Bets/assets/72436014/6da6d234-945b-4c8a-9a90-6fbc2b3a38c0)
 
 Y por ultimo, si le damos al boton atras, en la pantalla home, aparecerá un mensaje para saber si quiere seguir en la app, o
 si el usuario quiere salir de ella, en cuyo caso, se cerrará la aplicación.
+![confirmExit](https://github.com/FranSiciliaPerez/F1Bets/assets/72436014/b19aed7f-a987-4965-8b63-994c9523dd05)
 
 ## Bibliografia
 Estos son algunos de los recursos que mas he estado utilizando
